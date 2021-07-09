@@ -1,3 +1,27 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": [
+    "airbnb-typescript",
+    "next",
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "root": true,
+  "plugins": [
+    "jsx-a11y"
+  ],
+  "overrides": [
+    {
+      "files": ["*.{ts,tsx}"],
+      "extends": ["airbnb-typescript"],
+      "rules": {
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+        "react/static-property-placement": ["off"]
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
+  ]
 }
