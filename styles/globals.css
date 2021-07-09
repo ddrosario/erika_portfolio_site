@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 html,
 body {
   padding: 0;
@@ -6,9 +9,19 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --greeny-blue: #3dafb6;
+  --white: #ffffff;
+  --black: #000000;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
 }
 
 * {
