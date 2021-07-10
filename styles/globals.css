@@ -9,6 +9,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 :root {
   --greeny-blue: #3dafb6;
   --white: #ffffff;
@@ -20,7 +24,25 @@ a {
   text-decoration: none;
 }
 
+a:hover, a:focus {
+  color: var(--white);
+}
+
+button:hover, button:focus {
+  color: var(--white);
+}
+
 h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 
