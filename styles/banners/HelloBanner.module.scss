@@ -1,16 +1,6 @@
-
-.banner {
+.bannerPadding {
   width: 100%;
   padding: 20px 50px;
-  background-color: var(--white);
-  border-color: var(--greeny-blue);
-  border-bottom-style: solid;
-  border-top-style: solid;
-  border-bottom-width: 20px;
-  border-top-width: 20px;
-  border-left: none;
-  border-right: none;
-  text-align: center;
 }
 
 .bannerHeader {
@@ -39,4 +29,42 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--black);
+}
+
+@media (min-width: 768px) {
+  .bannerPadding {
+    padding: 30px 50px;
+  }
+
+  .bannerHeader {
+    font-size: 50px;
+    margin-bottom: 10px;
+    .myName {
+      font-size: inherit;
+      display: inline;
+    }
+  }
+
+  .bannerSubtext {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bannerPadding {
+    padding: 30px 50px;
+  }
+
+  .bannerHeader {
+    font-size: 60px;
+    margin-bottom: 5px;
+    .myName {
+      font-size: inherit;
+      display: inline;
+    }
+  }
+
+  .bannerSubtext {
+    font-size: 40px;
+  }
 }
