@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 134px;
+  padding: 0px 50px;
+  max-width: 1440px;
+}
+
+.logo {
+  font-family: Viaoda Libre;;
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  .eri {
+    color: var(--greeny-blue);
+  }
+  .lambe {
+    color: var(--white);
+  }
+}
+
+.nav {
+  display: flex;
+  font-family: Viaoda Libre;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  a {
+    margin-right: 20px;
+  }
+  .navLink {
+    text-decoration: underline;
+  }
+}
+
+.socialsContainer {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .header {
+    height: 207px;
+    padding: 0px 80px;
+  }
+
+  .logo {
+    font-size: 40px;
+    .eri {
+      padding-right: 10px;
+    }
+  }
+
+  .nav {
+    font-size: 24px;
+    margin-left: auto;
+    a {
+      margin-right: 30px;
+    }
+  }
+}
