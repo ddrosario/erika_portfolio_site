@@ -17,7 +17,7 @@ const EgProject = ({
 }: Project) => (
   <article className={styles.egProject}>
     <div className={styles.borderedProject}>
-      <div className={styles.project}>
+      <div className={styles.projectImg}>
         <img
           src={projectImg}
           alt={projectAlt}

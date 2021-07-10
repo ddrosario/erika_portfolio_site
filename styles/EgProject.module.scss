@@ -16,9 +16,38 @@
   border-radius: 8px;
   border: solid 1px #d3fdfe;
   background-color: var(--white);
+  min-height: 119px;
+  h3 {
+    font-family: Viaoda Libre;
+    font-size: 28px;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 18;
+    font-weight: 300;
+  }
+}
+
+.projectImg {
+  padding: 15px;
+  border-radius: 8px;
+  border: solid 1px #d3fdfe;
+  background-color: var(--white);
+  min-height: 119px;
 }
 
 .spacer {
   width: 100%;
   height: 11px;
+}
+
+@media (min-width: 1440px) {
+  .borderedProject {
+    padding: 20px;
+  }
+
+  .project {
+    min-height: 220px;
+    padding: 6px 23px;
+  }
 }
