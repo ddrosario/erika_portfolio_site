@@ -1,0 +1,30 @@
+
+.banner {
+  width: 100%;
+  // padding: 20px 50px;
+  background-color: var(--white);
+  border-color: var(--greeny-blue);
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-bottom-width: 20px;
+  border-top-width: 20px;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    // padding: 30px 50px;
+    border-bottom-width: 30px;
+    border-top-width: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .banner {
+    // padding: 30px 50px;
+    border-bottom-width: 49px;
+    border-top-width: 49px;
+  }
+}
