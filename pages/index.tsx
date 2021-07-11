@@ -8,7 +8,26 @@ import PageLayout from '../components/PageLayout';
 import HelloBanner from '../components/banners/HelloBanner';
 import EgProject from '../components/EgProject';
 
-const egProjectData = [];
+const egProjectData = [
+  {
+    projectImg: 'https://picsum.photos/300/300',
+    projectAlt: '',
+    title: 'Mirror',
+    description: 'An online fashion retailer site',
+  },
+  {
+    projectImg: 'https://picsum.photos/300/300',
+    projectAlt: '',
+    title: 'Coming Soon...',
+    description: 'Example project description',
+  },
+  {
+    projectImg: 'https://picsum.photos/300/300',
+    projectAlt: '',
+    title: 'Coming Soon',
+    description: 'Another example project description',
+  },
+];
 
 export default function Home() {
   return (
