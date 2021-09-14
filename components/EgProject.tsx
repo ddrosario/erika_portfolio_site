@@ -1,12 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
-import styles from '../styles/EgProject.module.scss';
+import styles from '@styles/EgProject.module.scss';
+import BorderedCard from './hoc/BorderedCard';
+import BoxedLink from './hoc/BoxedLink';
 
 interface Project {
   projectImg: string;
   projectAlt: string;
   title: string;
   description: string;
+  urlSlug: string;
 }
 
 const EgProject = ({
@@ -14,24 +18,32 @@ const EgProject = ({
   projectAlt,
   title,
   description,
+  urlSlug,
 }: Project) => (
-  <article className={styles.egProject}>
-    <div className={styles.borderedProject}>
+  <BorderedCard>
+    <article className={styles.egProject}>
+      <div className={styles.projectTextContainer}>
+        <div className={styles.projectTitle}>
+          {title}
+        </div>
+        <p className={styles.projectDescription}>
+          {description}
+        </p>
+      </div>
       <div className={styles.projectImg}>
         <img
           src={projectImg}
           alt={projectAlt}
         />
       </div>
-    </div>
-    <div className={styles.spacer} />
-    <div className={styles.borderedProject}>
-      <div className={styles.project}>
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div>
+        <BoxedLink
+          href={`/projects${urlSlug}`}
+          linkText="View Case Study"
+        />
       </div>
-    </div>
-  </article>
+    </article>
+  </BorderedCard>
 );
 
 export default EgProject;

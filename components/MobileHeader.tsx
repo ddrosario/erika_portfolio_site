@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from '../styles/header/MobileHeader.module.scss';
+
+import styles from '@styles/header/MobileHeader.module.scss';
 
 const MobileHeader = () => {
   const [showDropdown, setShowDropdown] = React.useState(false);
