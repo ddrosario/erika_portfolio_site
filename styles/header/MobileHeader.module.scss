@@ -2,18 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 30px;
-  width: 100%;
-  background-color: var(--black);
+  height: 69px;
+  padding: 20px 37px 20px 34px;
+  background-color: var(--pine-green);
 }
 
 .watermark {
-  font-family: Viaoda Libre;
-  font-size: 40px;
+  font-family: PS-Paradizo;
+  font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: normal;
-  color: var(--greeny-blue);
+  letter-spacing: normal;;
+  color: var(--high-contrast-text);
 }

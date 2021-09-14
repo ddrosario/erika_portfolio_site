@@ -5,6 +5,14 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  background-color: var(--black);
-  color: var(--greeny-blue);
+  background-color: var(--greeny-blue);
+  color: var(--black);
+
+  padding: 20px 35px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 36px 77px;
+  }
 }

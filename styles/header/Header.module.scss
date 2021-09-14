@@ -2,42 +2,57 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 134px;
-  padding: 0px 50px;
-  max-width: 1440px;
+  height: 69px;
+  padding: 20px 37px 20px 34px;
+  background-color: var(--pine-green);
+}
+
+.headerNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 88px;
+    padding: 0px 30px 5px;
+    max-width: 1440px;
+  }
 }
 
 .logo {
-  font-family: Viaoda Libre;;
+  font-family: Viaoda Libre;
+  ;
   font-size: 28px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  .eri {
-    color: var(--greeny-blue);
-  }
-  .lambe {
-    color: var(--white);
-  }
 }
 
 .nav {
   display: flex;
-  font-family: Viaoda Libre;
+  font-family: Inter;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  color: var(--high-contrast-text);
+
   a {
-    margin-right: 20px;
+    margin-right: 15px;
   }
   .navLink {
     text-decoration: underline;
+    color: var(--white);
   }
 }
 
@@ -55,6 +70,7 @@
 
   .logo {
     font-size: 40px;
+
     .eri {
       padding-right: 10px;
     }
@@ -63,6 +79,7 @@
   .nav {
     font-size: 24px;
     margin-left: auto;
+
     a {
       margin-right: 30px;
     }

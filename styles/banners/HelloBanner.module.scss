@@ -1,29 +1,25 @@
 .bannerPadding {
   width: 100%;
-  padding: 20px 50px;
+  text-align: center;
 }
 
 .bannerHeader {
-  font-family: Viaoda Libre;
-  font-size: 40px;
+  font-family: Inter;
+  font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: var(--black);
-  margin: 0;
-  .myName {
-    display: block;
-    font-size: 30px;
-  }
+  margin-bottom: 3px;
 }
 
 .bannerSubtext {
   margin: 0;
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 300;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 200;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -32,39 +28,16 @@
 }
 
 @media (min-width: 768px) {
-  .bannerPadding {
-    padding: 30px 50px;
-  }
-
   .bannerHeader {
-    font-size: 50px;
-    margin-bottom: 10px;
-    .myName {
-      font-size: inherit;
-      display: inline;
-    }
+    font-size: 36px;
+    margin-bottom: 5px;
   }
 
   .bannerSubtext {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
 @media (min-width: 1440px) {
-  .bannerPadding {
-    padding: 30px 50px;
-  }
-
-  .bannerHeader {
-    font-size: 60px;
-    margin-bottom: 5px;
-    .myName {
-      font-size: inherit;
-      display: inline;
-    }
-  }
-
-  .bannerSubtext {
-    font-size: 40px;
-  }
+  
 }
