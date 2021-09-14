@@ -1,31 +1,36 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { GetStaticPathsContext } from 'next';
-import styles from '../styles/Home.module.scss';
+import styles from '@styles/Home.module.scss';
+import egStyles from '@styles/EgProject.module.scss';
 
-import PageLayout from '../components/PageLayout';
-import HelloBanner from '../components/banners/HelloBanner';
-import EgProject from '../components/EgProject';
+import PageLayout from '@components/PageLayout';
+import HelloBanner from '@components/banners/HelloBanner';
+import EgProject from '@components/EgProject';
+import BorderedCard from '@components/hoc/BorderedCard';
+import Footer from '@components/Footer';
 
 const egProjectData = [
   {
     projectImg: 'https://picsum.photos/300/300',
     projectAlt: '',
-    title: 'Mirror',
-    description: 'An online fashion retailer site',
+    title: 'Aura',
+    description: 'A Mood-Tracking App',
+    urlSlug: '/aura',
   },
   {
     projectImg: 'https://picsum.photos/300/300',
     projectAlt: '',
-    title: 'Coming Soon...',
-    description: 'Example project description',
+    title: 'Nintendo',
+    description: 'The addition of a social aspect to the Nintendo eShop on the Switch',
+    urlSlug: '/nintendo',
   },
   {
     projectImg: 'https://picsum.photos/300/300',
     projectAlt: '',
-    title: 'Coming Soon',
-    description: 'Another example project description',
+    title: 'Carnival Cruiseline',
+    description: 'A complete responsive redesign of the Carnival Cruiseline website',
+    urlSlug: '/carnival',
   },
 ];
 
@@ -38,29 +43,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <HelloBanner />
-        <main className={styles.main}>
+        <div className={styles.card}>
+          <HelloBanner />
+        </div>
+        <div className={styles.main}>
           {egProjectData.map((projectData) => (
-            <EgProject
+            <div
+              className={styles.card}
               key={projectData.title}
-              projectImg={projectData.projectImg}
-              projectAlt={projectData.projectAlt}
-              title={projectData.title}
-              description={projectData.description}
-            />
+            >
+              <EgProject
+                projectImg={projectData.projectImg}
+                projectAlt={projectData.projectAlt}
+                title={projectData.title}
+                description={projectData.description}
+                urlSlug={projectData.urlSlug}
+              />
+            </div>
           ))}
-        </main>
-
-        <footer className={styles.footer}>
-          <a
-            href="https://www.github.com/ddrosario"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by ddrosario
-          </a>
-        </footer>
+        </div>
+        <BorderedCard>
+          <div className={styles.ctaCard}>
+            <div className={egStyles.projectTitle}>
+              Your project could be here!
+            </div>
+            <div className={egStyles.projectDescription}>
+              Reach out to me on the form below and let’s chat!
+            </div>
+          </div>
+        </BorderedCard>
       </PageLayout>
+      <Footer />
     </>
   );
 }
