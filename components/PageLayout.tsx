@@ -10,15 +10,28 @@ interface PageLayoutProps {
   children: JSX.Element | JSX.Element[];
 }
 
-const PageLayout = ({ children }: PageLayoutProps) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+const Mobile = ({ children }: any) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  return isMobile ? children : null;
+};
 
-  return (
+const Default = ({ children }: any) => {
+  const isNotMobile = useMediaQuery({ minWidth: 768 });
+  return isNotMobile ? children : null;
+};
+
+const PageLayout = ({ children }: PageLayoutProps) => (
+  <>
+    <Mobile>
+      <MobileHeader />
+    </Mobile>
+    <Default>
+      <Header />
+    </Default>
     <div className={styles.container}>
-      {isMobile ? <MobileHeader /> : <Header />}
       {children}
     </div>
-  );
-};
+  </>
+);
 
 export default PageLayout;
