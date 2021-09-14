@@ -1,0 +1,51 @@
+.main {
+  height: 100%;
+  background-color: var(--pine-green);
+  color: var(--black);
+
+  padding: 20px 35px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h3 {
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--high-contrast-text);
+  margin-bottom: 20px;
+}
+
+.email {
+  display: block;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black);
+  margin: 10px auto 20px auto;
+  &:visited {
+    color: var(--black);
+  }
+  &:hover {
+    color: var(--black);
+  }
+}
+
+.socialLinks {
+  margin: 20px auto 0px;
+  width: max-content;
+  color: var(--high-contrast-text);
+}
