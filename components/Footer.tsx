@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from '@styles/banners/Footer.module.scss';
 
 import BorderedCard from './hoc/BorderedCard';
-import BoxedLink from './hoc/BoxedLink';
 
 const Footer = () => (
   <footer className={styles.main}>
@@ -22,10 +21,17 @@ const Footer = () => (
             Erikaalanalambe@gmail.com
           </a>
         </Link>
-        <BoxedLink
+        <Link
           href="/contact-me"
-          linkText="Contact"
-        />
+          passHref
+        >
+          <a
+            className={styles.boxedLink}
+            href="replace"
+          >
+            Contact
+          </a>
+        </Link>
       </div>
     </BorderedCard>
     <div className={styles.socialLinks}>
