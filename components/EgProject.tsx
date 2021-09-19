@@ -11,6 +11,8 @@ interface Project {
   title: string;
   description: string;
   urlSlug: string;
+  // secondImg?: string;
+  // secondAlt?: string;
 }
 
 const EgProject = ({
@@ -19,6 +21,8 @@ const EgProject = ({
   title,
   description,
   urlSlug,
+  // secondImg,
+  // secondAlt,
 }: Project) => (
   <BorderedCard>
     <article className={styles.egProject}>
@@ -30,11 +34,13 @@ const EgProject = ({
           {description}
         </p>
       </div>
-      <div className={styles.projectImg}>
-        <img
-          src={projectImg}
-          alt={projectAlt}
-        />
+      <div className={styles.projectImgContainer}>
+        <div className={styles.projectImg}>
+          <img
+            src={projectImg}
+            alt={projectAlt}
+          />
+        </div>
       </div>
       <div>
         <BoxedLink
@@ -45,5 +51,10 @@ const EgProject = ({
     </article>
   </BorderedCard>
 );
+
+// EgProject.defaultProps = {
+//   secondImg: null,
+//   secondAlt: null,
+// };
 
 export default EgProject;
