@@ -31,7 +31,7 @@ const MobileNavDropdown = () => (
         </a>
       </Link>
     </li>
-    <li>
+    {/* <li>
       <Link
         href="/Resume"
         passHref
@@ -43,7 +43,7 @@ const MobileNavDropdown = () => (
           Resume
         </a>
       </Link>
-    </li>
+    </li> */}
     <li>
       <Link
         href="/contact-me"

@@ -3,13 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import styles from '../styles/header/Header.module.scss';
-import pngLogo from '../public/logo.png';
+import styles from '@styles/header/Header.module.scss';
+import pngLogo from '@assets/logo.png';
 
 const locations = {
   work: '/',
   about: '/about',
-  resume: '/resume',
+  // resume: '/resume',
   contactMe: '/contact-me',
 };
 
@@ -19,38 +19,39 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <Image
-          src={pngLogo}
-          alt="Eri Lambe"
-        />
-      </div>
-      <div className={styles.headerNav}>
-        <nav className={styles.nav}>
-          <Link
-            href={locations.work}
-            passHref
-          >
-            <a
-              className={locations.work === pathname ? styles.navLink : ''}
-              href="replace"
-              tabIndex={0}
+      <div className={styles.headerBody}>
+        <div className={styles.logo}>
+          <Image
+            src={pngLogo}
+            alt="Eri Lambe"
+          />
+        </div>
+        <div className={styles.headerNav}>
+          <nav className={styles.nav}>
+            <Link
+              href={locations.work}
+              passHref
             >
-              Work
-            </a>
-          </Link>
-          <Link
-            href={locations.about}
-            passHref
-          >
-            <a
-              className={locations.about === pathname ? styles.navLink : ''}
-              href="replace"
+              <a
+                className={locations.work === pathname ? styles.navLink : ''}
+                href="replace"
+                tabIndex={0}
+              >
+                Work
+              </a>
+            </Link>
+            <Link
+              href={locations.about}
+              passHref
             >
-              About
-            </a>
-          </Link>
-          <Link
+              <a
+                className={locations.about === pathname ? styles.navLink : ''}
+                href="replace"
+              >
+                About
+              </a>
+            </Link>
+            {/* <Link
             href={locations.resume}
             passHref
           >
@@ -60,30 +61,31 @@ const Header = () => {
             >
               Resume
             </a>
-          </Link>
-          <Link
-            href={locations.contactMe}
-            passHref
-          >
-            <a
-              className={locations.contactMe === pathname ? styles.navLink : ''}
-              href="replace"
+          </Link> */}
+            <Link
+              href={locations.contactMe}
+              passHref
             >
-              Contact Me
-            </a>
-          </Link>
-        </nav>
-        <ul className={styles.socialsContainer}>
-          <li>
-            😀
-          </li>
-          <li>
-            🌎
-          </li>
-          <li>
-            📈
-          </li>
-        </ul>
+              <a
+                className={locations.contactMe === pathname ? styles.navLink : ''}
+                href="replace"
+              >
+                Contact Me
+              </a>
+            </Link>
+          </nav>
+          <ul className={styles.socialsContainer}>
+            <li>
+              😀
+            </li>
+            <li>
+              🌎
+            </li>
+            <li>
+              📈
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );
