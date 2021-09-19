@@ -1,0 +1,22 @@
+
+.link {
+  height: 28px;
+  margin: 0 45px 5px 5px;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black);
+}
+
+.dropdown {
+  // width: 101px;
+  height: 147px;
+  padding: 10px 4px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 1px var(--high-contrast-text);
+  background-color: #fff;
+}
