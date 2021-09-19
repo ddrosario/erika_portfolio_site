@@ -2,6 +2,9 @@
   height: 100%;
   background-color: var(--pine-green);
   color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   padding: 20px 35px;
 }
@@ -65,4 +68,16 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--high-contrast-text);
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 36px 77px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    padding: 60px;
+  }
 }
