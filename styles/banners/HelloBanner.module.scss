@@ -38,6 +38,13 @@
   }
 }
 
-@media (min-width: 1440px) {
-  
+@media (min-width: 1200px) {
+  .bannerHeader {
+    font-size: 50px;
+    margin-bottom: 5px;
+  } 
+
+  .bannerSubtext {
+    font-size: 38px;
+  }
 }

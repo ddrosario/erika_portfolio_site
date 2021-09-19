@@ -49,3 +49,20 @@
   width: max-content;
   color: var(--high-contrast-text);
 }
+
+.boxedLink {
+  width: 119px;
+  height: 36px;
+  margin: 22px 62px 0;
+  padding: 9px 33px 10px 31px;
+  border-radius: 8px;
+  background-color: var(--black);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--high-contrast-text);
+}
