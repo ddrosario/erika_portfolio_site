@@ -17,21 +17,21 @@ import CarnivalCard from '@components/projectCards/CarnivalCard';
 
 const egProjectData = [
   {
-    projectImg: 'https://picsum.photos/300/300',
+    projectImg: '/assets/projects/aura/overview.png',
     projectAlt: '',
     title: 'Aura',
     description: 'A Mood-Tracking App',
     urlSlug: '/aura',
   },
   {
-    projectImg: 'https://picsum.photos/300/300',
+    projectImg: '/assets/projects/nintendo/overview.png',
     projectAlt: '',
     title: 'Nintendo',
     description: 'The addition of a social aspect to the Nintendo eShop on the Switch',
     urlSlug: '/nintendo',
   },
   {
-    projectImg: 'https://picsum.photos/300/300',
+    projectImg: '/assets/projects/carnival/overview.png',
     projectAlt: '',
     title: 'Carnival Cruiseline',
     description: 'A complete responsive redesign of the Carnival Cruiseline website',
