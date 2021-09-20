@@ -1,0 +1,90 @@
+.h1 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.titleSubtext {
+  text-align: center;
+  font-family: var(--subtitle-font-family);
+  font-size: var(--subtitle-font-size);
+  font-weight: 200;
+
+}
+
+.h2 {
+  font-family: var(--card-title-font-family);
+  font-size: var(--card-title-font-size);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.projectText {
+  font-family: var(--card-subtext-font-family);
+  font-size: var(--card-subtext-font-size);
+  font-weight: 200;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.singleImgContainer {
+}
+
+.singleImgBorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleImg {
+  height: 156px;
+  width: 156px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--greeny-blue);
+  & img {
+    padding: 10px;
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+  }
+}
+
+.threeImgContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px 50px;
+}
+
+.imgContainer {
+
+}
+
+.imgBorder {
+}
+
+.img {
+  height: 105px;
+  width: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: var(--greeny-blue);
+  & img {
+    width: inherit;
+    height: inherit;
+    padding: 15px;
+    object-fit: contain;
+  }
+}
+
+.imgLabel {
+
+}
