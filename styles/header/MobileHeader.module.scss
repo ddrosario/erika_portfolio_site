@@ -4,7 +4,7 @@
   align-items: center;
   height: 69px;
   padding: 20px 37px 20px 34px;
-  background-color: var(--pine-green);
+  background-color: var(--header-color);
 }
 
 .watermark {
@@ -25,6 +25,8 @@
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
    user-select: none; 
+   background-color: transparent;
+   border: 0;
 
   & span {
     display: block;
@@ -33,7 +35,8 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: var(--high-contrast-text);
+    border-radius: 15px;;
   }
 }
 

@@ -28,10 +28,21 @@ body {
 :root {
   --greeny-blue: #40b0b7;
   --high-contrast-text: #3dafb6;
-  --modal-text: ##4eb6bd;
+  --modal-text: #4eb6bd;
   --pine-green: #083034;
   --white: #ffffff;
   --black: #000000;
+  --background-color: #4eb6bd;
+  --header-color: #083034;
+  --footer-color: #083034;
+  --title-font-family: Inter;
+  --title-font-size: 20px;
+  --subtitle-font-family: Nunito;
+  --subtitle-font-size: 14px;
+  --card-title-font-size: 18px;
+  --card-title-font-family: Inter;
+  --card-subtext-font-size: 12px;
+  --card-subtext-font-family: Nunito;
 }
 
 a {
@@ -41,6 +52,10 @@ a {
 
 a:hover, a:focus {
   color: var(--white);
+}
+
+button {
+  transition: all 0.33s ease-in-out;
 }
 
 button:hover, button:focus {
@@ -67,4 +82,22 @@ li {
 
 * {
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --card-title-font-size: 36px;
+    --card-subtext-font-size: 14px;
+    --title-font-size: 36px;
+    --subtitle-font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --card-title-font-size: 40px;
+    --card-subtext-font-size: 28px;
+    --title-font-size: 40px;
+    --subtitle-font-size: 28px;
+  }
 }
