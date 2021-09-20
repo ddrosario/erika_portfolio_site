@@ -7,7 +7,7 @@ const MobileNavDropdown = () => (
   <ul className={styles.dropdown}>
     <li>
       <Link
-        href="/work"
+        href="/"
         passHref
       >
         <a
