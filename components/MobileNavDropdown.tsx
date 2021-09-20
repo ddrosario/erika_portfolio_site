@@ -46,12 +46,22 @@ const MobileNavDropdown = () => (
     </li> */}
     <li>
       <Link
-        href="/contact-me"
+        href="#contact"
         passHref
       >
         <a
           className={styles.link}
           href="replace"
+          onClick={(e) => {
+            const footer = document.getElementById('contact2');
+            if (footer) {
+              e.preventDefault();
+              e.stopPropagation();
+              footer.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }
+          }}
         >
           Contact Me
         </a>

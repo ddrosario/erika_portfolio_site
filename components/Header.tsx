@@ -10,7 +10,7 @@ const locations = {
   work: '/',
   about: '/about',
   // resume: '/resume',
-  contactMe: '/contact-me',
+  contactMe: '#contact',
 };
 
 const Header = () => {
@@ -69,6 +69,16 @@ const Header = () => {
               <a
                 className={locations.contactMe === pathname ? styles.navLink : ''}
                 href="replace"
+                onClick={(e) => {
+                  const footer = document.getElementById('contact');
+                  if (footer) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    footer.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }
+                }}
               >
                 Contact Me
               </a>
