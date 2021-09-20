@@ -6,7 +6,7 @@ import styles from '@styles/banners/Footer.module.scss';
 import BorderedCard from './hoc/BorderedCard';
 
 const Footer = () => (
-  <footer className={styles.main}>
+  <footer className={styles.main} id="contact">
     <h3 className={styles.h3}>Let&apos;s work together!</h3>
     <BorderedCard>
       <div className={styles.card}>
@@ -34,9 +34,9 @@ const Footer = () => (
         </Link>
       </div>
     </BorderedCard>
-    <div className={styles.socialLinks}>
+    {/* <div className={styles.socialLinks}>
       nav buttons go here
-    </div>
+    </div> */}
   </footer>
 );
 

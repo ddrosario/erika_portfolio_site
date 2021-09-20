@@ -74,7 +74,7 @@ const Header = () => {
               </a>
             </Link>
           </nav>
-          <ul className={styles.socialsContainer}>
+          {/* <ul className={styles.socialsContainer}>
             <li>
               😀
             </li>
@@ -84,7 +84,7 @@ const Header = () => {
             <li>
               📈
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </header>
