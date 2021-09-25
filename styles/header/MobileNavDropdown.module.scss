@@ -10,7 +10,8 @@
   letter-spacing: normal;
   color: var(--black);
   font-family: var(--card-title-font-family);
-  font-size: var(--card-subtext-font-size);
+  // font-size: var(--card-subtext-font-size);
+  font-size: 14px;
 }
 
 .dropdown {
@@ -19,5 +20,9 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px var(--high-contrast-text);
-  background-color: #fff;
+  background-color: var(--white);
+
+  & li {
+    padding: 3px 0px;
+  }
 }

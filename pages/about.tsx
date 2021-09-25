@@ -1,9 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import styles from '../styles/About.module.scss';
 
-import PageLayout from '../components/PageLayout';
-import DynamicMsgBanner from '../components/banners/DynamicMsgBanner';
+import BorderedCard from '@components/hoc/BorderedCard';
+import PageLayout from '@components/PageLayout';
+import Footer from '@components/Footer';
+
+import styles from '@styles/About.module.scss';
 
 const journeyMsg = [
   'My name is Erika Lambe and I, until recently, was a full-time student who also worked full-time at Starbucks as a Barista/ Barista Trainer. During this time, I was able to hone my communication skills as well as other skills such as patience, empathy, organization, and improve my method of completing tasks.',
@@ -20,14 +22,27 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <DynamicMsgBanner message="It's nice to meet you!" />
         <main className={styles.main}>
+          <BorderedCard>
+            <div>
+              <h1 className={styles.h1}>
+                It&apos;s nice to meet you!
+              </h1>
+            </div>
+          </BorderedCard>
+          <div className={styles.comingSoon}>
+            <BorderedCard>
+              <div className={styles.comingText}>
+                Coming Soon...
+              </div>
+            </BorderedCard>
+          </div>
           <article className={styles.article}>
             <h3>My Journey</h3>
             {journeyMsg.map((paragraph: string) => (
               <React.Fragment key={paragraph}>
                 <p>
-                  <span>&emsp;</span>
+                  <span>&emsp;&emsp;&emsp;&emsp;</span>
                   {paragraph}
                 </p>
                 <br />
@@ -35,17 +50,8 @@ export default function About() {
             ))}
           </article>
         </main>
-
-        <footer className={styles.footer}>
-          <a
-            href="https://www.github.com/ddrosario"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by ddrosario
-          </a>
-        </footer>
       </PageLayout>
+      <Footer />
     </>
   );
 }

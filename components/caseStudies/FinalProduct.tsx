@@ -13,7 +13,7 @@ interface FinalProductProps {
 export default function FinalProduct({ projectType }: FinalProductProps) {
   return (
     <BorderedCard>
-      <h2 className={styles.h2}>Wireframes</h2>
+      <h2 className={styles.h2}>Final Product!</h2>
       <p className={styles.projectText}>{finalProduct[projectType].text}</p>
       <div className={styles.singleImgBorder}>
         <div className={styles.singleImg}>

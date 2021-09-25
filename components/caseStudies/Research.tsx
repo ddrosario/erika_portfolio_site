@@ -17,29 +17,42 @@ export default function Research({ projectType }: ResearchProps) {
       <h2 className={styles.h2}>Research</h2>
       <p className={styles.projectText}>{project.text}</p>
       <div className={styles.threeImgContainer}>
-        <div className={styles.imgBorder}>
-          <div className={styles.img}>
-            <img
-              src={project.imgBrief}
-              alt=""
-            />
+        <div className={styles.imgContainer}>
+          <div className={styles.imgBorder}>
+            <div className={styles.img}>
+              <img
+                src={project.imgBrief}
+                alt=""
+              />
+            </div>
           </div>
+          <p className={styles.imgLabel}>Brief</p>
         </div>
-        <div className={styles.imgBorder}>
-          <div className={styles.img}>
-            <img
-              src={project.imgTimeline}
-              alt=""
-            />
+        <div className={styles.imgContainer}>
+          <div className={styles.imgBorder}>
+            <div className={styles.img}>
+              <img
+                src={project.imgTimeline}
+                alt=""
+              />
+            </div>
           </div>
+          <p className={styles.imgLabel}>Timeline</p>
         </div>
-        <div className={styles.imgBorder}>
-          <div className={styles.img}>
-            <img
-              src={project.imgComp}
-              alt=""
-            />
+        <div className={styles.imgContainer}>
+          <div className={styles.imgBorder}>
+            <div className={styles.img}>
+              <img
+                src={project.imgComp}
+                alt=""
+              />
+            </div>
           </div>
+          <p className={styles.imgLabel}>
+            Competitor
+            <br />
+            Research
+          </p>
         </div>
       </div>
     </BorderedCard>

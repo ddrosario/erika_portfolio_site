@@ -1,34 +1,55 @@
 .main {
-  max-width: 1440px;
-  padding: 50px 0px;
+  max-width: var(--max-card-width);
+}
+
+.h1 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-weight: normal;
+  text-align: center;
+}
+
+.comingSoon {
+  font-family: var(--card-subtext-font-family);
+  font-size: var(--card-subtext-font-size);
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 25.9%;
+  margin-top: 20px;
+}
+
+.comingText {
+  padding: 62px 0px;
 }
 
 .article {
-  border-top-color: var(--greeny-blue);
-  border-bottom-color: var(--greeny-blue);
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-top-width: 20px;
-  border-bottom-width: 20px;
+  // border-top-color: var(--greeny-blue);
+  // border-bottom-color: var(--greeny-blue);
+  // border-top-style: solid;
+  // border-bottom-style: solid;
+  // border-top-width: 20px;
+  // border-bottom-width: 20px;
+  margin: 20px auto 0px;
   color: var(--black);
   background-color: var(--white);
   padding: 30px 20px;
 
   h3 {
-    font-size: 30px;
+    font-family: var(--title-font-family);
+    font-size: var(--title-font-size);
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   p {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
+    font-family: var(--card-subtext-font-family);
+    font-size: var(--card-subtext-font-size);
+    font-weight: 200;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -38,37 +59,45 @@
 
 @media (min-width: 768px) {
   .article {
-    border-width: 12px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: var(--greeny-blue);
-    margin: 0px 2px;
-    padding: 30px 25px;
+    margin: 30px auto 0px;
+    padding: 50px 26px;
 
     h3 {
-      font-size: 40px;
-      margin-bottom: 24px;
+      // font-size: 40px;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 22px;
+      // font-size: 22px;
     }
+  }
+  
+  .comingSoon {
+    padding: 0px 20.1%;
+    margin-top: 30px;
+    font-weight: 200;
+    font-size: var(--card-title-font-size);
+  }
+  
+  .comingText {
+    padding: 260px 0px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .article {
-    border-width: 20px;
-    margin: 0px 80px;
-    padding: 60px 55px 60px 41px;
+    margin: 60px auto 0px;
+    padding: 60px 32px; // TODO: whats in sketch but seems off
 
     h3 {
-      font-size: 50px;
-      margin-bottom: 40px;
     }
 
     p {
-      font-size: 30px;
     }
+  }
+
+  .comingSoon {
+    padding: 0px 20.1%;
+    margin-top: 60px;
   }
 }

@@ -13,7 +13,7 @@ interface UIKitProps {
 export default function UIKit({ projectType }: UIKitProps) {
   return (
     <BorderedCard>
-      <h2 className={styles.h2}>Wireframes</h2>
+      <h2 className={styles.h2}>UI Kit</h2>
       <p className={styles.projectText}>{uiKit[projectType].text}</p>
       <div className={styles.singleImgBorder}>
         <div className={styles.singleImg}>
