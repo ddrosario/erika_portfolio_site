@@ -187,3 +187,66 @@ export const finalProduct = {
     img: '/assets/projects/carnival/final.png',
   },
 };
+
+export const sketch = {
+  aura: {
+    text: 'Then, I sketched out my plans for all of the pages of the app!',
+    img1: '/assets/projects/aura/sketch1.png',
+    img2: '/assets/projects/aura/sketch2.png',
+    img3: '/assets/projects/aura/sketch3.png',
+  },
+};
+
+export const usabilityTesting = {
+  aura: {
+    text: 'After the Prototype Testing, I looked over the results and wrote up a Debrief as well as created an Affinity Map to better organize the data.',
+    imgDebrief: '/assets/projects/aura/usability-testing-debrief.png',
+    imgAffinityMap: '/assets/projects/aura/usability-testing-affinity-map.png',
+  },
+};
+
+export const logoAndIcons = {
+  aura: {
+    text: 'Next was creating the logo and the icons for the app. The icons were later revised to be friendlier and more rounded.',
+    imgMoods: '/assets/projects/aura/logo-icons-moods.png',
+    imgIcons: '/assets/projects/aura/logo-icons-icons.png',
+  },
+};
+
+export const prototyping = {
+  nintendo: {
+    text: 'Next was to create a prototype that could be tested with users uzing the platform Maze! ',
+    imgPrototype: '/assets/projects/nintendo/prototype.png',
+    imgTesting: '/assets/projects/nintendo/prototype-testing.png',
+  },
+  carnival: {
+    text: 'Finally, I added the branding to the eShop and its changes!',
+    imgPrototype: '/assets/projects/carnival/prototype.png',
+    imgTesting: '',
+  },
+};
+
+export const branding = {
+  nintendo: {
+    text: 'The next step was to add in the well-known Nintendo Switch eShop branding and make sure that the new feature fit in flawlessly!',
+    imgBranding: '/assets/projects/nintendo/branding.png',
+  },
+  carnival: {
+    text: 'The next step was to add in the Carnival Cruise website branding!',
+    imgBranding: '/assets/projects/carnival/branding.png',
+  },
+};
+
+export const responsive = {
+  carnival: {
+    text: 'The next step was to create the Ipad and IPhone versions of the app!',
+    img: '/assets/projects/carnival/responsive.png',
+  },
+};
+
+export const clickTesting = {
+  carnival: {
+    text: 'Next was to create a prototype that could be tested with users using the platform Maze! ',
+    img: '/assets/projects/carnival/click-testing.png',
+  },
+};
