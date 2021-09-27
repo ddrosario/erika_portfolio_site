@@ -19,25 +19,27 @@ export default function Roadmap({ projectType }: RoadmapProps) {
     return (
       <>
         <BorderedCard>
-          <h2 className={styles.h2}>Branding</h2>
-          <p className={styles.projectText}>{project.text}</p>
-          <div className={styles.singleImgContainer}>
-            <div className={styles.singleImgBorder}>
-              <button
-                className={styles.singleImg}
-                onClick={() => {
-                  openLightbox(project.fullImgBranding);
-                }}
-                type="button"
-              >
-                <img
-                  src={project.imgBranding}
-                  alt=""
-                />
-              </button>
+          <section className={styles.caseStudy}>
+            <h2 className={styles.h2}>Branding</h2>
+            <p className={styles.projectText}>{project.text}</p>
+            <div className={styles.singleImgContainer}>
+              <div className={styles.singleImgBorder}>
+                <button
+                  className={styles.singleImg}
+                  onClick={() => {
+                    openLightbox(project.fullImgBranding);
+                  }}
+                  type="button"
+                >
+                  <img
+                    src={project.imgBranding}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>Wireframes</p>
             </div>
-            <p className={styles.imgLabel}>Wireframes</p>
-          </div>
+          </section>
         </BorderedCard>
         {Lightbox}
       </>

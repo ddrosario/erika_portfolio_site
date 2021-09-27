@@ -18,65 +18,67 @@ export default function Planning({ projectType }: PlanningProps) {
   return (
     <>
       <BorderedCard>
-        {projectType === 'carnival' ? (
-          <h2 className={styles.h2}>Planning Out The Site</h2>
-        ) : (
-          <h2 className={styles.h2}>Planning Out The App</h2>
-        )}
-        <p className={styles.projectText}>{project.text}</p>
-        <div className={styles.threeImgContainer}>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgSitemap);
-                }}
-              >
-                <img
-                  src={project.imgSitemap}
-                  alt=""
-                />
-              </button>
+        <section className={styles.caseStudy}>
+          {projectType === 'carnival' ? (
+            <h2 className={styles.h2}>Planning Out The Site</h2>
+          ) : (
+            <h2 className={styles.h2}>Planning Out The App</h2>
+          )}
+          <p className={styles.projectText}>{project.text}</p>
+          <div className={styles.threeImgContainer}>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgBorder}>
+                <button
+                  className={styles.img}
+                  type="button"
+                  onClick={() => {
+                    openLightbox(project.fullImgSitemap);
+                  }}
+                >
+                  <img
+                    src={project.imgSitemap}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>Sitemap</p>
             </div>
-            <p className={styles.imgLabel}>Sitemap</p>
-          </div>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgUserFlow);
-                }}
-              >
-                <img
-                  src={project.imgUserFlow}
-                  alt=""
-                />
-              </button>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgBorder}>
+                <button
+                  className={styles.img}
+                  type="button"
+                  onClick={() => {
+                    openLightbox(project.fullImgUserFlow);
+                  }}
+                >
+                  <img
+                    src={project.imgUserFlow}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>User Flow</p>
             </div>
-            <p className={styles.imgLabel}>User Flow</p>
-          </div>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgTaskFlow);
-                }}
-              >
-                <img
-                  src={project.imgTaskFlow}
-                  alt=""
-                />
-              </button>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgBorder}>
+                <button
+                  className={styles.img}
+                  type="button"
+                  onClick={() => {
+                    openLightbox(project.fullImgTaskFlow);
+                  }}
+                >
+                  <img
+                    src={project.imgTaskFlow}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>Task Flow</p>
             </div>
-            <p className={styles.imgLabel}>Task Flow</p>
           </div>
-        </div>
+        </section>
       </BorderedCard>
       {Lightbox}
     </>

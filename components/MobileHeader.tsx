@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import styles from '@styles/header/MobileHeader.module.scss';
 
@@ -18,7 +19,17 @@ const MobileHeader = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.watermark}>Eri</div>
+      <Link
+        href="/"
+        passHref
+      >
+        <a
+          className={styles.watermark}
+          href="replace"
+        >
+          Eri
+        </a>
+      </Link>
       <nav className={styles.nav} ref={navRef}>
         <button
           className={showDropdown ? `${styles.active} ${styles.hamburgerMenu}` : styles.hamburgerMenu}

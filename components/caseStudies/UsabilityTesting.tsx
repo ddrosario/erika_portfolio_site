@@ -19,44 +19,46 @@ export default function UsabilityTesting({ projectType }: UsabilityTestingProps)
     return (
       <>
         <BorderedCard>
-          <h2 className={styles.h2}>Usability Testing Results</h2>
-          <p className={styles.projectText}>{project.text}</p>
-          <div className={styles.threeImgContainer}>
-            <div className={styles.imgContainer}>
-              <div className={styles.imgBorder}>
-                <button
-                  className={styles.img}
-                  type="button"
-                  onClick={() => {
-                    openLightbox(project.fullImgDebrief);
-                  }}
-                >
-                  <img
-                    src={project.imgDebrief}
-                    alt=""
-                  />
-                </button>
+          <section className={styles.caseStudy}>
+            <h2 className={styles.h2}>Usability Testing Results</h2>
+            <p className={styles.projectText}>{project.text}</p>
+            <div className={styles.threeImgContainer}>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgDebrief);
+                    }}
+                  >
+                    <img
+                      src={project.imgDebrief}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Debrief</p>
               </div>
-              <p className={styles.imgLabel}>Debrief</p>
-            </div>
-            <div className={styles.imgContainer}>
-              <div className={styles.imgBorder}>
-                <button
-                  className={styles.img}
-                  type="button"
-                  onClick={() => {
-                    openLightbox(project.fullImgAffinityMap);
-                  }}
-                >
-                  <img
-                    src={project.imgAffinityMap}
-                    alt=""
-                  />
-                </button>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgAffinityMap);
+                    }}
+                  >
+                    <img
+                      src={project.imgAffinityMap}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Affinity Map</p>
               </div>
-              <p className={styles.imgLabel}>Affinity Map</p>
             </div>
-          </div>
+          </section>
         </BorderedCard>
         {Lightbox}
       </>

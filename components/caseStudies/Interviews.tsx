@@ -17,52 +17,67 @@ export default function Interviews({ projectType }: InterviewsProps) {
   return (
     <>
       <BorderedCard>
-        <h2 className={styles.h2}>Interview Guide and Interviews</h2>
-        <p className={styles.projectText}>{project.text}</p>
-        <div className={styles.threeImgContainer}>
-          <div className={styles.imgBorder}>
-            <button
-              className={styles.img}
-              onClick={() => {
-                openLightbox(project.fullImgDebrief);
-              }}
-              type="button"
-            >
-              <img
-                src={project.imgDebrief}
-                alt=""
-              />
-            </button>
+        <section className={styles.caseStudy}>
+          <h2 className={styles.h2}>Interview Guide and Interviews</h2>
+          <p className={styles.projectText}>{project.text}</p>
+          <div className={styles.threeImgContainer}>
+            <div className={styles.imgBorder}>
+              <button
+                className={styles.img}
+                onClick={() => {
+                  openLightbox(project.fullImgDebrief);
+                }}
+                type="button"
+              >
+                <img
+                  src={project.imgDebrief}
+                  alt=""
+                />
+              </button>
+              <p className={styles.imgLabel}>
+                Debrief
+              </p>
+            </div>
+            <div className={styles.imgBorder}>
+              <button
+                className={styles.img}
+                onClick={() => {
+                  openLightbox(project.fullImgMap);
+                }}
+                type="button"
+              >
+                <img
+                  src={project.imgMap}
+                  alt=""
+                />
+              </button>
+              <p className={styles.imgLabel}>
+                Affinity
+                <br />
+                Map
+              </p>
+            </div>
+            <div className={styles.imgBorder}>
+              <button
+                className={styles.img}
+                onClick={() => {
+                  openLightbox(project.fullImgInterview);
+                }}
+                type="button"
+              >
+                <img
+                  src={project.imgInterview}
+                  alt=""
+                />
+              </button>
+              <p className={styles.imgLabel}>
+                Interview
+                <br />
+                Questions
+              </p>
+            </div>
           </div>
-          <div className={styles.imgBorder}>
-            <button
-              className={styles.img}
-              onClick={() => {
-                openLightbox(project.fullImgMap);
-              }}
-              type="button"
-            >
-              <img
-                src={project.imgMap}
-                alt=""
-              />
-            </button>
-          </div>
-          <div className={styles.imgBorder}>
-            <button
-              className={styles.img}
-              onClick={() => {
-                openLightbox(project.fullImgInterview);
-              }}
-              type="button"
-            >
-              <img
-                src={project.imgInterview}
-                alt=""
-              />
-            </button>
-          </div>
-        </div>
+        </section>
       </BorderedCard>
       {Lightbox}
     </>

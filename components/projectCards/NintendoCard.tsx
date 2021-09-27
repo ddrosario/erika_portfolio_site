@@ -11,8 +11,8 @@ const NintendoCard = () => (
       <div className={styles.projectImgContainer}>
         <div className={styles.projectImg}>
           <img
-            src="https://picsum.photos/200/200"
-            alt=""
+            src="/assets/projects/nintendo/overview.png"
+            alt="nintendo switch"
           />
         </div>
       </div>

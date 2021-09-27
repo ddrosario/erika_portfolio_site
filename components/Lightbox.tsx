@@ -41,7 +41,8 @@ const Lightbox = ({ imgUrl, handleCloseLightbox }: LightboxProps) => {
               }
             }}
           >
-            x
+            <span />
+            <span />
           </button>
           <div className={styles.outerBox}>
             <div className={styles.centerLB}>

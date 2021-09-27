@@ -11,8 +11,8 @@ const AuraCard = () => (
       <div className={styles.projectImgContainer}>
         <div className={styles.projectImg}>
           <img
-            src="https://picsum.photos/200/200"
-            alt=""
+            src="/assets/projects/aura/overview.png"
+            alt="example phone app calendar"
           />
         </div>
       </div>
@@ -35,8 +35,8 @@ const AuraCard = () => (
       <div className={styles.projectImgContainer}>
         <div className={styles.projectImg}>
           <img
-            src="https://picsum.photos/200/200"
-            alt=""
+            src="/assets/projects/aura/overview2.png"
+            alt="example phone app home screen"
           />
         </div>
       </div>

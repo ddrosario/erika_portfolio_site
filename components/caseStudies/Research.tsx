@@ -17,65 +17,67 @@ export default function Research({ projectType }: ResearchProps) {
   return (
     <>
       <BorderedCard>
-        <h2 className={styles.h2}>Research</h2>
-        <p className={styles.projectText}>{project.text}</p>
-        <div className={styles.threeImgContainer}>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgBrief);
-                }}
-              >
-                <img
-                  src={project.imgBrief}
-                  alt=""
-                />
-              </button>
+        <section className={styles.caseStudy}>
+          <h2 className={styles.h2}>Research</h2>
+          <p className={styles.projectText}>{project.text}</p>
+          <div className={styles.threeImgContainer}>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgBorder}>
+                <button
+                  className={styles.img}
+                  type="button"
+                  onClick={() => {
+                    openLightbox(project.fullImgBrief);
+                  }}
+                >
+                  <img
+                    src={project.imgBrief}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>Brief</p>
             </div>
-            <p className={styles.imgLabel}>Brief</p>
-          </div>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgTimeline);
-                }}
-              >
-                <img
-                  src={project.imgTimeline}
-                  alt=""
-                />
-              </button>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgBorder}>
+                <button
+                  className={styles.img}
+                  type="button"
+                  onClick={() => {
+                    openLightbox(project.fullImgTimeline);
+                  }}
+                >
+                  <img
+                    src={project.imgTimeline}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>Timeline</p>
             </div>
-            <p className={styles.imgLabel}>Timeline</p>
-          </div>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgComp);
-                }}
-              >
-                <img
-                  src={project.imgComp}
-                  alt=""
-                />
-              </button>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgBorder}>
+                <button
+                  className={styles.img}
+                  type="button"
+                  onClick={() => {
+                    openLightbox(project.fullImgComp);
+                  }}
+                >
+                  <img
+                    src={project.imgComp}
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p className={styles.imgLabel}>
+                Competitor
+                <br />
+                Research
+              </p>
             </div>
-            <p className={styles.imgLabel}>
-              Competitor
-              <br />
-              Research
-            </p>
           </div>
-        </div>
+        </section>
       </BorderedCard>
       {Lightbox}
     </>

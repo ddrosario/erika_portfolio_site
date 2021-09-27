@@ -19,44 +19,46 @@ export default function LogoAndIcons({ projectType }: LogoAndIconsProps) {
     return (
       <>
         <BorderedCard>
-          <h2 className={styles.h2}>Logo and Icons</h2>
-          <p className={styles.projectText}>{project.text}</p>
-          <div className={styles.threeImgContainer}>
-            <div className={styles.imgContainer}>
-              <div className={styles.imgBorder}>
-                <button
-                  className={styles.img}
-                  type="button"
-                  onClick={() => {
-                    openLightbox(project.fullImgMoods);
-                  }}
-                >
-                  <img
-                    src={project.imgMoods}
-                    alt=""
-                  />
-                </button>
+          <section className={styles.caseStudy}>
+            <h2 className={styles.h2}>Logo and Icons</h2>
+            <p className={styles.projectText}>{project.text}</p>
+            <div className={styles.threeImgContainer}>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgMoods);
+                    }}
+                  >
+                    <img
+                      src={project.imgMoods}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Moods</p>
               </div>
-              <p className={styles.imgLabel}>Moods</p>
-            </div>
-            <div className={styles.imgContainer}>
-              <div className={styles.imgBorder}>
-                <button
-                  className={styles.img}
-                  type="button"
-                  onClick={() => {
-                    openLightbox(project.fullImgIcons);
-                  }}
-                >
-                  <img
-                    src={project.imgIcons}
-                    alt=""
-                  />
-                </button>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgIcons);
+                    }}
+                  >
+                    <img
+                      src={project.imgIcons}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Icons</p>
               </div>
-              <p className={styles.imgLabel}>Icons</p>
             </div>
-          </div>
+          </section>
         </BorderedCard>
         {Lightbox}
       </>

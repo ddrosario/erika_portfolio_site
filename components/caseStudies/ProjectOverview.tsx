@@ -13,16 +13,18 @@ interface ProjectOverviewProps {
 export default function ProjectOverview({ projectType }: ProjectOverviewProps) {
   return (
     <BorderedCard>
-      <h2 className={styles.h2}>Project Overview</h2>
-      <p className={styles.projectText}>{overview[projectType].text}</p>
-      <div className={styles.singleImgBorder}>
-        <div className={styles.projectImg}>
-          <img
-            src={overview[projectType].img}
-            alt=""
-          />
+      <section className={styles.caseStudy}>
+        <h2 className={styles.h2}>Project Overview</h2>
+        <p className={styles.projectText}>{overview[projectType].text}</p>
+        <div className={styles.singleImgBorder}>
+          <div className={styles.projectImg}>
+            <img
+              src={overview[projectType].img}
+              alt=""
+            />
+          </div>
         </div>
-      </div>
+      </section>
     </BorderedCard>
   );
 }
@@ -45,6 +47,7 @@ export default function ProjectOverview({ projectType }: ProjectOverviewProps) {
 //   return (
 //     <>
 //       <BorderedCard>
+// { /* <section className={styles.caseStudy}> */ }
 //         <h2 className={styles.h2}>Project Overview</h2>
 //         <p className={styles.projectText}>{overview[projectType].text}</p>
 //         <div className={styles.projectImgBorder}>
@@ -61,6 +64,7 @@ export default function ProjectOverview({ projectType }: ProjectOverviewProps) {
 //             />
 //           </button>
 //         </div>
+// </section>
 //       </BorderedCard>
 //       {Lightbox}
 //     </>

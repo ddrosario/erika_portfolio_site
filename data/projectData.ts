@@ -269,10 +269,10 @@ export const usabilityTesting = {
 export const logoAndIcons = {
   aura: {
     text: 'Next was creating the logo and the icons for the app. The icons were later revised to be friendlier and more rounded.',
-    imgMoods: '/assets/projects/aura/logo-icons-moods.png',
-    fullImgMoods: '/assets/projects/lg_aura/logo-icons-moods.png',
-    imgIcons: '/assets/projects/aura/logo-icons-icons.png',
-    fullImgIcons: '/assets/projects/lg_aura/logo-icons-icons.png',
+    imgMoods: '/assets/projects/aura/logo-and-icons-moods.png',
+    fullImgMoods: '/assets/projects/lg_aura/logo-and-icons-moods.png',
+    imgIcons: '/assets/projects/aura/logo-and-icons-icons.png',
+    fullImgIcons: '/assets/projects/lg_aura/logo-and-icons-icons.png',
   },
 };
 

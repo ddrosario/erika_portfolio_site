@@ -16,22 +16,24 @@ export default function FinalProduct({ projectType }: FinalProductProps) {
   return (
     <>
       <BorderedCard>
-        <h2 className={styles.h2}>Final Product!</h2>
-        <p className={styles.projectText}>{finalProduct[projectType].text}</p>
-        <div className={styles.singleImgBorder}>
-          <button
-            className={styles.singleImg}
-            onClick={() => {
-              openLightbox(finalProduct[projectType].fullImg);
-            }}
-            type="button"
-          >
-            <img
-              src={finalProduct[projectType].img}
-              alt=""
-            />
-          </button>
-        </div>
+        <section className={styles.caseStudy}>
+          <h2 className={styles.h2}>Final Product!</h2>
+          <p className={styles.projectText}>{finalProduct[projectType].text}</p>
+          <div className={styles.singleImgBorder}>
+            <button
+              className={styles.singleImg}
+              onClick={() => {
+                openLightbox(finalProduct[projectType].fullImg);
+              }}
+              type="button"
+            >
+              <img
+                src={finalProduct[projectType].img}
+                alt=""
+              />
+            </button>
+          </div>
+        </section>
       </BorderedCard>
       {Lightbox}
     </>

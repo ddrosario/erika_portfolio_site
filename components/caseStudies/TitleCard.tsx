@@ -12,8 +12,10 @@ interface TitleCardProps {
 export default function TitleCard({ projectType }: TitleCardProps) {
   return (
     <BorderedCard>
-      <h1 className={styles.h1}>{title[projectType].title}</h1>
-      <p className={styles.titleSubtext}>{title[projectType].subtext}</p>
+      <section className={styles.caseStudy}>
+        <h1 className={styles.h1}>{title[projectType].title}</h1>
+        <p className={styles.titleSubtext}>{title[projectType].subtext}</p>
+      </section>
     </BorderedCard>
   );
 }

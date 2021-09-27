@@ -30,8 +30,8 @@ const CarnivalCard = () => (
       <div className={styles.projectImgContainer}>
         <div className={styles.projectImg}>
           <img
-            src="https://picsum.photos/200/200"
-            alt=""
+            src="/assets/projects/carnival/overview.png"
+            alt="Laptop at Carnival Cruise website"
           />
         </div>
       </div>

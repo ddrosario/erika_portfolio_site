@@ -19,7 +19,74 @@ export default function Persona({ projectType }: PersonaProps) {
     return (
       <>
         <BorderedCard>
-          <h2 className={styles.h2}>Persona</h2>
+          <section className={styles.caseStudy}>
+            <h2 className={styles.h2}>Persona</h2>
+            <p className={styles.projectText}>{project.text}</p>
+            <div className={styles.threeImgContainer}>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgPersona1);
+                    }}
+                  >
+                    <img
+                      src={project.imgPersona1}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Persona 1</p>
+              </div>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgPersona2);
+                    }}
+                  >
+                    <img
+                      src={project.imgPersona2}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Persona 2</p>
+              </div>
+              <div className={styles.imgContainer}>
+                <div className={styles.imgBorder}>
+                  <button
+                    className={styles.img}
+                    type="button"
+                    onClick={() => {
+                      openLightbox(project.fullImgPersona3);
+                    }}
+                  >
+                    <img
+                      src={project.imgPersona3}
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <p className={styles.imgLabel}>Goals</p>
+              </div>
+            </div>
+          </section>
+        </BorderedCard>
+        {Lightbox}
+      </>
+    );
+  }
+
+  return (
+    <>
+      <BorderedCard>
+        <section className={styles.caseStudy}>
+          <h2 className={styles.h2}>Persona Planning and Persona</h2>
           <p className={styles.projectText}>{project.text}</p>
           <div className={styles.threeImgContainer}>
             <div className={styles.imgContainer}>
@@ -37,7 +104,7 @@ export default function Persona({ projectType }: PersonaProps) {
                   />
                 </button>
               </div>
-              <p className={styles.imgLabel}>Persona 1</p>
+              <p className={styles.imgLabel}>Persona Planning</p>
             </div>
             <div className={styles.imgContainer}>
               <div className={styles.imgBorder}>
@@ -54,7 +121,7 @@ export default function Persona({ projectType }: PersonaProps) {
                   />
                 </button>
               </div>
-              <p className={styles.imgLabel}>Persona 2</p>
+              <p className={styles.imgLabel}>Persona</p>
             </div>
             <div className={styles.imgContainer}>
               <div className={styles.imgBorder}>
@@ -74,70 +141,7 @@ export default function Persona({ projectType }: PersonaProps) {
               <p className={styles.imgLabel}>Goals</p>
             </div>
           </div>
-        </BorderedCard>
-        {Lightbox}
-      </>
-    );
-  }
-
-  return (
-    <>
-      <BorderedCard>
-        <h2 className={styles.h2}>Persona Planning and Persona</h2>
-        <p className={styles.projectText}>{project.text}</p>
-        <div className={styles.threeImgContainer}>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgPersona1);
-                }}
-              >
-                <img
-                  src={project.imgPersona1}
-                  alt=""
-                />
-              </button>
-            </div>
-            <p className={styles.imgLabel}>Persona Planning</p>
-          </div>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgPersona2);
-                }}
-              >
-                <img
-                  src={project.imgPersona2}
-                  alt=""
-                />
-              </button>
-            </div>
-            <p className={styles.imgLabel}>Persona</p>
-          </div>
-          <div className={styles.imgContainer}>
-            <div className={styles.imgBorder}>
-              <button
-                className={styles.img}
-                type="button"
-                onClick={() => {
-                  openLightbox(project.fullImgPersona3);
-                }}
-              >
-                <img
-                  src={project.imgPersona3}
-                  alt=""
-                />
-              </button>
-            </div>
-            <p className={styles.imgLabel}>Goals</p>
-          </div>
-        </div>
+        </section>
       </BorderedCard>
       {Lightbox}
     </>
