@@ -17,7 +17,7 @@ const AuraCard = () => (
         </div>
       </div>
       <div className={styles.projectTextContainer}>
-        <div className={styles.auraTitle}>
+        <div className={styles.auraHeader}>
           <div className={styles.projectTitle}>
             Aura
           </div>
@@ -25,7 +25,7 @@ const AuraCard = () => (
             A Mood-Tracking App
           </p>
         </div>
-        <div>
+        <div className={styles.boxedLinkWrapper}>
           <BoxedLink
             href="/projects/aura"
             linkText="View Case Study"

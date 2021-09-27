@@ -7,16 +7,12 @@
   height: 100%;
   background-color: var(--background-color);
   color: var(--black);
-  background-image: url("/assets/background3.png");
-  background-position-x: -15px;
-
   padding: 20px 35px;
 }
 
 @media (min-width: 768px) {
   .container {
     padding: 36px 77px;
-    background-position-x: 0px;
   }
 }
 

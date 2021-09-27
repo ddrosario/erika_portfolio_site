@@ -17,7 +17,7 @@
 
 .projectTitle {
   font-family: var(--card-title-font-family);
-  font-size: 18px;
+  font-size: var(--card-title-font-size);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -27,8 +27,8 @@
 }
 
 .projectDescription {
-  font-family: Nunito;
-  font-size: 14px;
+  font-family: var(--card-subtext-font-family);
+  font-size: var(--card-subtext-font-size);
   font-weight: 200;
   font-stretch: normal;
   font-style: normal;
@@ -126,7 +126,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  .auraTitle {
+  .projectHeader, .auraHeader{
     text-align: center;
     min-width: 215px;
   }
@@ -164,8 +164,11 @@
     min-height: 239px;
   }
   .projectTitle {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 5px;
+  }
+  .auraHeader {
+    margin-top: 20px;
   }
 
   .projectDescription {
@@ -201,5 +204,9 @@
       transition: bottom 1.4s;
       z-index: 0;
     }
+  }
+
+  .boxedLinkWrapper {
+    margin-bottom: 20px;
   }
 }

@@ -17,7 +17,7 @@ const NintendoCard = () => (
         </div>
       </div>
       <div className={styles.projectTextContainer}>
-        <div className={styles.auraTitle}>
+        <div className={styles.projectHeader}>
           <div className={styles.projectTitle}>
             Nintendo eShop
           </div>
@@ -25,7 +25,7 @@ const NintendoCard = () => (
             The addition of a social aspect to the Nintendo eShop on the Switch
           </p>
         </div>
-        <div>
+        <div className={styles.boxedLinkWrapper}>
           <BoxedLink
             href="/projects/nintendo"
             linkText="View Case Study"

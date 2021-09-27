@@ -5,7 +5,7 @@
 
 .bannerHeader {
   font-family: var(--card-title-font-family);
-  font-size: 20px;
+  font-size: var(--card-title-font-size);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -17,8 +17,8 @@
 
 .bannerSubtext {
   margin: 0;
-  font-family: Nunito;
-  font-size: 14px;
+  font-family: var(--card-subtext-font-family);
+  font-size: var(--card-subtext-font-size);
   font-weight: 200;
   font-stretch: normal;
   font-style: normal;
@@ -29,22 +29,18 @@
 
 @media (min-width: 768px) {
   .bannerHeader {
-    font-size: 36px;
     margin-bottom: 5px;
   }
 
   .bannerSubtext {
-    font-size: 28px;
   }
 }
 
 @media (min-width: 1200px) {
   .bannerHeader {
-    font-size: 50px;
     margin-bottom: 5px;
   } 
 
   .bannerSubtext {
-    font-size: 38px;
   }
 }

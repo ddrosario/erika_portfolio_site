@@ -9,7 +9,7 @@ const CarnivalCard = () => (
   <BorderedCard>
     <article className={styles.egProject}>
       <div className={styles.projectTextContainer}>
-        <div className={styles.auraTitle}>
+        <div className={styles.projectHeader}>
           <div className={styles.projectTitle}>
             Carnival Cruiseline
           </div>
@@ -19,7 +19,7 @@ const CarnivalCard = () => (
             A complete responsive redesign of the Carnival Cruiseline website
           </p>
         </div>
-        <div>
+        <div className={styles.boxedLinkWrapper}>
           <BoxedLink
             href="/projects/carnival"
             linkText="View Case Study"
