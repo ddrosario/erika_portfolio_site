@@ -30,3 +30,37 @@
     margin-bottom: 60px;
   }
 }
+
+.notInView {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.inView {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s cubic-bezier(0.32,-0.04, 0.59, 1.11) forwards;
+}
+
+.delay1 {
+  animation-delay: 0.77s;
+}
+.delay2 {
+  animation-delay: 1s;
+}
+.delay3 {
+  animation-delay: .5s;
+}
+.delay4 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

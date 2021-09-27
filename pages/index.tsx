@@ -14,6 +14,7 @@ import RenderDefault from '@components/hoc/RenderDefault';
 import AuraCard from '@components/projectCards/AuraCard';
 import NintendoCard from '@components/projectCards/NintendoCard';
 import CarnivalCard from '@components/projectCards/CarnivalCard';
+import useIntersect from '@util/hooks/useIntersection';
 
 const egProjectData = [
   {
@@ -40,6 +41,12 @@ const egProjectData = [
 ];
 
 export default function Home() {
+  const options = { root: null, threshold: 0.1, triggerOnce: true };
+  const [ref1, isVisible1] = useIntersect(options);
+  const [ref2, isVisible2] = useIntersect(options);
+  const [ref3, isVisible3] = useIntersect(options);
+  const [ref4, isVisible4] = useIntersect(options);
+  console.log(isVisible1, isVisible2, isVisible3, isVisible4);
   return (
     <>
       <Head>
@@ -69,27 +76,29 @@ export default function Home() {
             ))}
           </RenderMobile>
           <RenderDefault>
-            <div className={styles.card}>
+            <div className={`${styles.card} ${isVisible1 ? styles.inView : styles.notInView}`} ref={ref1}>
               <AuraCard />
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} ${isVisible2 ? styles.inView : styles.notInView} ${styles.delay2}`} ref={ref2}>
               <NintendoCard />
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} ${isVisible3 ? styles.inView : styles.notInView} ${styles.delay3}`} ref={ref3}>
               <CarnivalCard />
             </div>
           </RenderDefault>
         </div>
-        <BorderedCard>
-          <div className={styles.ctaCard}>
-            <div className={egStyles.projectTitle}>
-              Your project could be here!
+        <div className={`${isVisible3 ? styles.inView : styles.notInView} ${styles.delay4}`}>
+          <BorderedCard>
+            <div className={styles.ctaCard} ref={ref4}>
+              <div className={egStyles.projectTitle}>
+                Your project could be here!
+              </div>
+              <div className={egStyles.projectDescription}>
+                Reach out to me on the form below and let’s chat!
+              </div>
             </div>
-            <div className={egStyles.projectDescription}>
-              Reach out to me on the form below and let’s chat!
-            </div>
-          </div>
-        </BorderedCard>
+          </BorderedCard>
+        </div>
       </PageLayout>
       <Footer />
     </>
