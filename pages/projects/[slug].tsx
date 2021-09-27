@@ -7,6 +7,7 @@ import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
 
 import { ProjectType } from 'data/projectData';
+
 import ProjectOverview from '@components/caseStudies/ProjectOverview';
 import TitleCard from '@components/caseStudies/TitleCard';
 import Research from '@components/caseStudies/Research';

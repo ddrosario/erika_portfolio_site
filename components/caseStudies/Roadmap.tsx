@@ -5,6 +5,7 @@ import BorderedCard from '@components/hoc/BorderedCard';
 
 import styles from '@styles/projects.module.scss';
 import { roadmap, ProjectType } from 'data/projectData';
+import useLightbox from '@util/hooks/useLightbox';
 
 interface RoadmapProps {
   projectType: ProjectType;
@@ -12,48 +13,73 @@ interface RoadmapProps {
 
 export default function Roadmap({ projectType }: RoadmapProps) {
   const project = roadmap[projectType];
+  const [Lightbox, openLightbox] = useLightbox();
 
   if (projectType === 'carnival') {
     return (
-      <BorderedCard>
-        <h2 className={styles.h2}>Feature Roadmap</h2>
-        <p className={styles.projectText}>{project.text}</p>
-        <div className={styles.singleImgContainer}>
-          <div className={styles.singleImgBorder}>
-            <div className={styles.singleImg}>
-              <img
-                src={project.imgRoadmap}
-                alt=""
-              />
+      <>
+        <BorderedCard>
+          <h2 className={styles.h2}>Feature Roadmap</h2>
+          <p className={styles.projectText}>{project.text}</p>
+          <div className={styles.singleImgContainer}>
+            <div className={styles.singleImgBorder}>
+              <button
+                className={styles.singleImg}
+                type="button"
+                onClick={() => {
+                  openLightbox(project.fullImgRoadmap);
+                }}
+              >
+                <img
+                  src={project.imgRoadmap}
+                  alt=""
+                />
+              </button>
             </div>
           </div>
-        </div>
-      </BorderedCard>
+        </BorderedCard>
+        {Lightbox}
+      </>
     );
   }
 
   return (
-    <BorderedCard>
-      <h2 className={styles.h2}>Feature Roadmap and Revisions</h2>
-      <p className={styles.projectText}>{project.text}</p>
-      <div className={styles.threeImgContainer}>
-        <div className={styles.imgBorder}>
-          <div className={styles.img}>
-            <img
-              src={project.imgRoadmap}
-              alt=""
-            />
+    <>
+      <BorderedCard>
+        <h2 className={styles.h2}>Feature Roadmap and Revisions</h2>
+        <p className={styles.projectText}>{project.text}</p>
+        <div className={styles.threeImgContainer}>
+          <div className={styles.imgBorder}>
+            <button
+              className={styles.img}
+              type="button"
+              onClick={() => {
+                openLightbox(project.fullImgRoadmap);
+              }}
+            >
+              <img
+                src={project.imgRoadmap}
+                alt=""
+              />
+            </button>
+          </div>
+          <div className={styles.imgBorder}>
+            <button
+              type="button"
+              className={styles.img}
+              onClick={() => {
+                openLightbox(project.fullImgRevised);
+              }}
+            >
+              <img
+                src={project.imgRevised}
+                alt=""
+              />
+            </button>
           </div>
         </div>
-        <div className={styles.imgBorder}>
-          <div className={styles.img}>
-            <img
-              src={project.imgRevised}
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </BorderedCard>
+      </BorderedCard>
+      {Lightbox}
+    </>
   );
 }
