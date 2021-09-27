@@ -46,7 +46,6 @@ export default function Home() {
   const [ref2, isVisible2] = useIntersect(options);
   const [ref3, isVisible3] = useIntersect(options);
   const [ref4, isVisible4] = useIntersect(options);
-  console.log(isVisible1, isVisible2, isVisible3, isVisible4);
   return (
     <>
       <Head>
@@ -87,7 +86,7 @@ export default function Home() {
             </div>
           </RenderDefault>
         </div>
-        <div className={`${isVisible3 ? styles.inView : styles.notInView} ${styles.delay4}`}>
+        <div className={`${isVisible4 ? styles.inView : styles.notInView} ${styles.delay4}`}>
           <BorderedCard>
             <div className={styles.ctaCard} ref={ref4}>
               <div className={egStyles.projectTitle}>
