@@ -1,9 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Link from 'next/link';
 
 import styles from '@styles/banners/Footer.module.scss';
 
 import BorderedCard from './hoc/BorderedCard';
+import BoxedLink from './hoc/BoxedLink';
 
 const Footer = () => (
   <footer className={styles.main} id="contact">
@@ -21,22 +23,56 @@ const Footer = () => (
             Erikaalanalambe@gmail.com
           </a>
         </Link>
-        <Link
-          href="/contact-me"
-          passHref
-        >
-          <a
-            className={styles.boxedLink}
-            href="replace"
-          >
-            Contact
-          </a>
-        </Link>
+        <BoxedLink
+          href="mailto:Erikaalanalambe@gmail.com"
+          linkText="Contact"
+        />
       </div>
     </BorderedCard>
-    {/* <div className={styles.socialLinks}>
-      nav buttons go here
-    </div> */}
+    <div className={styles.socialLinks}>
+      <Link
+        href="https://dribbble.com/EriLambe"
+        passHref
+      >
+        <a
+          className={styles.socialLink}
+          href="replace"
+        >
+          <img
+            src="/assets/social_icons/dribbble.svg"
+            alt="dribbble"
+          />
+        </a>
+      </Link>
+      <Link
+        href="https://erikaalanalambe.medium.com/"
+        passHref
+      >
+        <a
+          className={styles.socialLink}
+          href="replace"
+        >
+          <img
+            src="/assets/social_icons/medium.png"
+            alt="medium"
+          />
+        </a>
+      </Link>
+      <Link
+        href="https://www.linkedin.com/in/erilambe"
+        passHref
+      >
+        <a
+          className={styles.linkedin}
+          href="replace"
+        >
+          <img
+            src="/assets/social_icons/linkedin.png"
+            alt="linkedin"
+          />
+        </a>
+      </Link>
+    </div>
   </footer>
 );
 
