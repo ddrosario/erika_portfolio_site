@@ -10,7 +10,7 @@ interface IntersectOptions {
 const useIntersect = (options: IntersectOptions) => {
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
   const [wasIntersecting, setWasIntersecting] = useState<boolean>(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const {
     threshold, root, rootMargin, triggerOnce,
   } = options;
