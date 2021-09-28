@@ -30,6 +30,8 @@ export default function Projects({ slug }: ProjectsProps) {
           <title>
             Eri Lambe - Aura Case Study
           </title>
+          <meta property="og:title" content="Eri Lambe - Aura Case Study" />
+          <meta name="twitter:title" content="Eri Lambe - Aura Case Study" />
         </Head>
 
         <PageLayout>
@@ -142,6 +144,8 @@ export default function Projects({ slug }: ProjectsProps) {
           <title>
             Eri Lambe - Nintendo Case Study
           </title>
+          <meta property="og:title" content="Eri Lambe - Nintendo Case Study" />
+          <meta name="twitter:title" content="Eri Lambe - Nintendo Case Study" />
         </Head>
 
         <PageLayout>
@@ -217,6 +221,8 @@ export default function Projects({ slug }: ProjectsProps) {
           <title>
             Eri Lambe - Carnival Case Study
           </title>
+          <meta property="og:title" content="Eri Lambe - Carnival Case Study" />
+          <meta name="twitter:title" content="Eri Lambe - Carnival Case Study" />
         </Head>
 
         <PageLayout>

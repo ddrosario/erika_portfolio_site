@@ -50,6 +50,8 @@ export default function Home() {
     <>
       <Head>
         <title>Eri Lambe</title>
+        <meta property="og:title" content="Eri Lambe Portfolio" />
+        <meta name="twitter:title" content="Eri Lambe Portfolio" />
       </Head>
       <PageLayout>
         <div className={styles.card}>

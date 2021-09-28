@@ -28,13 +28,11 @@ class MyDocument extends Document {
           <meta property="og:image" content="/assets/profile-img.jpeg" />
           <meta property="og:image:width" content="200" />
           <meta property="og:image:height" content="200" />
-          <meta property="og:description" content="Hi I'm a UI Designer based out of San Jose California" />
+          <meta property="og:description" content="Hi I'm a UI Designer based out of San Jose California." />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Eri Lambe Portfolio" />
           <meta name="twitter:image" content="/assets/profile-img.jpeg" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:title" content="Eri Lambe Portfolio" />
-          <meta name="twitter:description" content="Hi I'm a UI Designer based out of San Jose California" />
+          <meta name="twitter:description" content="Hi I'm a UI Designer based out of San Jose California." />
           {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> */}
           <link rel="icon" href="/favicon.ico" />

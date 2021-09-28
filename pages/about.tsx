@@ -20,7 +20,9 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Eri Lambe</title>
+        <title>Eri Lambe - About Me</title>
+        <meta property="og:title" content="Eri Lambe - About Me" />
+        <meta name="twitter:title" content="Eri Lambe - About Me" />
       </Head>
       <PageLayout>
         <main className={styles.main}>
