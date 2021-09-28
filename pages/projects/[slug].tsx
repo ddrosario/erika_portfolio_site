@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Head from 'next/head';
 import { GetServerSidePropsContext } from 'next';
@@ -6,30 +7,18 @@ import styles from '@styles/Home.module.scss';
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
 
-import { ProjectType } from 'data/projectData';
+import * as data from 'data/caseStudyData';
 
 import ProjectOverview from '@components/caseStudies/ProjectOverview';
 import TitleCard from '@components/caseStudies/TitleCard';
-import Research from '@components/caseStudies/Research';
-import Interviews from '@components/caseStudies/Interviews';
-import Roadmap from '@components/caseStudies/Roadmap';
-import Persona from '@components/caseStudies/Persona';
-import MoodBoard from '@components/caseStudies/MoodBoard';
-import Planning from '@components/caseStudies/Planning';
-import Wireframes from '@components/caseStudies/Wireframes';
-import UIKit from '@components/caseStudies/UIKit';
-import FinalProduct from '@components/caseStudies/FinalProduct';
-import Sketch from '@components/caseStudies/Sketch';
-import UsabilityTesting from '@components/caseStudies/UsabilityTesting';
-import LogoAndIcons from '@components/caseStudies/LogoAndIcons';
-import Prototyping from '@components/caseStudies/Prototyping';
-import Branding from '@components/caseStudies/Branding';
-import Responsive from '@components/caseStudies/Responsive';
-import ClickTesting from '@components/caseStudies/ClickTesting';
-import BoxedLink from '@components/hoc/BoxedLink';
+
+import OneImgExample from '@components/caseStudies/OneImgExample';
+import TwoImgExample from '@components/caseStudies/TwoImgExample';
+import ThreeImgExample from '@components/caseStudies/ThreeImgExample';
+import CaseStudyNavLinks from '@components/CaseStudyNavLinks';
 
 interface ProjectsProps {
-  slug: ProjectType;
+  slug: data.ProjectType;
 }
 
 export default function Projects({ slug }: ProjectsProps) {
@@ -50,40 +39,64 @@ export default function Projects({ slug }: ProjectsProps) {
             <ProjectOverview projectType={slug} />
           </div>
           <div className={styles.card}>
-            <Research projectType={slug} />
+            <ThreeImgExample
+              {...data.research.aura}
+            />
           </div>
           <div className={styles.card}>
-            <Interviews projectType={slug} />
+            <ThreeImgExample
+              {...data.interview.aura}
+            />
           </div>
           <div className={styles.card}>
-            <Roadmap projectType={slug} />
+            <TwoImgExample
+              {...data.roadmap.aura}
+            />
           </div>
           <div className={styles.card}>
-            <Persona projectType={slug} />
+            <ThreeImgExample
+              {...data.persona.aura}
+            />
           </div>
           <div className={styles.card}>
-            <MoodBoard projectType={slug} />
+            <OneImgExample
+              {...data.moodBoard.aura}
+            />
           </div>
           <div className={styles.card}>
-            <Planning projectType={slug} />
+            <ThreeImgExample
+              {...data.planning.aura}
+            />
           </div>
           <div className={styles.card}>
-            <Sketch projectType={slug} />
+            <ThreeImgExample
+              {...data.sketch.aura}
+            />
           </div>
           <div className={styles.card}>
-            <LogoAndIcons projectType={slug} />
+            <TwoImgExample
+              {...data.logoAndIcons.aura}
+            />
           </div>
           <div className={styles.card}>
-            <UsabilityTesting projectType={slug} />
+            <TwoImgExample
+              {...data.usabilityTesting.aura}
+            />
           </div>
           <div className={styles.card}>
-            <Wireframes projectType={slug} />
+            <OneImgExample
+              {...data.wireframes.aura}
+            />
           </div>
           <div className={styles.card}>
-            <UIKit projectType={slug} />
+            <OneImgExample
+              {...data.uiKit.aura}
+            />
           </div>
           <div className={styles.card}>
-            <FinalProduct projectType={slug} />
+            <OneImgExample
+              {...data.finalProduct.aura}
+            />
           </div>
           <div className={styles.caseStudyNav}>
             <CaseStudyNavLinks href="/projects/carnival" linkText="< carnival" />
@@ -111,34 +124,54 @@ export default function Projects({ slug }: ProjectsProps) {
             <ProjectOverview projectType={slug} />
           </div>
           <div className={styles.card}>
-            <Research projectType={slug} />
+            <ThreeImgExample
+              {...data.research.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Interviews projectType={slug} />
+            <ThreeImgExample
+              {...data.interview.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Roadmap projectType={slug} />
+            <OneImgExample
+              {...data.roadmap.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Persona projectType={slug} />
+            <ThreeImgExample
+              {...data.persona.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Planning projectType={slug} />
+            <ThreeImgExample
+              {...data.planning.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Wireframes projectType={slug} />
+            <OneImgExample
+              {...data.wireframes.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Prototyping projectType={slug} />
+            <TwoImgExample
+              {...data.prototyping.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <Branding projectType={slug} />
+            <OneImgExample
+              {...data.branding.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <UIKit projectType={slug} />
+            <OneImgExample
+              {...data.uiKit.nintendo}
+            />
           </div>
           <div className={styles.card}>
-            <FinalProduct projectType={slug} />
+            <OneImgExample
+              {...data.finalProduct.nintendo}
+            />
           </div>
           <div className={styles.caseStudyNav}>
             <CaseStudyNavLinks href="/projects/aura" linkText="< aura" />
@@ -166,43 +199,69 @@ export default function Projects({ slug }: ProjectsProps) {
             <ProjectOverview projectType={slug} />
           </div>
           <div className={styles.card}>
-            <Research projectType={slug} />
+            <ThreeImgExample
+              {...data.research.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Interviews projectType={slug} />
+            <ThreeImgExample
+              {...data.interview.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Roadmap projectType={slug} />
+            <OneImgExample
+              {...data.roadmap.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Persona projectType={slug} />
+            <ThreeImgExample
+              {...data.persona.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Planning projectType={slug} />
+            <ThreeImgExample
+              {...data.planning.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Wireframes projectType={slug} />
+            <OneImgExample
+              {...data.wireframes.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Prototyping projectType={slug} />
+            <OneImgExample
+              {...data.prototyping.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <UIKit projectType={slug} />
+            <OneImgExample
+              {...data.uiKit.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <MoodBoard projectType={slug} />
+            <OneImgExample
+              {...data.moodBoard.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Responsive projectType={slug} />
+            <OneImgExample
+              {...data.responsive.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <ClickTesting projectType={slug} />
+            <OneImgExample
+              {...data.clickTesting.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <Branding projectType={slug} />
+            <OneImgExample
+              {...data.branding.carnival}
+            />
           </div>
           <div className={styles.card}>
-            <FinalProduct projectType={slug} />
+            <OneImgExample
+              {...data.finalProduct.carnival}
+            />
           </div>
           <div className={styles.caseStudyNav}>
             <CaseStudyNavLinks href="/projects/nintendo" linkText="< nintendo" />
