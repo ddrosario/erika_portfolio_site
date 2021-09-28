@@ -1,9 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import BorderedCard from '@components/hoc/BorderedCard';
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
+
+import profileImg from '@assets/profile-img.jpeg';
 
 import styles from '@styles/About.module.scss';
 
@@ -30,12 +33,14 @@ export default function About() {
               </h1>
             </div>
           </BorderedCard>
-          <div className={styles.comingSoon}>
-            <BorderedCard>
-              <div className={styles.comingText}>
-                Coming Soon...
-              </div>
-            </BorderedCard>
+          <div className={styles.profileContainer}>
+            <div className={styles.profileImg}>
+              <Image
+                layout="responsive"
+                src={profileImg}
+                alt="Erika smiling"
+              />
+            </div>
           </div>
           <article className={styles.article}>
             <h3>My Journey</h3>
