@@ -85,9 +85,9 @@ export default function Projects({ slug }: ProjectsProps) {
           <div className={styles.card}>
             <FinalProduct projectType={slug} />
           </div>
-          <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
-            <BoxedLink href="/projects/carnival" linkText="carnival" />
-            <BoxedLink href="/projects/nintendo" linkText="nintendo" />
+          <div className={styles.caseStudyNav}>
+            <CaseStudyNavLinks href="/projects/carnival" linkText="< carnival" />
+            <CaseStudyNavLinks href="/projects/nintendo" linkText="nintendo >" />
           </div>
         </PageLayout>
         <Footer />
@@ -140,9 +140,9 @@ export default function Projects({ slug }: ProjectsProps) {
           <div className={styles.card}>
             <FinalProduct projectType={slug} />
           </div>
-          <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
-            <BoxedLink href="/projects/aura" linkText="aura" />
-            <BoxedLink href="/projects/carnival" linkText="carnival" />
+          <div className={styles.caseStudyNav}>
+            <CaseStudyNavLinks href="/projects/aura" linkText="< aura" />
+            <CaseStudyNavLinks href="/projects/carnival" linkText="carnival >" />
           </div>
         </PageLayout>
         <Footer />
@@ -204,9 +204,9 @@ export default function Projects({ slug }: ProjectsProps) {
           <div className={styles.card}>
             <FinalProduct projectType={slug} />
           </div>
-          <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
-            <BoxedLink href="/projects/nintendo" linkText="nintendo" />
-            <BoxedLink href="/projects/aura" linkText="aura" />
+          <div className={styles.caseStudyNav}>
+            <CaseStudyNavLinks href="/projects/nintendo" linkText="< nintendo" />
+            <CaseStudyNavLinks href="/projects/aura" linkText="aura >" />
           </div>
         </PageLayout>
         <Footer />
