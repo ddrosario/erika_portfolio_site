@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--greeny-blue);
+  background-color: var(--background-color);
   border: 0;
   margin: auto;
   cursor: pointer;
@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--greeny-blue);
+  background-color: var(--background-color);
   border: 0;
   position: relative;
   & img {
@@ -104,14 +104,31 @@
 .threeImgContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 15px 50px;
 
-  & div:nth-child(1) {
-    margin-right: auto;
+  & div {
+    // flex: 1 1 auto;
   }
-  & div:nth-child(2) {
-    margin-left: auto;
+
+}
+
+@media (max-width: 383px) {
+  .threeImgContainer {
+    justify-content: center;
+  }
+}
+
+.breakFlex {
+  height: 0;
+  flex-basis: 100%;
+}
+
+.thirdImg {
+  width: 100%;
+  flex: 1 1 100%;
+  & button {
+    margin: auto;
   }
 }
 
@@ -130,7 +147,7 @@
   justify-content: center;
   border-radius: 50%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: var(--greeny-blue);
+  background-color: var(--background-color);
   border: 0;
   cursor: pointer;
   & img {
@@ -179,7 +196,7 @@
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    background-color: var(--greeny-blue);
+    background-color: var(--background-color);
     & img {
       width: inherit;
       height: inherit;

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import styles from '@styles/header/Header.module.scss';
-import pngLogo from '@assets/logo.png';
+import pngLogo from '@assets/logo-pink.png';
 
 const locations = {
   work: '/',
@@ -20,12 +20,20 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerBody}>
-        <div className={styles.logo}>
-          <Image
-            src={pngLogo}
-            alt="Eri Lambe"
-          />
-        </div>
+        <Link
+          href="/"
+          passHref
+        >
+          <a
+            className={styles.logo}
+            href="replace"
+          >
+            <Image
+              src={pngLogo}
+              alt="Eri Lambe"
+            />
+          </a>
+        </Link>
         <div className={styles.headerNav}>
           <nav className={styles.nav}>
             <Link

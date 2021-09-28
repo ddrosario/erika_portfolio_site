@@ -25,6 +25,13 @@
   align-items: center;
 }
 
+.caseStudyNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+}
+
 @media (min-width: 1200px) {
   .card {
     margin-bottom: 60px;

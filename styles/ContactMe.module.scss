@@ -4,8 +4,8 @@
 }
 
 .article {
-  border-top-color: var(--greeny-blue);
-  border-bottom-color: var(--greeny-blue);
+  border-top-color: var(--background-color);
+  border-bottom-color: var(--background-color);
   border-top-style: solid;
   border-bottom-style: solid;
   border-top-width: 20px;
@@ -54,7 +54,7 @@
   line-height: normal;
   letter-spacing: normal;
   cursor: pointer;
-  color: var(--greeny-blue);
+  color: var(--background-color);
   border:0;
   border-radius: 8px;
   background-color: var(--black);
@@ -82,7 +82,7 @@
     border-width: 12px;
     border-radius: 8px;
     border-style: solid;
-    border-color: var(--greeny-blue);
+    border-color: var(--background-color);
     padding: 30px 25px;
 
     h3 {

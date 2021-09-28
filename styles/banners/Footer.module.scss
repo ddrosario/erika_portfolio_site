@@ -18,7 +18,7 @@
 .h3 {
   text-align: center;
   font-family: var(--card-title-font-family);
-  font-size: 18px;
+  font-size: var(--card-title-font-size);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -30,9 +30,9 @@
 
 .email {
   display: block;
-  font-family: var(--card-title-font-family);
-  font-size: 18px;
-  font-weight: normal;
+  font-family: var(--card-subtext-font-family);
+  font-size: var(--card-subtext-font-size);
+  font-weight: 200;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -53,21 +53,26 @@
   color: var(--high-contrast-text);
 }
 
-.boxedLink {
-  width: 119px;
-  height: 36px;
-  margin: 22px 62px 0;
-  padding: 9px 33px 10px 31px;
-  border-radius: 8px;
-  background-color: var(--black);
-  font-family: var(--card-title-font-family);
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--high-contrast-text);
+.socialLink {
+  display: inline-block;
+  width: 25px;
+  // height: 25px;
+  margin: 0px 7px;
+
+  & img {
+    width: inherit;
+  }
+}
+
+.linkedin {
+  display: inline-block;
+  width: 29px;
+  // height: 25px;
+  margin: 0px 7px;
+
+  & img {
+    width: inherit;
+  }
 }
 
 @media (min-width: 768px) {
