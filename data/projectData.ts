@@ -119,6 +119,7 @@ export const roadmap = {
 
 export const persona = {
   aura: {
+    header: 'Persona Planning and Persona',
     text: 'Next, I began thinking about what kind of people would be using this app and who my main audience would be, then created my persona! I also put together the Company/User Goals page to help me narrow down my goal for the app.',
     imgPersona1: '/assets/projects/aura/persona1.png',
     fullImgPersona1: '/assets/projects/lg_aura/persona1.png',
@@ -128,6 +129,7 @@ export const persona = {
     fullImgPersona3: '/assets/projects/lg_aura/persona3.png',
   },
   nintendo: {
+    header: 'Persona',
     text: 'Next, I created my two personas! I also put together the Company/User Goals page to help me narrow down my goal for the addition.',
     imgPersona1: '/assets/projects/nintendo/persona1.png',
     fullImgPersona1: '/assets/projects/lg_nintendo/persona1.png',
@@ -137,6 +139,7 @@ export const persona = {
     fullImgPersona3: '/assets/projects/lg_nintendo/persona3.png',
   },
   carnival: {
+    header: 'Persona',
     text: 'Next, I began thinking about what kind of people would be using this app and who my main audience would be, then created my two personas! I also put together the Company/User Goals page to help me narrow down my goal for the addition.',
     imgPersona1: '/assets/projects/carnival/persona1.png',
     fullImgPersona1: '/assets/projects/lg_carnival/persona1.png',
