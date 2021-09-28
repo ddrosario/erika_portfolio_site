@@ -50,8 +50,6 @@ export default function Home() {
     <>
       <Head>
         <title>Eri Lambe</title>
-        <meta name="description" content="Eri Lambe" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
         <div className={styles.card}>
