@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Head from 'next/head';
@@ -33,7 +34,34 @@ export default function Projects({ slug }: ProjectsProps) {
 
         <PageLayout>
           <div className={styles.card}>
-            <TitleCard projectType={slug} />
+            <TitleCard projectType={slug}>
+              <div className={styles.titleCats}>
+                <img
+                  src="/assets/projects/aura/cats/cat1.svg"
+                  alt="aura - happy cat"
+                />
+                <img
+                  src="/assets/projects/aura/cats/cat2.svg"
+                  alt="sunny - happy orange cat"
+                />
+                <img
+                  src="/assets/projects/aura/cats/cat3.svg"
+                  alt="pinky - pink happy cat"
+                />
+                <img
+                  src="/assets/projects/aura/cats/cat4.svg"
+                  alt="brown neutral cat"
+                />
+                <img
+                  src="/assets/projects/aura/cats/cat5.svg"
+                  alt="gloomy - sad dark cat"
+                />
+                <img
+                  src="/assets/projects/aura/cats/cat6.svg"
+                  alt="angry dark cat"
+                />
+              </div>
+            </TitleCard>
           </div>
           <div className={styles.card}>
             <ProjectOverview projectType={slug} />

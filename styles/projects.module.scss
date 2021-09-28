@@ -79,26 +79,6 @@
     height: inherit;
     object-fit: contain;
   }
-  // &:hover {
-  //   &:after {
-  //     bottom: 5px;
-  //   }
-  // }
-  // &:after {
-  //   z-index: -1;
-  //   content: ' ';
-  //   width: 80%;
-  //   height: 50%;
-  //   position: absolute;
-  //   bottom: 10px;
-  //   left: 0;
-  //   right: 0;
-  //   margin: auto;
-  //   background: none;
-  //   border-radius: 50%;
-  //   box-shadow: 0 15px 10px rgba(0,0,0,0.3);
-  //   transition: bottom .4s;
-  // }
 }
 
 .threeImgContainer {
@@ -106,11 +86,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px 50px;
-
-  & div {
-    // flex: 1 1 auto;
-  }
-
 }
 
 @media (max-width: 383px) {
