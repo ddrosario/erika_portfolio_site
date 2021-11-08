@@ -1,113 +1,35 @@
-.main {
+.root {
+  font-family: var(--title-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 40px auto;
   width: 100%;
-  padding: 50px 0px;
-}
-
-.article {
-  border-top-color: var(--background-color);
-  border-bottom-color: var(--background-color);
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-top-width: 20px;
-  border-bottom-width: 20px;
-  color: var(--black);
-  background-color: var(--white);
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  h3 {
-    font-size: 30px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-  }
+  text-align: center;
 }
 
 .contactBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 43px;
-  width: 132px;
-  font-family: Roboto;
-  font-size: 20px;
+  height: 30px;
+  width: 80px;
+  font-family: var(--title-font-family);
+  font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   cursor: pointer;
-  color: var(--background-color);
-  border:0;
+  color: var(--text-color);
   border-radius: 8px;
-  background-color: var(--black);
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 1px var(--accent-color);
+  margin: 40px auto;
+  text-decoration: none;
   &:hover, &:focus {
-    color: var(--white);
-  }
-}
-
-.footer {
-  margin-top: auto;
-}
-
-.socialsContainer {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  cursor: pointer;
-  margin: 20px 0px 50px 0px;
-}
-
-@media (min-width: 768px) {
-  .article {
-    border-width: 12px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: var(--background-color);
-    padding: 30px 25px;
-
-    h3 {
-      font-size: 40px;
-      margin-bottom: 24px;
-    }
-
-    p {
-      font-size: 22px;
-    }
-  }
-}
-
-@media (min-width: 1440px) {
-  .article {
-    border-width: 20px;
-    padding: 60px 55px 60px 41px;
-
-    h3 {
-      font-size: 50px;
-      margin-bottom: 40px;
-    }
-
-    p {
-      font-size: 30px;
-    }
+    color: var(--text-color);
   }
 }
