@@ -2,17 +2,17 @@ import React from 'react';
 
 import styles from '@styles/banners/HelloBanner.module.scss';
 
-import BorderedCard from '../hoc/BorderedCard';
-
 const HelloBanner = () => (
-  <BorderedCard>
-    <div className={styles.bannerPadding}>
-      <h1 className={styles.bannerHeader}>
-        Hello, my name is Erika!
-      </h1>
-      <h3 className={styles.bannerSubtext}>I&apos;m a Product Designer based in the Bay Area.</h3>
+  <div className={styles.banner}>
+    <h1 className={styles.bannerHeader}>
+      My name is Erika,
+    </h1>
+    <div
+      className={styles.bannerSubtext}
+    >
+      It&apos;s nice to meet you!
     </div>
-  </BorderedCard>
+  </div>
 );
 
 export default HelloBanner;

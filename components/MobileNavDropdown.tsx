@@ -31,19 +31,6 @@ const MobileNavDropdown = () => (
         </a>
       </Link>
     </li>
-    {/* <li>
-      <Link
-        href="/Resume"
-        passHref
-      >
-        <a
-          className={styles.link}
-          href="replace"
-        >
-          Resume
-        </a>
-      </Link>
-    </li> */}
     <li>
       <Link
         href="#contact"

@@ -1,25 +1,32 @@
 import React from 'react';
-import Link from 'next/link';
+
+import LinkTile from '@components/LinkTile';
 
 import styles from '@styles/CaseStudyNavLinks.module.scss';
 
-interface CaseStudyNavLinksProps {
-  href: string;
-  linkText: string;
-}
-
-const CaseStudyNavLinks = ({ href, linkText }: CaseStudyNavLinksProps) => (
-  <Link
-    href={href}
-    passHref
-  >
-    <a
-      className={styles.boxedLink}
-      href="replace"
-    >
-      {linkText}
-    </a>
-  </Link>
+const CaseStudyNavLinks = () => (
+  <div className={styles.grid}>
+    <LinkTile
+      href="/projects/heart"
+      backgroundImgUrl="https://picsum.photos/200"
+      text="Heart of the Valley"
+    />
+    <LinkTile
+      href="/projects/aura"
+      backgroundImgUrl="https://picsum.photos/200"
+      text="Aura"
+    />
+    <LinkTile
+      href="/projects/nintendo"
+      backgroundImgUrl="https://picsum.photos/200"
+      text="Nintendo eShop"
+    />
+    <LinkTile
+      href="/projects/carnival"
+      backgroundImgUrl="https://picsum.photos/200"
+      text="Carnival Cruise"
+    />
+  </div>
 );
 
 export default CaseStudyNavLinks;
