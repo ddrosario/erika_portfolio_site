@@ -128,10 +128,7 @@ export default function Projects({ slug }: ProjectsProps) {
               {...data.finalProduct.aura}
             />
           </div>
-          <div className={styles.caseStudyNav}>
-            <CaseStudyNavLinks href="/projects/carnival" linkText="< carnival" />
-            <CaseStudyNavLinks href="/projects/nintendo" linkText="nintendo >" />
-          </div>
+          <div className={styles.caseStudyNav} />
         </PageLayout>
         <Footer />
       </>
@@ -205,10 +202,7 @@ export default function Projects({ slug }: ProjectsProps) {
               {...data.finalProduct.nintendo}
             />
           </div>
-          <div className={styles.caseStudyNav}>
-            <CaseStudyNavLinks href="/projects/aura" linkText="< aura" />
-            <CaseStudyNavLinks href="/projects/carnival" linkText="carnival >" />
-          </div>
+          <div className={styles.caseStudyNav} />
         </PageLayout>
         <Footer />
       </>
@@ -297,10 +291,7 @@ export default function Projects({ slug }: ProjectsProps) {
               {...data.finalProduct.carnival}
             />
           </div>
-          <div className={styles.caseStudyNav}>
-            <CaseStudyNavLinks href="/projects/nintendo" linkText="< nintendo" />
-            <CaseStudyNavLinks href="/projects/aura" linkText="aura >" />
-          </div>
+          <div className={styles.caseStudyNav} />
         </PageLayout>
         <Footer />
       </>
