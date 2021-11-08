@@ -22,19 +22,9 @@ const MobileHeader = () => {
 
   return (
     <header className={styles.header}>
-      <Link
-        href="/"
-        passHref
-      >
-        <a
-          className={styles.watermark}
-          href="replace"
-        >
-          <Image
-            src={Logo}
-            alt="Eri Lambe"
-            layout="intrinsic"
-          />
+      <Link href="/" passHref>
+        <a className={styles.watermark} href="replace">
+          <Image src={Logo} alt="Eri Lambe" layout="intrinsic" />
         </a>
       </Link>
       <nav className={styles.nav2}>
@@ -43,7 +33,8 @@ const MobileHeader = () => {
       </nav>
       {/* <nav className={styles.nav} ref={navRef}>
         <button
-          className={showDropdown ? `${styles.active} ${styles.hamburgerMenu}` : styles.hamburgerMenu}
+          className={showDropdown ?
+            `${styles.active} ${styles.hamburgerMenu}` : styles.hamburgerMenu}
           type="button"
           onClick={() => {
             setShowDropdown((prev) => !prev);
