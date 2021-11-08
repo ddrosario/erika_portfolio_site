@@ -1,9 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from '@styles/header/MobileHeader.module.scss';
 
 import useRefClickListener from '@util/hooks/useRefClickListener';
+import Logo from '@assets/logo.svg';
+
 import MobileNavDropdown from './MobileNavDropdown';
 
 const MobileHeader = () => {
@@ -27,10 +30,18 @@ const MobileHeader = () => {
           className={styles.watermark}
           href="replace"
         >
-          Eri
+          <Image
+            src={Logo}
+            alt="Eri Lambe"
+            layout="intrinsic"
+          />
         </a>
       </Link>
-      <nav className={styles.nav} ref={navRef}>
+      <nav className={styles.nav2}>
+        <div>About</div>
+        <div>Contact</div>
+      </nav>
+      {/* <nav className={styles.nav} ref={navRef}>
         <button
           className={showDropdown ? `${styles.active} ${styles.hamburgerMenu}` : styles.hamburgerMenu}
           type="button"
@@ -47,7 +58,7 @@ const MobileHeader = () => {
             <MobileNavDropdown />
           </div>
         )}
-      </nav>
+      </nav> */}
     </header>
   );
 };
