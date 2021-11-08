@@ -1,56 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-@font-face {
-  font-family: 'PS-Paradizo';
-  src: url('/static/PS-Paradizo-Regular.eot');
-  src: url('/static/PS-Paradizo-Regular.eot?#iefix') format('embedded-opentype'),
-      url('/static/PS-Paradizo-Regular.woff2') format('woff2'),
-      url('/static/PS-Paradizo-Regular.woff') format('woff'),
-      url('/static/PS-Paradizo-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 body {
   overflow-y: scroll;
+}
+* {
+  box-sizing: border-box;
 }
 
 :root {
   --high-contrast-text: #ffe1f5;
   --modal-text: #303032;
   --white: #ffffff;
-  --black: #000000;
+  --black: #111010;
   --btn-background-color: #fff0ff;
   --btn-color: #303032;
-  --background-color: #ffe1f5;
-  --header-color: #303032;
-  --footer-color: #303032;
-  --title-font-family: Inter;
+  --background-color: #ffffff;
+  --header-color: #ffffff;
+  --footer-color: #e50c84;
+  --title-font-family: 'Lora', serif;
   --title-font-size: 20px;
-  --subtitle-font-family: Nunito;
+  --subtitle-font-family: 'Lato', sans-serif;
   --subtitle-font-size: 14px;
   --card-title-font-size: 18px;
-  --card-title-font-family: Inter;
+  --card-title-font-family: 'Lora', serif;
   --card-subtext-font-size: 12px;
-  --card-subtext-font-family: Nunito;
+  --card-subtext-font-family: 'Lato', sans-serif;
   --link-font-size: 12px;
   --max-card-width: 918px;
   --case-study-hover-color: #fff0ff;
+
+  // new variables
+  --accent-color: #e50c84;
+  --text-color: #111010;
+  --body-font-family: 'Lato', sans-serif;
+  --body-font-size: 14px;
+  --body-font-weight: 300;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--accent-color);
 }
 
 a:hover, a:focus {
@@ -67,13 +61,45 @@ button:hover, button:focus {
 
 h1, h2, h3, h4, h5, p {
   margin: 0;
+  color: var(--text-color), #000000;
 }
 
 h1 {
   font-family: var(--title-font-family);
-  font-size: var(--title-font-size);
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: var(--title-font-family);
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  margin: 40px auto;
+  color: var(--accent-color);
+  // color: var(--accent-color);
+}
+
+h3 {
+  font-family: var(--title-font-family);
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: var(--title-font-family);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--card-subtext-font-family);
+  font-weight: 300;
+  text-align: left;
+  font-size: 14px;
 }
 
 img {
@@ -81,17 +107,48 @@ img {
 }
 
 ul {
-  list-style-type: none;
+  // list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
+  font-family: var(--card-subtext-font-family);
+  font-weight: 300;
+  text-align: left;
+  font-size: 14px;
+
+  & li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--accent-color); /* Change the color */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 25px; /* Also needed for space (tweak if needed) */
+    margin-left: -25px; /* Also needed for space (tweak if needed) */
+  }
+
+  & li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 39px;
+  }
 }
 
-li {
-  list-style: none;
+.footer {
+  width: 100%;
+  height: 46px;
+  background-color: var(--accent-color);
 }
 
-* {
-  box-sizing: border-box;
+.divider {
+  left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+  margin-top: 60px;
+  margin-bottom: 60px;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+  height: 1px;
+  background-color: rgba(229, 12, 132, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -102,6 +159,22 @@ li {
     --subtitle-font-size: 14px;
     --link-font-size: 18px;
   }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -111,5 +184,21 @@ li {
     --title-font-size: 40px;
     --subtitle-font-size: 28px;
     --link-font-size: 22px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 28px;
   }
 }

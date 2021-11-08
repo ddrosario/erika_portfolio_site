@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 69px;
-  padding: 20px 37px 20px 34px;
+  height: 48px;
+  padding: 20px 18px 0px;
   background-color: var(--header-color);
   cursor: pointer;
   -moz-user-select: none;
@@ -14,34 +14,30 @@
 }
 
 .watermark {
-  font-family: PS-Paradizo;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;;
-  color: var(--high-contrast-text);
+  height: 28px;
+  width: fit-content;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .hamburgerMenu {
   display: block;
   cursor: pointer;
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-   user-select: none; 
-   background-color: transparent;
-   border: 0;
+  user-select: none; 
+  background-color: transparent;
+  border: none;
+  padding: none;
+  width: inherit;
+  height: inherit;
 
   & span {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    width: 18px;
+    height: 2px;
+    margin: 3px 0px 3px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: var(--high-contrast-text);
+    background-color: var(--text-color);
     border-radius: 15px;;
   }
 }
@@ -51,15 +47,25 @@
 }
 
 .active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 
 .active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 .nav {
   position: relative;
+  height: 26px;
+  width: 24px;
+}
+
+.nav2 {
+  font-family: var(--title-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  gap: 8px;
 }
 
 .navDropdown {

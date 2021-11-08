@@ -1,25 +1,17 @@
-.bannerPadding {
+.banner {
   width: 100%;
   text-align: center;
 }
 
 .bannerHeader {
-  font-family: var(--card-title-font-family);
-  font-size: var(--card-title-font-size);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--black);
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .bannerSubtext {
-  margin: 0;
+  margin-top: 5px;
   font-family: var(--card-subtext-font-family);
-  font-size: var(--card-subtext-font-size);
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;

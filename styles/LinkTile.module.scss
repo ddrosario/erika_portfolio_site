@@ -1,0 +1,58 @@
+.linkTile {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  
+  & a {
+    width: 100%;
+    // padding: 20px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: bold;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  & img {
+    // opacity: 0.2;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // object-fit: cover;
+    // z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-position: 0% 0%;
+    object-fit: cover;
+  }
+}
+
+.img {
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  z-index: -1;
+  transition: all 0.33s ease-in-out;
+}
+
+.active {
+  opacity: 1 !important;
+}
