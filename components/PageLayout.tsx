@@ -1,14 +1,14 @@
 import React from 'react';
-// import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import styles from '@styles/PageLayout.module.scss';
 
-import MobileHeader from './MobileHeader';
-import Header from './Header';
+// import MobileHeader from './MobileHeader';
+// import Header from './Header';
 import RenderMobile from './hoc/RenderMobile';
 import RenderDefault from './hoc/RenderDefault';
 
-// const DynamicHeader = dynamic(() => import('./Header'));
-// const DynamicMobileHeader = dynamic(() => import('./MobileHeader'))
+const Header = dynamic(() => import('./Header'));
+const MobileHeader = dynamic(() => import('./MobileHeader'));
 
 interface PageLayoutProps {
   children: JSX.Element | JSX.Element[];

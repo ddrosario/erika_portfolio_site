@@ -6,15 +6,7 @@ import styles from '@styles/Home.module.scss';
 
 import PageLayout from '@components/PageLayout';
 import HelloBanner from '@components/banners/HelloBanner';
-import EgProject from '@components/EgProject';
 import AboutMe from '@components/AboutMe';
-import Footer from '@components/Footer';
-import RenderMobile from '@components/hoc/RenderMobile';
-import RenderDefault from '@components/hoc/RenderDefault';
-import AuraCard from '@components/projectCards/AuraCard';
-import NintendoCard from '@components/projectCards/NintendoCard';
-import CarnivalCard from '@components/projectCards/CarnivalCard';
-import LinkTile from '@components/LinkTile';
 import SocialLinks from '@components/SocialLinks';
 import CaseStudyNavLinks from '@components/CaseStudyNavLinks';
 import ContactMe from '@components/ContactMe';
@@ -51,6 +43,7 @@ export default function Home() {
   const [ref2, isVisible2] = useIntersect(options);
   const [ref3, isVisible3] = useIntersect(options);
   const [ref4, isVisible4] = useIntersect(options);
+  console.log(ref4, '\n\n\nis visible? ', isVisible4);
   return (
     <>
       <Head>
