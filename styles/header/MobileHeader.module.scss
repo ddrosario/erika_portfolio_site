@@ -13,9 +13,13 @@
   user-select: none;
 }
 
+.openHeader {
+  background-color: var(--text-color);
+}
+
 .watermark {
-  height: 28px;
-  width: fit-content;
+  width: 82px;
+  display: block;
   margin-right: 10px;
   flex-shrink: 0;
 }
@@ -40,6 +44,9 @@
     background-color: var(--text-color);
     border-radius: 15px;;
   }
+}
+.active span {
+  background-color: var(--background-color);
 }
 
 .active span:nth-child(2) {
@@ -69,6 +76,13 @@
 }
 
 .navDropdown {
+  width: 100%;
   position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: 0;
   right: 0;
+  background-color: var(--black);
+  color: var(--white);
+  z-index: 100;
 }
