@@ -1,24 +1,30 @@
 import React from 'react';
 
-import BorderedCard from '@components/hoc/BorderedCard';
-
-import styles from '@styles/projects.module.scss';
-import { title, ProjectType } from 'data/projectData';
+import styles from '@styles/banners/TitleCard.module.scss';
 
 interface TitleCardProps {
-  projectType: ProjectType;
+  h1Text: string;
+  subtext: string;
+  overviewText: string;
   children?: null | JSX.Element | JSX.Element[];
 }
 
-export default function TitleCard({ projectType, children }: TitleCardProps) {
+export default function TitleCard({
+  h1Text,
+  subtext,
+  overviewText,
+  children,
+}: TitleCardProps) {
   return (
-    <BorderedCard>
-      <section className={styles.caseStudy}>
-        <h1 className={styles.h1}>{title[projectType].title}</h1>
-        <p className={styles.titleSubtext}>{title[projectType].subtext}</p>
-        {children}
-      </section>
-    </BorderedCard>
+    <section className={styles.banner}>
+      <h1 className={styles.bannerHeader}>{h1Text}</h1>
+      <div className={styles.bannerSubtext}>{subtext}</div>
+      {children}
+      <h2 className={styles.overviewHeader}>Overview</h2>
+      <p>
+        {overviewText}
+      </p>
+    </section>
   );
 }
 
