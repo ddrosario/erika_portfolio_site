@@ -1,3 +1,13 @@
+.navGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.header {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
 .linkTile {
   position: relative;
   text-align: center;
@@ -12,6 +22,7 @@
   border: solid 1px var(--accent-color);
   background-color: var(--background-color);
   z-index: 1;
+  height: 60px;
   // transition: all 0.5s linear;
 
   &::before {
@@ -32,32 +43,34 @@
   
   &:hover {
     border: 0;
+    padding: 1px;
     // color: var(--white);
   }
 
   & a {
     width: 100%;
     height: 100%;
-    display: block;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
     color: inherit;
     text-decoration: none;
-    font-family: var(--link-font-family);
-    font-size: var(--link-font-size);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
     font-weight: bold;
+    padding-left: 25px;
 
     &:hover {
       color: inherit;
     }
   }
+}
+.anchorIcon {
+  margin-right: auto;
+}
 
-  & span {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
+.anchorText {
+  margin-right: auto;
 }
 
 .img {

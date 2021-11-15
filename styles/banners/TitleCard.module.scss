@@ -19,6 +19,12 @@
   color: var(--black);
 }
 
+.overviewHeader {
+  color: var(--text-color);
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
 @media (min-width: 768px) {
   .bannerHeader {
     margin-bottom: 5px;

@@ -16,7 +16,7 @@
   width: 80px;
   font-family: var(--title-font-family);
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -25,11 +25,13 @@
   color: var(--text-color);
   border-radius: 8px;
   background-color: var(--background-color);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px var(--accent-color);
   margin: 40px auto;
   text-decoration: none;
+  color: var(--text-color);
   &:hover, &:focus {
-    color: var(--text-color);
+    background-image: var(--pink-gradient);
+    color: var(--white);
   }
 }

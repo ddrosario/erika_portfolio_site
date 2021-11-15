@@ -124,6 +124,13 @@
       margin-left: 0px;
     }
   }
+  .resumeTitle {
+    margin: 40px auto;
+  }
+
+  .resumeDate {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -158,6 +165,14 @@
       margin-right: 0px;
       margin-left: 0px;
     }
+  }
+
+  .resumeTitle {
+    margin: 60px auto;
+  }
+
+  .resumeDate {
+    font-size: 24px;
   }
 
 }
