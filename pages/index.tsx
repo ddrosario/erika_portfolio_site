@@ -73,9 +73,9 @@ export default function Home() {
         </div>
         <div className="divider" />
         <AboutMe />
-        <div className={styles.socialLinks}>
+        {/* <div className={styles.socialLinks}>
           <SocialLinks />
-        </div>
+        </div> */}
         <div className="divider" />
         <article className={styles.resume}>
           <section>
