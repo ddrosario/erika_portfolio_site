@@ -2,6 +2,7 @@
 .container {
   height: 100%;
   padding: 0px 16px;
+  margin: 0px auto;
 }
 
 @media (min-width: 768px) {
@@ -12,6 +13,7 @@
 
 @media (min-width: 1200px) {
   .container {
-    padding: 60px;
+    padding: 60px 0px;
+    max-width: 966px;
   }
 }
