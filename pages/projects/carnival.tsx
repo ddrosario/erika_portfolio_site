@@ -7,7 +7,7 @@ import Footer from '@components/Footer';
 
 import * as carnival from 'data/carnival';
 
-import styles from '@styles/Projects.module.scss';
+import styles from '@styles/Projects2.module.scss';
 import TitleCard from '@components/caseStudies/TitleCard';
 import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
 
