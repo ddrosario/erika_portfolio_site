@@ -19,7 +19,6 @@ const DesignProcessNav = ({ navItems }: DesignProcessNavProps) => {
   // something to prevent format
   const ref = React.useRef();
 
-  console.log(navItems);
   return (
     <section>
       <h2 className={styles.header}>The Design Process</h2>
