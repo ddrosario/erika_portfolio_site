@@ -88,3 +88,23 @@
 .active {
   opacity: 1 !important;
 }
+
+@media (min-width: 768px) {
+  .navGrid {
+    row-gap: 45px;
+    column-gap: 55px;
+  }
+  .linkTile {
+    height: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navGrid {
+    gap: 60px;
+  }
+  .linkTile {
+    height: 100px;
+  }
+
+}
