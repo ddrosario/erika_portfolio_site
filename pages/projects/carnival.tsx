@@ -61,9 +61,9 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Eri Lambe - Aura Case Study</title>
-        <meta property="og:title" content="Eri Lambe - Aura Case Study" />
-        <meta name="twitter:title" content="Eri Lambe - Aura Case Study" />
+        <title>Eri Lambe - Carnival Cruise Case Study</title>
+        <meta property="og:title" content="Eri Lambe - Carnival Cruise Case Study" />
+        <meta name="twitter:title" content="Eri Lambe - Carnival Cruise Case Study" />
       </Head>
 
       <PageLayout>
@@ -80,134 +80,134 @@ export default function Projects() {
         <section id="empathize">
           <div className="headerDivider">
             <h2>Step One: Empathize</h2>
-            <section>
-              {carnival.empathize.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
           </div>
+          <section>
+            {carnival.empathize.map((item) => (
+              <div key={item.title} className={styles.caseStudyItem}>
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+                <div>
+                  {item.images.map((img) => (
+                    <img
+                      src={img.webp}
+                      key={img.jpg}
+                      alt=""
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
         </section>
         <section id="define">
           <div className="headerDivider">
-            <h2>Define</h2>
-            <section>
-              {carnival.define.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
+            <h2>Step Two: Define</h2>
           </div>
+          <section>
+            {carnival.define.map((item) => (
+              <div key={item.title} className={styles.caseStudyItem}>
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+                <div>
+                  {item.images.map((img) => (
+                    <img
+                      src={img.webp}
+                      key={img.jpg}
+                      alt=""
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
         </section>
         <section id="ideate">
           <div className="headerDivider">
-            <h2>Ideate</h2>
-            <section>
-              {carnival.ideate.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
+            <h2>Step Three: Ideate</h2>
           </div>
+          <section>
+            {carnival.ideate.map((item) => (
+              <div key={item.title} className={styles.caseStudyItem}>
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+                <div>
+                  {item.images.map((img) => (
+                    <img
+                      src={img.webp}
+                      key={img.jpg}
+                      alt=""
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
         </section>
         <section id="prototype">
           <div className="headerDivider">
-            <h2>Prototype</h2>
-            <section>
-              {carnival.prototyping.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
+            <h2>Step Four: Prototype</h2>
           </div>
+          <section>
+            {carnival.prototyping.map((item) => (
+              <div key={item.title} className={styles.caseStudyItem}>
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+                <div>
+                  {item.images.map((img) => (
+                    <img
+                      src={img.webp}
+                      key={img.jpg}
+                      alt=""
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
         </section>
         <section id="test">
           <div className="headerDivider">
-            <h2>Test</h2>
-            <section>
-              {carnival.testing.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
+            <h2>Step Five: Test</h2>
           </div>
+          <section>
+            {carnival.testing.map((item) => (
+              <div key={item.title} className={styles.caseStudyItem}>
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+                <div>
+                  {item.images.map((img) => (
+                    <img
+                      src={img.webp}
+                      key={img.jpg}
+                      alt=""
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
         </section>
         <section id="implement">
           <div className="headerDivider">
-            <h2>Implement</h2>
-            <section>
-              {carnival.implement.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
+            <h2>Step Six: Implement</h2>
           </div>
+          <section>
+            {carnival.implement.map((item) => (
+              <div key={item.title} className={styles.caseStudyItem}>
+                <h4>{item.title}</h4>
+                <p>{item.body}</p>
+                <div>
+                  {item.images.map((img) => (
+                    <img
+                      src={img.webp}
+                      key={img.jpg}
+                      alt=""
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
         </section>
       </PageLayout>
       <Footer text="Have any questions about this project?" />

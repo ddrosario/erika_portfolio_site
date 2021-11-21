@@ -1,4 +1,8 @@
 
 .caseStudyItem {
   display: block;
+  & h4 {
+    margin-left: 0px;
+    margin-right: auto;
+  }
 }
