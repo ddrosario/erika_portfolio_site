@@ -1,4 +1,3 @@
-
 .container {
   height: 100%;
   padding: 0px 16px;
@@ -13,7 +12,8 @@
 
 @media (min-width: 1200px) {
   .container {
-    padding: 60px 0px;
+    margin: 60px auto;
     max-width: 966px;
+    padding: 0px;
   }
 }

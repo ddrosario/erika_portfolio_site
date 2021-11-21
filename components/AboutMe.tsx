@@ -1,8 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import Image from 'next/image';
-
-import profileImg from '@assets/profile-img.jpeg';
 
 import styles from '@styles/About.module.scss';
 
@@ -11,7 +8,9 @@ const aboutMeParagraph = ' with experience in both the User Experience and User 
 export default function About() {
   return (
     <article>
-      <h2>A Little About Me</h2>
+      <div className="headerDivider">
+        <h2>A Little About Me</h2>
+      </div>
       <div>
         <div className={styles.profileContainer}>
           <div className={styles.profileImg}>

@@ -4,3 +4,18 @@
   grid-template-rows: 60px repeat(auto-fill, 60px);
   gap: 18px;
 }
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-rows: 70px repeat(auto-fill, 70px);
+    row-gap: 45px;
+    column-gap: 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-rows: 100px repeat(auto-fill, 100px);
+    gap: 60px;
+  }
+}

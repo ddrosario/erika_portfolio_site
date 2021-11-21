@@ -71,15 +71,12 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="divider" />
         <AboutMe />
-        {/* <div className={styles.socialLinks}>
-          <SocialLinks />
-        </div> */}
-        <div className="divider" />
         <article className={styles.resume}>
           <section>
-            <h2>Volunteer Experience</h2>
+            <div className="headerDivider">
+              <h2>Volunteer Experience</h2>
+            </div>
             <div className={styles.resumeTitle}>
               <h4>Heart of the Valley</h4>
               <p className={styles.resumeDate}>Year: 2021-</p>
@@ -96,7 +93,9 @@ export default function Home() {
           </section>
           <div className="divider" />
           <section>
-            <h2>Education</h2>
+            <div className="headerDivider">
+              <h2>Education</h2>
+            </div>
             <section>
               <div className={styles.resumeTitle}>
                 <h4>DesignLab</h4>

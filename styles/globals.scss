@@ -3,8 +3,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +13,7 @@ html {
 body {
   overflow-y: scroll;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -52,7 +54,8 @@ a {
   color: var(--accent-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--white);
 }
 
@@ -60,11 +63,17 @@ button {
   transition: all 0.33s ease-in-out;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   color: var(--white);
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin: 0;
   color: var(--text-color), #000000;
 }
@@ -81,8 +90,8 @@ h2 {
   font-weight: bold;
   text-align: center;
   font-size: 22px;
-  margin: 40px auto;
-  color: var(--accent-color);
+  margin: 30px auto;
+  // color: var(--accent-color);
   // color: var(--accent-color);
 }
 
@@ -122,11 +131,16 @@ ul {
   font-size: 14px;
 
   & li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: var(--accent-color); /* Change the color */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 25px; /* Also needed for space (tweak if needed) */
-    margin-left: -25px; /* Also needed for space (tweak if needed) */
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--accent-color);
+    /* Change the color */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 25px;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -25px;
+    /* Also needed for space (tweak if needed) */
   }
 
   & li {
@@ -142,16 +156,52 @@ ul {
   background-color: var(--accent-color);
 }
 
+.headerDivider {
+  margin: 100px auto;
+
+  &::before {
+    left: 50%;
+    content: "";
+    display: block;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(229, 12, 132, 0.1);
+  }
+
+  &::after {
+    left: 50%;
+    content: "";
+    display: block;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(229, 12, 132, 0.1);
+  }
+}
+
 .divider {
   left: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
   margin-top: 60px;
   margin-bottom: 60px;
-	max-width: 100vw;
-	position: relative;
-	right: 50%;
-	width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
   height: 1px;
   background-color: rgba(229, 12, 132, 0.1);
 }
@@ -176,7 +226,7 @@ ul {
 
   h2 {
     font-size: 32px;
-    margin: 60px auto;
+    margin: 40px auto;
   }
 
   h3 {
@@ -194,19 +244,21 @@ ul {
   ul {
     font-weight: 300;
     font-size: 22px;
-  
+
     & li::before {
-      width: 25px; /* Also needed for space (tweak if needed) */
-      margin-left: -25px; /* Also needed for space (tweak if needed) */
+      width: 25px;
+      /* Also needed for space (tweak if needed) */
+      margin-left: -25px;
+      /* Also needed for space (tweak if needed) */
     }
-  
+
     & li {
       margin-top: 5px;
       margin-bottom: 5px;
       padding-left: 39px;
     }
   }
-  
+
   .divider {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -227,7 +279,7 @@ ul {
   }
 
   h2 {
-    margin: 100px auto;
+    margin: 50px auto;
     font-size: 36px;
   }
 
@@ -240,26 +292,32 @@ ul {
   }
 
   p {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   ul {
     font-weight: 300;
     font-size: 28px;
-  
+
     & li::before {
-      width: 25px; /* Also needed for space (tweak if needed) */
-      margin-left: -25px; /* Also needed for space (tweak if needed) */
+      width: 25px;
+      /* Also needed for space (tweak if needed) */
+      margin-left: -25px;
+      /* Also needed for space (tweak if needed) */
     }
-  
+
     & li {
       margin-top: 5px;
       margin-bottom: 5px;
       padding-left: 39px;
     }
   }
+
+  .headerDivider {
+    margin: 150px 0px;
+  }
+
   .divider {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin: 50px 0px;
   }
 }
