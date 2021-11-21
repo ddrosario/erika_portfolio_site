@@ -2,11 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '@styles/ContactMe.module.scss';
 
-export default function ContactMe() {
+interface ContactMeProps {
+  text?: string;
+}
+
+export default function ContactMe({ text }: ContactMeProps) {
   return (
     <>
       <section className={styles.root}>
-        <div>Let&apos;s work together!</div>
+        <div>{text}</div>
         <Link
           href="mailto:Erikaalanalambe@gmail.com"
           passHref
@@ -22,3 +26,7 @@ export default function ContactMe() {
     </>
   );
 }
+
+ContactMe.defaultProps = {
+  text: "Let's work together!",
+};

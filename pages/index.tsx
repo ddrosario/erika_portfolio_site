@@ -7,35 +7,10 @@ import styles from '@styles/Home.module.scss';
 import PageLayout from '@components/PageLayout';
 import HelloBanner from '@components/banners/HelloBanner';
 import AboutMe from '@components/AboutMe';
-import SocialLinks from '@components/SocialLinks';
 import CaseStudyNavLinks from '@components/CaseStudyNavLinks';
-import ContactMe from '@components/ContactMe';
+import Footer from '@components/Footer';
 
 import useIntersect from '@util/hooks/useIntersection';
-
-const egProjectData = [
-  {
-    projectImg: '/assets/projects/aura/overview.png',
-    projectAlt: '',
-    title: 'Aura',
-    description: 'A Mood-Tracking App',
-    urlSlug: '/aura',
-  },
-  {
-    projectImg: '/assets/projects/nintendo/overview.png',
-    projectAlt: '',
-    title: 'Nintendo',
-    description: 'The addition of a social aspect to the Nintendo eShop on the Switch',
-    urlSlug: '/nintendo',
-  },
-  {
-    projectImg: '/assets/projects/carnival/overview.png',
-    projectAlt: '',
-    title: 'Carnival Cruiseline',
-    description: 'A complete responsive redesign of the Carnival Cruiseline website',
-    urlSlug: '/carnival',
-  },
-];
 
 export default function Home() {
   const options = { root: null, threshold: 0.1, triggerOnce: true };
@@ -43,7 +18,7 @@ export default function Home() {
   const [ref2, isVisible2] = useIntersect(options);
   const [ref3, isVisible3] = useIntersect(options);
   const [ref4, isVisible4] = useIntersect(options);
-  console.log(ref4, '\n\n\nis visible? ', isVisible4);
+
   return (
     <>
       <Head>
@@ -124,9 +99,8 @@ export default function Home() {
             </section>
           </section>
         </article>
-        <ContactMe />
       </PageLayout>
-      <div className="footer" />
+      <Footer />
     </>
   );
 }

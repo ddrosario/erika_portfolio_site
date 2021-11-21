@@ -5,7 +5,7 @@ import Head from 'next/head';
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
 
-import * as aura from 'data/aura';
+import * as hov from 'data/hov';
 
 import styles from '@styles/Projects.module.scss';
 import TitleCard from '@components/caseStudies/TitleCard';
@@ -81,7 +81,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Step One: Empathize</h2>
             <section>
-              {aura.empathize.map((item) => (
+              {hov.empathize.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -103,7 +103,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Define</h2>
             <section>
-              {aura.define.map((item) => (
+              {hov.define.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -125,7 +125,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Ideate</h2>
             <section>
-              {aura.ideate.map((item) => (
+              {hov.ideate.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -147,51 +147,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Prototype</h2>
             <section>
-              {aura.prototyping.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
-          </div>
-        </section>
-        <section id="test">
-          <div className="headerDivider">
-            <h2>Test</h2>
-            <section>
-              {aura.testing.map((item) => (
-                <div key={item.title} className={styles.caseStudyItem}>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                  <div>
-                    {item.images.map((img) => (
-                      <img
-                        src={img.webp}
-                        key={img.jpg}
-                        alt=""
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </section>
-          </div>
-        </section>
-        <section id="implement">
-          <div className="headerDivider">
-            <h2>Implement</h2>
-            <section>
-              {aura.implement.map((item) => (
+              {hov.prototyping.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>

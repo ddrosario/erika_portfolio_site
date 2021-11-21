@@ -5,7 +5,7 @@ import Head from 'next/head';
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
 
-import * as aura from 'data/aura';
+import * as carnival from 'data/carnival';
 
 import styles from '@styles/Projects.module.scss';
 import TitleCard from '@components/caseStudies/TitleCard';
@@ -81,7 +81,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Step One: Empathize</h2>
             <section>
-              {aura.empathize.map((item) => (
+              {carnival.empathize.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -103,7 +103,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Define</h2>
             <section>
-              {aura.define.map((item) => (
+              {carnival.define.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -125,7 +125,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Ideate</h2>
             <section>
-              {aura.ideate.map((item) => (
+              {carnival.ideate.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -147,7 +147,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Prototype</h2>
             <section>
-              {aura.prototyping.map((item) => (
+              {carnival.prototyping.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -169,7 +169,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Test</h2>
             <section>
-              {aura.testing.map((item) => (
+              {carnival.testing.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
@@ -191,7 +191,7 @@ export default function Projects() {
           <div className="headerDivider">
             <h2>Implement</h2>
             <section>
-              {aura.implement.map((item) => (
+              {carnival.implement.map((item) => (
                 <div key={item.title} className={styles.caseStudyItem}>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>
