@@ -31,8 +31,10 @@
   text-decoration: none;
   color: var(--text-color);
   &:hover, &:focus {
+    padding: 1px;
+    border: 0;
     background-image: var(--pink-gradient);
-    color: var(--white);
+    color: var(--black);
   }
 }
 

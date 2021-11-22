@@ -17,3 +17,16 @@
     width: inherit;
   }
 }
+
+@media (min-width: 1200px) {
+  .profileImg {
+    width: 265px;
+    height: 300px;
+  }
+  .text {
+    font-size: 30px;
+  }
+  .profileContainer {
+    margin-right: 37px;
+  }
+}

@@ -66,7 +66,6 @@ export default function Home() {
               </li>
             </ul>
           </section>
-          <div className="divider" />
           <section>
             <div className="headerDivider">
               <h2>Education</h2>

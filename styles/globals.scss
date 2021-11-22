@@ -56,7 +56,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--white);
+  color: var(--black);
 }
 
 button {
@@ -65,7 +65,7 @@ button {
 
 button:hover,
 button:focus {
-  color: var(--white);
+  color: var(--black);
 }
 
 h1,
@@ -106,7 +106,7 @@ h4 {
   font-family: var(--title-font-family);
   font-size: 14px;
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 p {
