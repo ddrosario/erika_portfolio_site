@@ -95,11 +95,13 @@ export default function Projects() {
         >
           <div className={styles.projectsOverviewImages}>
             {projectOverviewImgs.map((img) => (
-              <img
-                className={styles.projectOverviewImg}
-                src={img.webp}
-                alt={img.alt}
-              />
+              <div>
+                <img
+                  className={styles.projectOverviewImg}
+                  src={img.webp}
+                  alt={img.alt}
+                />
+              </div>
             ))}
           </div>
         </TitleCard>

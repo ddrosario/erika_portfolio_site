@@ -1,6 +1,7 @@
 .banner {
   width: 100%;
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .bannerHeader {
@@ -30,6 +31,9 @@
 }
 
 @media (min-width: 768px) {
+  .banner {
+    margin-bottom: 100px;
+  }
   .bannerHeader {
     margin: 6px auto;
   }
@@ -47,6 +51,9 @@
 }
 
 @media (min-width: 1200px) {
+  .banner {
+    margin-bottom: 200px;
+  }
   .bannerHeader {
     margin: 4px auto;
   } 
