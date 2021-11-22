@@ -68,12 +68,12 @@ export default function Projects() {
 
       <PageLayout>
         <TitleCard
-          h1Text="Aura"
-          subtext="A Mood-Tracking App"
-          overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
+          h1Text="Nintendo eShop"
+          subtext="A seamless addition of a social aspect to the Nintendo eShop on the Switch gaming console"
+          overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
         >
           <div>
-            <img src="/assets/projects/lg_aura/overview.png" alt="app mock up on phone" />
+            <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
           </div>
         </TitleCard>
         <DesignProcessNav navItems={designProcessLocations} />
@@ -86,9 +86,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -108,9 +109,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -130,9 +132,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -152,9 +155,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -174,9 +178,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -196,9 +201,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""

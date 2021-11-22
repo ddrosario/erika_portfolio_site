@@ -56,13 +56,13 @@ export default function Projects() {
 
       <PageLayout>
         <TitleCard
-          h1Text="Aura"
-          subtext="A Mood-Tracking App"
+          h1Text="Heart of the Valley"
+          strongSubtext="Ongoing…"
+          subtext=" A website for helping visitors and locals find artworks in their area"
           overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
         >
-          <div>
-            <img src="/assets/projects/lg_aura/overview.png" alt="app mock up on phone" />
-          </div>
+          <div style={{ height: 200 }} />
+          {/* TODO: UPDATE THIS SPACING */}
         </TitleCard>
         <DesignProcessNav navItems={designProcessLocations} />
         <section id="empathize">
@@ -74,9 +74,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -96,9 +97,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -118,9 +120,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -140,9 +143,10 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
