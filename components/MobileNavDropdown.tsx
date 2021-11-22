@@ -58,7 +58,7 @@ const MobileNavDropdown = () => {
       </Link>
       <div className={styles.icons}>
         <Link
-          href="linkedin.com/in/erilambe"
+          href="https://www.linkedin.com/in/erilambe"
           passHref
         >
           <a

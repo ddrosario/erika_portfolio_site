@@ -53,7 +53,7 @@ const Header = () => (
           </a>
         </Link>
         <Link
-          href="linkedin.com/in/erilambe"
+          href="https://www.linkedin.com/in/erilambe"
           passHref
         >
           <a
