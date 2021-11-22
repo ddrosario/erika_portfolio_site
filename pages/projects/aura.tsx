@@ -50,6 +50,27 @@ const designProcessLocations: DesignProcessNavItem[] = [
   },
 ];
 
+const projectOverviewImgs = [
+  {
+    webp: '/assets/projects/aura/iphone-1.webp',
+    jpg: '/assets/projects/aura/iphone-1-small.jpg',
+    jpgLg: '/assets/projects/aura/iphone-1-lg.jpg',
+    alt: '',
+  },
+  {
+    webp: '/assets/projects/aura/iphone-2.webp',
+    jpg: '/assets/projects/aura/iphone-2-small.jpg',
+    jpgLg: '/assets/projects/aura/iphone-2-lg.jpg',
+    alt: '',
+  },
+  {
+    webp: '/assets/projects/aura/iphone-3.webp',
+    jpg: '/assets/projects/aura/iphone-3-small.jpg',
+    jpgLg: '/assets/projects/aura/iphone-3-lg.jpg',
+    alt: '',
+  },
+];
+
 export default function Projects() {
   const ref = React.useRef<HTMLElement>(null);
   const designNav = React.useMemo(
@@ -72,8 +93,14 @@ export default function Projects() {
           subtext="A Mood-Tracking App"
           overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
         >
-          <div>
-            <img src="/assets/projects/lg_aura/overview.png" alt="app mock up on phone" />
+          <div className={styles.projectsOverviewImages}>
+            {projectOverviewImgs.map((img) => (
+              <img
+                className={styles.projectOverviewImg}
+                src={img.webp}
+                alt={img.alt}
+              />
+            ))}
           </div>
         </TitleCard>
         <DesignProcessNav navItems={designProcessLocations} />
@@ -89,6 +116,7 @@ export default function Projects() {
                 <div>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -111,6 +139,7 @@ export default function Projects() {
                 <div>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -133,6 +162,7 @@ export default function Projects() {
                 <div>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -155,6 +185,7 @@ export default function Projects() {
                 <div>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -177,6 +208,7 @@ export default function Projects() {
                 <div>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""
@@ -199,6 +231,7 @@ export default function Projects() {
                 <div>
                   {item.images.map((img) => (
                     <img
+                      className={styles.caseStudyImg}
                       src={img.webp}
                       key={img.jpg}
                       alt=""

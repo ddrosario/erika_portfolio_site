@@ -4,13 +4,12 @@
 }
 
 .bannerHeader {
-  margin-bottom: 5px;
+  margin: 5px auto;
 }
 
 .bannerSubtext {
-  margin-top: 5px;
-  font-family: var(--card-subtext-font-family);
-  font-size: 22px;
+  font-family: var(--body-font-family);
+  font-size: 18px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -21,26 +20,44 @@
 
 .overviewHeader {
   color: var(--text-color);
-  margin-bottom: 5px;
-  font-weight: 500;
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+.overviewText {
+  font-family: var(--body-font-family);
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
   .bannerHeader {
-    margin-bottom: 5px;
+    margin: 6px auto;
   }
-
+  
   .bannerSubtext {
     font-size: 24px;
+  }
+
+  .overviewText {
+    font-size: 22px;
+    margin: 10px auto;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 
 @media (min-width: 1200px) {
   .bannerHeader {
-    margin-bottom: 5px;
+    margin: 4px auto;
   } 
-
+  
   .bannerSubtext {
+    font-size: 32px;
+  }
+
+  .overviewText {
     font-size: 30px;
+    margin: 15px auto;
+    padding: 0px;
   }
 }

@@ -36,18 +36,6 @@ const designProcessLocations: DesignProcessNavItem[] = [
     text: 'Prototype',
     id: 'prototype',
   },
-  {
-    icon: '/assets/design_process/test.svg',
-    iconAlt: '',
-    text: 'Test',
-    id: 'test',
-  },
-  {
-    icon: '/assets/design_process/implement.svg',
-    iconAlt: '',
-    text: 'Implement',
-    id: 'implement',
-  },
 ];
 
 export default function Projects() {

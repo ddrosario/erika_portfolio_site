@@ -20,8 +20,8 @@ export default function TitleCard({
       <h1 className={styles.bannerHeader}>{h1Text}</h1>
       <div className={styles.bannerSubtext}>{subtext}</div>
       {children}
-      <h2 className={styles.overviewHeader}>Overview</h2>
-      <p>
+      <h2 className={styles.overviewHeader}>Project Overview</h2>
+      <p className={styles.overviewText}>
         {overviewText}
       </p>
     </section>

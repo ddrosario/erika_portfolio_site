@@ -8,7 +8,31 @@
   }
 }
 
+.projectsOverviewImages {
+  display: flex;
+  justify-content: space-between;
+  height: 166px;
+  margin: 60px auto 80px auto;
+  :not(:first-child) {
+    display: none;
+  }
+}
+
+.projectOverviewImg {
+  margin: 0px auto;
+}
+.caseStudyImg {
+  display: block;
+  margin: 40px auto;
+}
+
 @media (min-width: 768px) {
+  .projectsOverviewImages {
+    height: 262px;
+    :not(:first-child) {
+      display: block;
+    }
+  }
   .caseStudyItem {
     margin-top: 100px;
     margin-bottom: 120px;
@@ -22,9 +46,17 @@
       padding-right: 28px;
     }
   }
+  .caseStudyImg {
+    margin: 50px auto;
+  }
 }
 
 @media (min-width: 1200px) {
+  .projectsOverviewImages {
+    height: 390px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+  }
   .caseStudyItem {
     margin-top: 150px;
     margin-bottom: 200px;
@@ -37,5 +69,8 @@
       padding-left: 0px;
       padding-right: 0px;
     }
+  }
+  .caseStudyImg {
+    margin: 60px auto;
   }
 }
