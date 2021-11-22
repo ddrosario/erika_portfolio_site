@@ -25,7 +25,7 @@ const MobileNavDropdown = () => {
         </a>
       </Link>
       <Link
-        href="/about"
+        href="/#about-me-section"
         passHref
       >
         <a
@@ -36,22 +36,22 @@ const MobileNavDropdown = () => {
         </a>
       </Link>
       <Link
-        href="#contact"
+        href="#footer"
         passHref
       >
         <a
           className={styles.link}
           href="replace"
-          onClick={(e) => {
-            const footer = document.getElementById('contact2');
-            if (footer) {
-              e.preventDefault();
-              e.stopPropagation();
-              footer.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }
-          }}
+          // onClick={(e) => {
+          //   const footer = document.getElementById('contact2');
+          //   if (footer) {
+          //     e.preventDefault();
+          //     e.stopPropagation();
+          //     footer.scrollIntoView({
+          //       behavior: 'smooth',
+          //     });
+          //   }
+          // }}
         >
           Contact
         </a>

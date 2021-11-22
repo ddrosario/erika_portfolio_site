@@ -8,8 +8,8 @@ import LinkedIn from '@assets/social_icons/linkedin.png';
 import Email from '@assets/social_icons/email.svg';
 
 const locations = {
-  about: '#about',
-  contact: 'mailto:Erikaalanalambe@gmail.com',
+  about: '/#about-me-section',
+  contact: '#footer',
   // resume: '/resume',
 };
 
