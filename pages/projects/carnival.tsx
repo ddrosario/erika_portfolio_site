@@ -73,7 +73,7 @@ export default function Projects() {
           overviewText="I did a full, responsive redesign of the Carnival Cruise website to make it more efficient and easier to navigate, with a focus on bringing it to a more modern age."
         >
           <div>
-            <img src="/assets/projects/carnvial/mockup.webp" alt="laptop with mockup" />
+            <img src="/assets/projects/carnival/mockup.webp" alt="laptop with mockup" />
           </div>
         </TitleCard>
         <DesignProcessNav navItems={designProcessLocations} />
