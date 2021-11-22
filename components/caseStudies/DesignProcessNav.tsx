@@ -41,8 +41,8 @@ const DesignProcessNav = ({ navItems }: DesignProcessNavProps) => {
                 className={styles.anchor}
                 href="replace"
               >
-                <div className={styles.anchorIcon}>
-                  <img src={icon} alt={iconAlt} />
+                <div className={id === 'prototype' ? styles.spacer : ''}>
+                  <img className={styles.anchorIcon} src={icon} alt={iconAlt} />
                 </div>
                 <div className={styles.anchorText}>
                   {text}

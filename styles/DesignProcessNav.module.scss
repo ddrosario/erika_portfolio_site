@@ -59,13 +59,13 @@
     font-size: var(--body-font-size);
     font-weight: bold;
     padding-left: 25px;
-
     &:hover {
       color: inherit;
     }
   }
 }
 .anchorIcon {
+  display: block;
   margin-right: auto;
 }
 
@@ -89,13 +89,26 @@
   opacity: 1 !important;
 }
 
+.spacer {
+  padding-left: 7px;
+}
+
 @media (min-width: 768px) {
   .navGrid {
     row-gap: 45px;
     column-gap: 55px;
   }
+  .anchorIcon {
+    height: 44px;
+  }
   .linkTile {
     height: 70px;
+    & a {
+      padding-left: 45px;
+    }
+  }
+  .spacer {
+    padding-left: 10px;
   }
 }
 
@@ -104,7 +117,16 @@
     gap: 60px;
   }
   .linkTile {
-    height: 100px;
+    height: 83px;
+    & a {
+      padding-left: 86px;
+    }
+  }
+  .anchorIcon {
+    height: 60px;
   }
 
+  .spacer {
+    padding-left: 12px;
+  }
 }

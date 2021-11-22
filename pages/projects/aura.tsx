@@ -113,7 +113,7 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
                       className={styles.caseStudyImg}
@@ -136,7 +136,7 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
                       className={styles.caseStudyImg}
@@ -159,7 +159,7 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
                       className={styles.caseStudyImg}
@@ -182,7 +182,7 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
                       className={styles.caseStudyImg}
@@ -205,7 +205,7 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
                       className={styles.caseStudyImg}
@@ -228,7 +228,7 @@ export default function Projects() {
               <div key={item.title} className={styles.caseStudyItem}>
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
-                <div>
+                <div className={styles.imageContainer}>
                   {item.images.map((img) => (
                     <img
                       className={styles.caseStudyImg}
