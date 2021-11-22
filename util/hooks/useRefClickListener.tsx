@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-export default function useRefClickListener(
-  ref: React.MutableRefObject<any>,
+export default function useRefClickListener<Type extends HTMLElement>(
   callback: Function,
   dependency: any = true,
-) {
+):React.RefObject<Type> {
+  const ref = useRef<Type>(null);
+
   useEffect(() => {
-    function handleClickOutside(event: Event) {
+    function handleClickOutside(event: MouseEvent | TouchEvent | any) {
       if (ref.current && !ref.current.contains(event.target) && dependency) {
         callback(event);
       }
@@ -18,4 +19,6 @@ export default function useRefClickListener(
       document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [ref, callback, dependency]);
+
+  return ref;
 }

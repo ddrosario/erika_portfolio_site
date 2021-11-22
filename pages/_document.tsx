@@ -36,8 +36,9 @@ class MyDocument extends Document {
           {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> */}
           <link rel="icon" href="/favicon.ico" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:wght@500;700&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

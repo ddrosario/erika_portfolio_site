@@ -12,7 +12,10 @@ const useIntersect = (options: IntersectOptions) => {
   const [wasIntersecting, setWasIntersecting] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
   const {
-    threshold, root, rootMargin, triggerOnce,
+    threshold,
+    root,
+    rootMargin,
+    triggerOnce,
   } = options;
 
   useEffect(() => {

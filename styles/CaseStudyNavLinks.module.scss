@@ -1,34 +1,21 @@
-.boxedLink {
-  display: inline-block;
-  height: 44px;
-  font-family: var(--card-title-font-family);
-  font-size: var(--link-font-size);
-  font-weight: 500;
-  text-align: center;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--footer-color);
-  transition: all 0.33s ease-in-out;
-  &:hover {
-    color: var(--footer-color);
-    text-decoration: underline;
-  }
-  &:focus {
-    color: var(--footer-color);
-    text-decoration: underline;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px repeat(auto-fill, 60px);
+  gap: 18px;
 }
 
 @media (min-width: 768px) {
-  .boxedLink {
-    height: 56px;
+  .grid {
+    grid-template-rows: 70px repeat(auto-fill, 70px);
+    row-gap: 45px;
+    column-gap: 55px;
   }
 }
 
 @media (min-width: 1200px) {
-  .boxedLink {
-    height: 66px;
+  .grid {
+    grid-template-rows: 100px repeat(auto-fill, 100px);
+    gap: 60px;
   }
 }

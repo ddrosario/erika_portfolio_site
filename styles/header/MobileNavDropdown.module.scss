@@ -1,28 +1,40 @@
+.dropdown {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  gap: 30px;
+
+  & li {
+    padding: 3px 0px;
+  }
+}
 
 .link {
   height: 28px;
-  margin: 0 auto 5px 5px;
-  font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--black);
+  color: inherit;
+  text-decoration: none;
   font-family: var(--card-title-font-family);
   // font-size: var(--card-subtext-font-size);
-  font-size: 14px;
+  font-size: 22px;
+  transition: all 1s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.dropdown {
-  width: 127px;
-  padding: 10px 4px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  border: solid 1px var(--high-contrast-text);
-  background-color: var(--white);
-
-  & li {
-    padding: 3px 0px;
-  }
+.icons {
+  margin-top: auto;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }

@@ -1,22 +1,20 @@
 .header {
   background-color: var(--header-color);
-  height: 69px;
   width: 100%;
+}
+
+.logo {
+  width: 111px;
 }
 
 .headerBody {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 37px 20px 34px;
+  padding: 30px 32px;
   height: 100%;
   margin: 0px auto;
-}
-
-.headerNav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  max-width: 966px;
 }
 
 .logo {
@@ -30,22 +28,27 @@
 
 .nav {
   display: flex;
-  font-family: Inter;
-  font-size: 18px;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: var(--title-font-family);
+  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--high-contrast-text);
-  
-  a {
-    margin-right: 15px;
+  gap: 15px;
+  color: var(--black);
+
+  & a {
+    color: var(--black);
+    text-decoration: none;
   }
-  .navLink {
-    text-decoration: underline;
-    color: var(--white);
-  }
+
+}
+
+.socialIcon {
+  height: 22px;
 }
 
 .socialsContainer {
@@ -55,42 +58,30 @@
 }
 
 @media (min-width: 768px) {
-  .header {
-    height: 88px;
-  }
 
-  .headerBody {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px 5px;
-    max-width: 1440px;
-  }
 }
 
 @media (min-width: 1200px) {
   .header {
-    height: 207px;
+    padding: 0;
+    margin: 72px auto;
   }
 
   .headerBody {
-    padding: 0px 80px;
+    padding: 0px 0px;
   }
 
   .logo {
-    font-size: 40px;
-
-    .eri {
-      padding-right: 10px;
-    }
+    width: 137px;
   }
 
   .nav {
-    font-size: 24px;
+    font-size: 20px;
     margin-left: auto;
+    gap: 25px;
+  }
 
-    a {
-      margin-right: 30px;
-    }
+  .socialIcon {
+    height: 24px;
   }
 }

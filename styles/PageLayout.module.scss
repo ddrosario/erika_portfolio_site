@@ -1,23 +1,19 @@
-
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   height: 100%;
-  background-color: var(--background-color);
-  color: var(--black);
-  padding: 20px 35px;
+  padding: 0px 16px;
+  margin: 0px auto;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 36px 77px;
+    padding: 0px 32px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    padding: 60px;
+    margin: 60px auto;
+    max-width: 966px;
+    padding: 0px;
   }
 }

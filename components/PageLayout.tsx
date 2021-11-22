@@ -1,14 +1,9 @@
 import React from 'react';
-// import dynamic from 'next/dynamic';
 import styles from '@styles/PageLayout.module.scss';
 
-import MobileHeader from './MobileHeader';
-import Header from './Header';
-import RenderMobile from './hoc/RenderMobile';
-import RenderDefault from './hoc/RenderDefault';
-
-// const DynamicHeader = dynamic(() => import('./Header'));
-// const DynamicMobileHeader = dynamic(() => import('./MobileHeader'))
+// import MobileHeader from './MobileHeader';
+// import Header from './Header';
+import RenderHeader from './hoc/RenderHeader';
 
 interface PageLayoutProps {
   children: JSX.Element | JSX.Element[];
@@ -16,12 +11,7 @@ interface PageLayoutProps {
 
 const PageLayout = ({ children }: PageLayoutProps) => (
   <>
-    <RenderMobile>
-      <MobileHeader />
-    </RenderMobile>
-    <RenderDefault>
-      <Header />
-    </RenderDefault>
+    <RenderHeader />
     <div className={styles.container}>
       {children}
     </div>
