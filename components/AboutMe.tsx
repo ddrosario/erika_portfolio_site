@@ -20,7 +20,7 @@ export default function About() {
         </div>
         <p className={styles.text}>
           <strong>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m a Product Designer based in San Jose, Ca
+            I&apos;m a Product Designer based in San Jose, Ca
           </strong>
           <span>{aboutMeParagraph}</span>
           <em>The Design of Everyday Things</em>

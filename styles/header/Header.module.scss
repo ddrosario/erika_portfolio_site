@@ -36,13 +36,20 @@
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: normal;
+  letter-spacing: 1;
   gap: 15px;
   color: var(--black);
 
-  & a {
-    color: var(--black);
+  & a.navText {
+    // color: var(--black);
+    padding-top: 1px;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  & a.navText:hover {
+    // color: var(--accent-color);
+    // text-decoration: underline;
+    border-bottom: 1px solid var(--accent-color);
   }
 
 }
@@ -55,6 +62,50 @@
   display: flex;
   gap: 10px;
   cursor: pointer;
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    & .socialIconImg {
+      opacity: 0;
+    }
+    & .socialIconImgActive {
+      opacity: 1;
+    }
+  }
+  &:focus {
+    outline: 0;
+    & .socialIconImg {
+      opacity: 0;
+    }
+    & .socialIconImgActive {
+      opacity: 1;
+    }
+  }
+}
+.socialIconImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  transition: all 0.1s linear;
+}
+.socialIconImgActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: all 0.1s linear;
 }
 
 @media (min-width: 768px) {

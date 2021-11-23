@@ -5,7 +5,9 @@ import Image from 'next/image';
 import styles from '@styles/header/Header.module.scss';
 import Logo from '@assets/logo.svg';
 import LinkedIn from '@assets/social_icons/linkedin.png';
+import LinkedInPink from '@assets/social_icons/linkedin-pink.png';
 import Email from '@assets/social_icons/email.svg';
+import EmailPink from '@assets/social_icons/email-pink.png';
 
 const locations = {
   about: '/#about-me-section',
@@ -36,6 +38,7 @@ const Header = () => (
           passHref
         >
           <a
+            className={styles.navText}
             href="replace"
           >
             About
@@ -46,6 +49,7 @@ const Header = () => (
           passHref
         >
           <a
+            className={styles.navText}
             href="replace"
             tabIndex={0}
           >
@@ -60,7 +64,12 @@ const Header = () => (
             className={styles.socialIcon}
             href="replace"
           >
-            <Image src={LinkedIn} alt="LinkedIn" width={24} height={24} />
+            <div className={styles.socialIconImg}>
+              <Image src={LinkedIn} alt="LinkedIn" width={24} height={24} />
+            </div>
+            <div className={styles.socialIconImgActive}>
+              <Image src={LinkedInPink} alt="LinkedIn" width={24} height={24} />
+            </div>
           </a>
         </Link>
         <Link
@@ -71,7 +80,12 @@ const Header = () => (
             className={styles.socialIcon}
             href="replace"
           >
-            <Image src={Email} alt="email" width={26} height={26} />
+            <div className={styles.socialIconImg}>
+              <Image src={Email} alt="email" width={26} height={26} />
+            </div>
+            <div className={styles.socialIconImgActive}>
+              <Image src={EmailPink} alt="LinkedIn" width={26} height={26} />
+            </div>
           </a>
         </Link>
       </nav>

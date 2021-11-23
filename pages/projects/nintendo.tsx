@@ -69,10 +69,9 @@ export default function Projects() {
       <PageLayout>
         <TitleCard
           h1Text="Nintendo eShop"
-          subtext="A seamless addition of a social aspect to the Nintendo eShop on the Switch gaming console"
           overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
         >
-          <div>
+          <div className={styles.nintendoTitleCard}>
             <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
           </div>
         </TitleCard>

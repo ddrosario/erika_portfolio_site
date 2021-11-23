@@ -27,7 +27,7 @@ export default function Home() {
         <meta name="twitter:title" content="Eri Lambe Portfolio" />
       </Head>
       <PageLayout>
-        <div className={styles.blockMargin}>
+        <div className={styles.helloBlock}>
           <HelloBanner />
         </div>
         <div className={styles.blockMargin}>

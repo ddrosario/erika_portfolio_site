@@ -1,28 +1,19 @@
 .banner {
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin-bottom: 80px;
 }
 
 .bannerHeader {
+  text-align: center;
   margin: 5px auto;
-}
-
-.bannerSubtext {
-  font-family: var(--body-font-family);
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--black);
 }
 
 .overviewHeader {
   color: var(--text-color);
   margin: 10px auto;
   font-weight: bold;
+  text-align: left;
 }
 
 .overviewText {
@@ -38,10 +29,6 @@
     margin: 6px auto;
   }
   
-  .bannerSubtext {
-    font-size: 24px;
-  }
-
   .overviewText {
     font-size: 22px;
     margin: 10px auto;
@@ -55,15 +42,11 @@
     margin-bottom: 200px;
   }
   .bannerHeader {
-    margin: 4px auto;
+    margin: 200px auto;
   } 
   
-  .bannerSubtext {
-    font-size: 32px;
-  }
-
   .overviewText {
-    font-size: 30px;
+    font-size: 32px;
     margin: 15px auto;
     padding: 0px;
   }

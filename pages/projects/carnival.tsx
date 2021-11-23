@@ -69,10 +69,9 @@ export default function Projects() {
       <PageLayout>
         <TitleCard
           h1Text="Carnival Cruiseline"
-          subtext="A complete redesign of the Carnival Cruiseline website"
           overviewText="I did a full, responsive redesign of the Carnival Cruise website to make it more efficient and easier to navigate, with a focus on bringing it to a more modern age."
         >
-          <div>
+          <div className={styles.nintendoTitleCard}>
             <img src="/assets/projects/carnival/mockup.webp" alt="laptop with mockup" />
           </div>
         </TitleCard>

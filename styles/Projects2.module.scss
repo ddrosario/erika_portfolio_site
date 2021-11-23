@@ -62,7 +62,7 @@
 @media (min-width: 1200px) {
   .projectsOverviewImages {
     height: 390px;
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 200px;
   }
   .caseStudyItem {
@@ -81,5 +81,11 @@
   .caseStudyImg {
     margin: 60px auto;
     padding: 0px 100px;
+  }
+
+  // Case study exclusive classes
+  .nintendoTitleCard {
+    margin: 200px auto;
+    width: 100%;
   }
 }
