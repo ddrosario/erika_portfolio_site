@@ -215,7 +215,13 @@ export default function Projects() {
           </section>
         </section>
       </PageLayout>
-      <Footer text="Have any questions about this project?" />
+      <Footer
+        text="Have any questions about this project?"
+        hrefLeft="/projects/aura"
+        leftLabel="Aura"
+        hrefRight="/projects/carnival"
+        rightLabel="Carnival"
+      />
     </>
   );
 }

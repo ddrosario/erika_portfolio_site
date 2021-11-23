@@ -57,8 +57,6 @@ export default function Projects() {
       <PageLayout>
         <TitleCard
           h1Text="Heart of the Valley"
-          strongSubtext="Ongoing…"
-          subtext=" A website for helping visitors and locals find artworks in their area"
           overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
         >
           <div style={{ height: 200 }} />
@@ -158,7 +156,13 @@ export default function Projects() {
           </section>
         </section>
       </PageLayout>
-      <Footer text="Have any questions about this project?" />
+      <Footer
+        text="Have any questions about this project?"
+        hrefLeft="/projects/carnival"
+        leftLabel="Carnival"
+        hrefRight="/projects/aura"
+        rightLabel="Aura"
+      />
     </>
   );
 }

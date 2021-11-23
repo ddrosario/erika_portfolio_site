@@ -90,18 +90,15 @@ export default function Projects() {
       <PageLayout>
         <TitleCard
           h1Text="Aura"
-          subtext="A Mood-Tracking App"
           overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
         >
           <div className={styles.projectsOverviewImages}>
             {projectOverviewImgs.map((img) => (
-              <div>
-                <img
-                  className={styles.projectOverviewImg}
-                  src={img.webp}
-                  alt={img.alt}
-                />
-              </div>
+              <img
+                className={styles.projectOverviewImg}
+                src={img.webp}
+                alt={img.alt}
+              />
             ))}
           </div>
         </TitleCard>
@@ -245,7 +242,13 @@ export default function Projects() {
           </section>
         </section>
       </PageLayout>
-      <Footer text="Have any questions about this project?" />
+      <Footer
+        text="Have any questions about this project?"
+        hrefLeft="/projects/hov"
+        leftLabel="HoV"
+        hrefRight="/projects/nintendo"
+        rightLabel="Nintendo"
+      />
     </>
   );
 }
