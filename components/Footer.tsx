@@ -27,7 +27,11 @@ const Footer = ({
         <div>{text}</div>
         <div className={styles.footerButtons}>
           {showProjectLinks && (
-            <ProjectLinks href={hrefLeft} linkText={leftLabel} left />
+            <ProjectLinks
+              href={hrefLeft as string}
+              linkText={leftLabel as string}
+              left
+            />
           )}
           <Link href="mailto:Erikaalanalambe@gmail.com" passHref>
             <a className={styles.contactBtn} href="replace">
@@ -35,7 +39,11 @@ const Footer = ({
             </a>
           </Link>
           {showProjectLinks && (
-            <ProjectLinks href={hrefRight} linkText={rightLabel} right />
+            <ProjectLinks
+              href={hrefRight as string}
+              linkText={rightLabel as string}
+              right
+            />
           )}
         </div>
       </section>
