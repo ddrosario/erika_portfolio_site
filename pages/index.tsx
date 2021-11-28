@@ -1,4 +1,5 @@
 import React from 'react';
+import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 // import Image from 'next/image';
@@ -12,12 +13,27 @@ import Footer from '@components/Footer';
 
 import useIntersect from '@util/hooks/useIntersection';
 
-export default function Home() {
+interface HomeProps {
+  section: string | undefined;
+}
+
+export default function Home({ section }: HomeProps) {
   const options = { root: null, threshold: 0.1, triggerOnce: true };
-  const [ref1, isVisible1] = useIntersect(options);
-  const [ref2, isVisible2] = useIntersect(options);
-  const [ref3, isVisible3] = useIntersect(options);
-  const [ref4, isVisible4] = useIntersect(options);
+
+  const options2 = { root: null, threshold: 0.4, triggerOnce: true };
+  const [ref1, isVisible1] = useIntersect<HTMLDivElement>(options2);
+  const [ref2, isVisible2] = useIntersect<HTMLDivElement>(options2);
+  const [ref3, isVisible3] = useIntersect<HTMLDivElement>(options2);
+  const [yourProject, isVisible4] = useIntersect<HTMLDivElement>(options);
+  const [arizonaRef, isVisibleArizona] = useIntersect<HTMLUListElement>(options2);
+  const [volunteerRef, isVisibleVolunteer] = useIntersect<HTMLUListElement>(options2);
+  const [designLabRef, isVisibleDesign] = useIntersect<HTMLUListElement>(options2);
+  React.useEffect(() => {
+    if (typeof section === 'string' && section === 'about-me') {
+      // const aboutMeSection = document.getElementById('about-me-section');
+      ref1.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [ref1, section]);
 
   return (
     <>
@@ -33,8 +49,8 @@ export default function Home() {
         <div className={styles.blockMargin}>
           <CaseStudyNavLinks />
         </div>
-        <div className={`${isVisible4 ? styles.inView : styles.notInView} ${styles.delay4}`}>
-          <div className={styles.ctaCard} ref={ref4}>
+        <div className={`${isVisible4 ? styles.inView : styles.notInView}`}>
+          <div className={styles.ctaCard} ref={yourProject}>
             <h4 className={styles.ctaHeader}>Your project could be here!</h4>
             <p>
               <Link href="mailto:Erikaalanalambe@gmail.com" passHref>
@@ -46,17 +62,24 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <AboutMe />
+        <div className={`${isVisible1 ? styles.inView : styles.notInView}`}>
+          <div ref={ref1}>
+            <AboutMe />
+          </div>
+        </div>
         <article className={styles.resume}>
-          <section>
-            <div className="headerDivider">
+          <section className={`${isVisible2 ? styles.inView : styles.notInView}`}>
+            <div className="headerDivider" ref={ref2}>
               <h2>Volunteer Experience</h2>
             </div>
             <div className={styles.resumeTitle}>
               <h4>Heart of the Valley</h4>
               <p className={styles.resumeDate}>Year: 2021-</p>
             </div>
-            <ul>
+            <ul
+              ref={volunteerRef}
+              className={isVisibleVolunteer ? styles.inViewUL : styles.notInViewUL}
+            >
               <li>
                 Working with teams of Designers, Engineers, and Project Managers to iterate designs
               </li>
@@ -66,8 +89,8 @@ export default function Home() {
               </li>
             </ul>
           </section>
-          <section>
-            <div className="headerDivider">
+          <section className={`${isVisible3 ? styles.inView : styles.notInView}`}>
+            <div className="headerDivider" ref={ref3}>
               <h2>Education</h2>
             </div>
             <section>
@@ -75,7 +98,10 @@ export default function Home() {
                 <h4>DesignLab</h4>
                 <p className={styles.resumeDate}>Year: 2021</p>
               </div>
-              <ul>
+              <ul
+                ref={designLabRef}
+                className={isVisibleDesign ? styles.inViewUL : styles.notInViewUL}
+              >
                 <li>
                   Over 800+ hours of learning the design process, UX Research, and designing for
                   responsive web
@@ -91,7 +117,10 @@ export default function Home() {
                 <h4>Arizona State University</h4>
                 <p className={styles.resumeDate}>Year: 2018-2021</p>
               </div>
-              <ul>
+              <ul
+                ref={arizonaRef}
+                className={isVisibleArizona ? styles.inViewUL : styles.notInViewUL}
+              >
                 <li>Graduated with a Bachelor’s in English Literature, with a minor in Media</li>
                 <li>Experience tutoring my colleagues and helping them write great papers</li>
               </ul>
@@ -102,4 +131,16 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { section } = context.query;
+
+  let propSection = null;
+  if (typeof section === 'string') {
+    propSection = section;
+  }
+  return {
+    props: { section: propSection },
+  };
 }

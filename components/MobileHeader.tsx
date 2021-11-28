@@ -12,14 +12,6 @@ import MobileNavDropdown from './MobileNavDropdown';
 
 const MobileHeader = () => {
   const [showDropdown, setShowDropdown] = React.useState(false);
-  // const navRef = React.useRef<HTMLElement>(null);
-
-  // const handleClose = React.useCallback(() => {
-  //   setShowDropdown(false);
-  // }, []);
-
-  // const navRef = useRefClickListener(handleClose);
-
   return (
     <>
       <header className={showDropdown ? `${styles.header} ${styles.openHeader}` : styles.header}>
@@ -56,7 +48,7 @@ const MobileHeader = () => {
       </header>
       {showDropdown && (
         <div className={styles.navDropdown}>
-          <MobileNavDropdown />
+          <MobileNavDropdown closeDropdown={() => setShowDropdown(false)} />
         </div>
       )}
     </>

@@ -6,7 +6,7 @@
 
 .bannerHeader {
   text-align: center;
-  margin: 5px auto;
+  margin: 60px auto;
 }
 
 .overviewHeader {
@@ -24,9 +24,6 @@
 @media (min-width: 768px) {
   .banner {
     margin-bottom: 100px;
-  }
-  .bannerHeader {
-    margin: 6px auto;
   }
   
   .overviewText {

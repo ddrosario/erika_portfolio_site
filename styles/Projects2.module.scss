@@ -27,6 +27,11 @@
   margin: 40px auto;
 }
 
+.nintendoTitleCard {
+  margin: 60px auto;
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .projectsOverviewImages {
     height: 262px;
@@ -56,6 +61,11 @@
   }
   .caseStudyImg {
     margin: 50px auto;
+  }
+
+  .nintendoTitleCard {
+    margin: 60px auto;
+    width: 100%;
   }
 }
 
@@ -87,5 +97,89 @@
   .nintendoTitleCard {
     margin: 200px auto;
     width: 100%;
+  }
+}
+
+.notInView {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.inView {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s cubic-bezier(0.32, -0.04, 0.59, 1.11) forwards;
+}
+
+.notInViewRight {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.inViewRight {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: fadeRight 1s cubic-bezier(0.32, -0.04, 0.59, 1.11) forwards;
+}
+.notInViewLeft {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.inViewLeft {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeLeft 1s cubic-bezier(0.32, -0.04, 0.59, 1.11) forwards;
+}
+
+.delay1 {
+  animation-delay: 0.77s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+.delay3 {
+  animation-delay: .5s;
+}
+
+.delay4 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -8,7 +8,11 @@ import EmailWhite from '@assets/social_icons/email-white.svg';
 
 import { usePreventBodyScroll } from '@util/hooks/usePreventBodyScroll';
 
-const MobileNavDropdown = () => {
+interface MobileNavDropdownProps {
+  closeDropdown(): void;
+}
+
+const MobileNavDropdown = ({ closeDropdown }: MobileNavDropdownProps) => {
   usePreventBodyScroll();
 
   return (
@@ -25,12 +29,13 @@ const MobileNavDropdown = () => {
         </a>
       </Link>
       <Link
-        href="/#about-me-section"
+        href="/?section=about-me"
         passHref
       >
         <a
           className={styles.link}
           href="replace"
+          onClick={closeDropdown}
         >
           About
         </a>
@@ -42,16 +47,16 @@ const MobileNavDropdown = () => {
         <a
           className={styles.link}
           href="replace"
-          // onClick={(e) => {
-          //   const footer = document.getElementById('contact2');
-          //   if (footer) {
-          //     e.preventDefault();
-          //     e.stopPropagation();
-          //     footer.scrollIntoView({
-          //       behavior: 'smooth',
-          //     });
-          //   }
-          // }}
+          onClick={(e) => {
+            const footer = document.getElementById('footer');
+            if (footer) {
+              e.preventDefault();
+              closeDropdown();
+              footer.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }
+          }}
         >
           Contact
         </a>

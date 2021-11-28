@@ -6,10 +6,12 @@ import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
 
 import * as aura from 'data/aura';
+import useIntersect from '@util/hooks/useIntersection';
 
 import styles from '@styles/Projects2.module.scss';
 import TitleCard from '@components/caseStudies/TitleCard';
 import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
+import ProjectCard from '@components/ProjectCard';
 
 const designProcessLocations: DesignProcessNavItem[] = [
   {
@@ -72,13 +74,14 @@ const projectOverviewImgs = [
 ];
 
 export default function Projects() {
-  const ref = React.useRef<HTMLElement>(null);
-  const designNav = React.useMemo(
-    () => ({
-      emphasize: {},
-    }),
-    [],
-  );
+  const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
+  const [empathize, isVisibleEmpathize] = useIntersect<HTMLDivElement>(textOptions);
+  const [define, isVisibleDefine] = useIntersect<HTMLDivElement>(textOptions);
+  const [ideate, isVisibleIdeate] = useIntersect<HTMLDivElement>(textOptions);
+  const [prototyping, isVisiblePrototyping] = useIntersect<HTMLDivElement>(textOptions);
+  const [test, isVisibleTest] = useIntersect<HTMLDivElement>(textOptions);
+  const [implement, isVisibleImplement] = useIntersect<HTMLDivElement>(textOptions);
+
   return (
     <>
       <Head>
@@ -104,140 +107,110 @@ export default function Projects() {
         </TitleCard>
         <DesignProcessNav navItems={designProcessLocations} />
         <section id="empathize">
-          <div className="headerDivider">
+          <div
+            ref={empathize}
+            className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
+          >
             <h2>Step One: Empathize</h2>
           </div>
           <section>
             {aura.empathize.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="define">
-          <div className="headerDivider">
+          <div
+            ref={define}
+            className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Two: Define</h2>
           </div>
           <section>
             {aura.define.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="ideate">
-          <div className="headerDivider">
+          <div
+            ref={ideate}
+            className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Three: Ideate</h2>
           </div>
           <section>
             {aura.ideate.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="prototype">
-          <div className="headerDivider">
+          <div
+            ref={prototyping}
+            className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Four: Prototype</h2>
           </div>
           <section>
             {aura.prototyping.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="test">
-          <div className="headerDivider">
+          <div
+            ref={test}
+            className={`headerDivider ${isVisibleTest ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Five: Test</h2>
           </div>
           <section>
             {aura.testing.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="implement">
-          <div className="headerDivider">
+          <div
+            ref={implement}
+            className={`headerDivider ${isVisibleImplement ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Six: Implement</h2>
           </div>
           <section>
             {aura.implement.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>

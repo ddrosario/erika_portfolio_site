@@ -9,8 +9,10 @@ import LinkedInPink from '@assets/social_icons/linkedin-pink.png';
 import Email from '@assets/social_icons/email.svg';
 import EmailPink from '@assets/social_icons/email-pink.png';
 
+import SmoothLink from '@components/hoc/SmoothLink';
+
 const locations = {
-  about: '/#about-me-section',
+  about: '/?section=about-me',
   contact: '#footer',
   // resume: '/resume',
 };
@@ -52,6 +54,11 @@ const Header = () => (
             className={styles.navText}
             href="replace"
             tabIndex={0}
+            onClick={(e) => {
+              e.preventDefault();
+              const footer = document.getElementById('footer');
+              footer?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Contact
           </a>

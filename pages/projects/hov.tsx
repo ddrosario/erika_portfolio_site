@@ -2,14 +2,15 @@
 import React from 'react';
 import Head from 'next/head';
 
+import useIntersect from '@util/hooks/useIntersection';
+import * as hov from 'data/hov';
+import styles from '@styles/Projects2.module.scss';
+
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
-
-import * as hov from 'data/hov';
-
-import styles from '@styles/Projects2.module.scss';
 import TitleCard from '@components/caseStudies/TitleCard';
 import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
+import ProjectCard from '@components/ProjectCard';
 
 const designProcessLocations: DesignProcessNavItem[] = [
   {
@@ -39,13 +40,13 @@ const designProcessLocations: DesignProcessNavItem[] = [
 ];
 
 export default function Projects() {
-  const ref = React.useRef<HTMLElement>(null);
-  const designNav = React.useMemo(
-    () => ({
-      emphasize: {},
-    }),
-    [],
-  );
+  const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
+  const [empathize, isVisibleEmpathize] = useIntersect<HTMLDivElement>(textOptions);
+  const [define, isVisibleDefine] = useIntersect<HTMLDivElement>(textOptions);
+  const [ideate, isVisibleIdeate] = useIntersect<HTMLDivElement>(textOptions);
+  const [prototyping, isVisiblePrototyping] = useIntersect<HTMLDivElement>(textOptions);
+  const [test, isVisibleTest] = useIntersect<HTMLDivElement>(textOptions);
+  const [implement, isVisibleImplement] = useIntersect<HTMLDivElement>(textOptions);
   return (
     <>
       <Head>
@@ -64,94 +65,74 @@ export default function Projects() {
         </TitleCard>
         <DesignProcessNav navItems={designProcessLocations} />
         <section id="empathize">
-          <div className="headerDivider">
+          <div
+            ref={empathize}
+            className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
+          >
             <h2>Step One: Empathize</h2>
           </div>
           <section>
             {hov.empathize.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="define">
-          <div className="headerDivider">
+          <div
+            ref={define}
+            className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Two: Define</h2>
           </div>
           <section>
             {hov.define.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="ideate">
-          <div className="headerDivider">
+          <div
+            ref={ideate}
+            className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Three: Ideate</h2>
           </div>
           <section>
             {hov.ideate.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
         <section id="prototype">
-          <div className="headerDivider">
+          <div
+            ref={prototyping}
+            className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
+          >
             <h2>Step Four: Prototype</h2>
           </div>
           <section>
             {hov.prototyping.map((item) => (
-              <div key={item.title} className={styles.caseStudyItem}>
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
-                <div className={styles.imageContainer}>
-                  {item.images.map((img) => (
-                    <img
-                      className={styles.caseStudyImg}
-                      src={img.webp}
-                      key={img.jpg}
-                      alt=""
-                    />
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                images={item.images}
+              />
             ))}
           </section>
         </section>
