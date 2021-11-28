@@ -1,0 +1,83 @@
+.backToTop {
+  background-color: var(--background-color);
+  cursor: pointer;
+  font-family: var(--title-font-family);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 0;
+  text-align: center;
+  position: sticky;
+  display: block;
+  opacity: 0;
+  margin-left: auto;
+  margin-right: 0px;
+  bottom: 10px;
+  transition: opacity 0.5s ease-in-out;
+  // right: 200px;
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+    & .iconImg {
+      opacity: 0;
+    }
+    & .iconImgActive {
+      opacity: 1;
+    }
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+.notVisible {
+  opacity: 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.iconImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  transition: all 0.1s linear;
+}
+.iconImgActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+.noMobile {
+  display: none;
+}
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+  .noMobile {
+    display: block;
+  }
+  .backToTop {
+    margin-right: -87px;
+    bottom: 50px;
+  }
+}

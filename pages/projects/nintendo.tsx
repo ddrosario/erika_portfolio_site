@@ -11,6 +11,7 @@ import Footer from '@components/Footer';
 import TitleCard from '@components/caseStudies/TitleCard';
 import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
+import BackToTopButton from '@components/BackToTopButton';
 
 const designProcessLocations: DesignProcessNavItem[] = [
   {
@@ -53,6 +54,8 @@ const designProcessLocations: DesignProcessNavItem[] = [
 
 export default function Projects() {
   const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
+  const backToTopOptions = { root: null, threshold: 0.1 };
+  const [header, isVisibleHeader] = useIntersect<HTMLDivElement>(backToTopOptions, true);
   const [empathize, isVisibleEmpathize] = useIntersect<HTMLDivElement>(textOptions);
   const [define, isVisibleDefine] = useIntersect<HTMLDivElement>(textOptions);
   const [ideate, isVisibleIdeate] = useIntersect<HTMLDivElement>(textOptions);
@@ -69,15 +72,17 @@ export default function Projects() {
       </Head>
 
       <PageLayout>
-        <TitleCard
-          h1Text="Nintendo eShop"
-          overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
-        >
-          <div className={styles.nintendoTitleCard}>
-            <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
-          </div>
-        </TitleCard>
-        <DesignProcessNav navItems={designProcessLocations} />
+        <div ref={header}>
+          <TitleCard
+            h1Text="Nintendo eShop"
+            overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
+          >
+            <div className={styles.nintendoTitleCard}>
+              <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
+            </div>
+          </TitleCard>
+          <DesignProcessNav navItems={designProcessLocations} />
+        </div>
         <section id="empathize">
           <div
             ref={empathize}
@@ -186,6 +191,7 @@ export default function Projects() {
             ))}
           </section>
         </section>
+        <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer
         text="Have any questions about this project?"

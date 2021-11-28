@@ -11,6 +11,7 @@ import Footer from '@components/Footer';
 import TitleCard from '@components/caseStudies/TitleCard';
 import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
+import BackToTopButton from '@components/BackToTopButton';
 
 const designProcessLocations: DesignProcessNavItem[] = [
   {
@@ -41,6 +42,8 @@ const designProcessLocations: DesignProcessNavItem[] = [
 
 export default function Projects() {
   const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
+  const backToTopOptions = { root: null, threshold: 0.1 };
+  const [header, isVisibleHeader] = useIntersect<HTMLDivElement>(backToTopOptions, true);
   const [empathize, isVisibleEmpathize] = useIntersect<HTMLDivElement>(textOptions);
   const [define, isVisibleDefine] = useIntersect<HTMLDivElement>(textOptions);
   const [ideate, isVisibleIdeate] = useIntersect<HTMLDivElement>(textOptions);
@@ -56,14 +59,16 @@ export default function Projects() {
       </Head>
 
       <PageLayout>
-        <TitleCard
-          h1Text="Heart of the Valley"
-          overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
-        >
-          <div style={{ height: 200 }} />
-          {/* TODO: UPDATE THIS SPACING */}
-        </TitleCard>
-        <DesignProcessNav navItems={designProcessLocations} />
+        <div ref={header}>
+          <TitleCard
+            h1Text="Heart of the Valley"
+            overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
+          >
+            <div style={{ height: 200 }} />
+            {/* TODO: UPDATE THIS SPACING */}
+          </TitleCard>
+          <DesignProcessNav navItems={designProcessLocations} />
+        </div>
         <section id="empathize">
           <div
             ref={empathize}
@@ -136,6 +141,7 @@ export default function Projects() {
             ))}
           </section>
         </section>
+        <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer
         text="Have any questions about this project?"

@@ -7,15 +7,15 @@ interface IntersectOptions {
   triggerOnce?: boolean;
 }
 
-function useIntersect<ElementType extends HTMLElement>(options: IntersectOptions) {
-  const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
-  const [wasIntersecting, setWasIntersecting] = useState<boolean>(false);
+function useIntersect<ElementType extends HTMLElement>(
+  options: IntersectOptions,
+  startIntersecting = false,
+) {
+  const [isIntersecting, setIsIntersecting] = useState<boolean>(startIntersecting);
+  const [wasIntersecting, setWasIntersecting] = useState<boolean>(startIntersecting);
   const ref = useRef<ElementType>(null);
   const {
-    threshold,
-    root,
-    rootMargin,
-    triggerOnce,
+    threshold, root, rootMargin, triggerOnce,
   } = options;
 
   useEffect(() => {

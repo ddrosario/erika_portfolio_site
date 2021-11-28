@@ -10,6 +10,7 @@ import HelloBanner from '@components/banners/HelloBanner';
 import AboutMe from '@components/AboutMe';
 import CaseStudyNavLinks from '@components/CaseStudyNavLinks';
 import Footer from '@components/Footer';
+import BackToTopButton from '@components/BackToTopButton';
 
 import useIntersect from '@util/hooks/useIntersection';
 
@@ -21,6 +22,8 @@ export default function Home({ section }: HomeProps) {
   const options = { root: null, threshold: 0.1, triggerOnce: true };
 
   const options2 = { root: null, threshold: 0.4, triggerOnce: true };
+  const backToTopOptions = { root: null, threshold: 0.1 };
+  const [header, isVisibleHeader] = useIntersect<HTMLDivElement>(backToTopOptions, true);
   const [ref1, isVisible1] = useIntersect<HTMLDivElement>(options2);
   const [ref2, isVisible2] = useIntersect<HTMLDivElement>(options2);
   const [ref3, isVisible3] = useIntersect<HTMLDivElement>(options2);
@@ -43,11 +46,13 @@ export default function Home({ section }: HomeProps) {
         <meta name="twitter:title" content="Eri Lambe Portfolio" />
       </Head>
       <PageLayout>
-        <div className={styles.helloBlock}>
-          <HelloBanner />
-        </div>
-        <div className={styles.blockMargin}>
-          <CaseStudyNavLinks />
+        <div ref={header}>
+          <div className={styles.helloBlock}>
+            <HelloBanner />
+          </div>
+          <div className={styles.blockMargin}>
+            <CaseStudyNavLinks />
+          </div>
         </div>
         <div className={`${isVisible4 ? styles.inView : styles.notInView}`}>
           <div className={styles.ctaCard} ref={yourProject}>
@@ -127,6 +132,7 @@ export default function Home({ section }: HomeProps) {
             </section>
           </section>
         </article>
+        <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer />
     </>
