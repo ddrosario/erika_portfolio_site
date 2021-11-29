@@ -31,6 +31,9 @@
   margin: 60px auto;
   width: 100%;
 }
+.mobileScrollFix {
+  overflow-x: hidden;
+}
 
 @media (min-width: 768px) {
   .projectsOverviewImages {

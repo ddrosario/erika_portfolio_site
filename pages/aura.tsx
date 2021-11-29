@@ -102,134 +102,136 @@ export default function Projects() {
       </Head>
 
       <PageLayout>
-        <div ref={header}>
-          <TitleCard
-            h1Text="Aura"
-            overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
-          >
-            <div
-              className={styles.projectsOverviewImages}
+        <div className={styles.mobileScrollFix}>
+          <div ref={header}>
+            <TitleCard
+              h1Text="Aura"
+              overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
             >
-              {projectOverviewImgs.map((img) => (
-                <img
-                  key={img.webp}
-                  className={styles.projectOverviewImg}
-                  src={img.webp}
-                  alt={img.alt}
+              <div
+                className={styles.projectsOverviewImages}
+              >
+                {projectOverviewImgs.map((img) => (
+                  <img
+                    key={img.webp}
+                    className={styles.projectOverviewImg}
+                    src={img.webp}
+                    alt={img.alt}
+                  />
+                ))}
+              </div>
+            </TitleCard>
+            <DesignProcessNav navItems={navItems} />
+          </div>
+          <section id="empathize">
+            <div
+              ref={empathize}
+              className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step One: Empathize</h2>
+            </div>
+            <section>
+              {aura.empathize.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
                 />
               ))}
+            </section>
+          </section>
+          <section id="define">
+            <div
+              ref={define}
+              className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Two: Define</h2>
             </div>
-          </TitleCard>
-          <DesignProcessNav navItems={navItems} />
+            <section>
+              {aura.define.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="ideate">
+            <div
+              ref={ideate}
+              className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Three: Ideate</h2>
+            </div>
+            <section>
+              {aura.ideate.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="prototype">
+            <div
+              ref={prototyping}
+              className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Four: Prototype</h2>
+            </div>
+            <section>
+              {aura.prototyping.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="test">
+            <div
+              ref={test}
+              className={`headerDivider ${isVisibleTest ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Five: Test</h2>
+            </div>
+            <section>
+              {aura.testing.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="implement">
+            <div
+              ref={implement}
+              className={`headerDivider ${isVisibleImplement ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Six: Implement</h2>
+            </div>
+            <section>
+              {aura.implement.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
         </div>
-        <section id="empathize">
-          <div
-            ref={empathize}
-            className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step One: Empathize</h2>
-          </div>
-          <section>
-            {aura.empathize.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="define">
-          <div
-            ref={define}
-            className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Two: Define</h2>
-          </div>
-          <section>
-            {aura.define.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="ideate">
-          <div
-            ref={ideate}
-            className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Three: Ideate</h2>
-          </div>
-          <section>
-            {aura.ideate.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="prototype">
-          <div
-            ref={prototyping}
-            className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Four: Prototype</h2>
-          </div>
-          <section>
-            {aura.prototyping.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="test">
-          <div
-            ref={test}
-            className={`headerDivider ${isVisibleTest ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Five: Test</h2>
-          </div>
-          <section>
-            {aura.testing.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="implement">
-          <div
-            ref={implement}
-            className={`headerDivider ${isVisibleImplement ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Six: Implement</h2>
-          </div>
-          <section>
-            {aura.implement.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer

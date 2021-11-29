@@ -80,125 +80,127 @@ export default function Projects() {
       </Head>
 
       <PageLayout>
-        <div ref={header}>
-          <TitleCard
-            h1Text="Nintendo eShop"
-            overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
-          >
-            <div className={styles.nintendoTitleCard}>
-              <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
+        <div className={styles.mobileScrollFix}>
+          <div ref={header}>
+            <TitleCard
+              h1Text="Nintendo eShop"
+              overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
+            >
+              <div className={styles.nintendoTitleCard}>
+                <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
+              </div>
+            </TitleCard>
+            <DesignProcessNav navItems={navItems} />
+          </div>
+          <section id="empathize">
+            <div
+              ref={empathize}
+              className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step One: Empathize</h2>
             </div>
-          </TitleCard>
-          <DesignProcessNav navItems={navItems} />
+            <section>
+              {nintendo.empathize.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="define">
+            <div
+              ref={define}
+              className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Two: Define</h2>
+            </div>
+            <section>
+              {nintendo.define.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="ideate">
+            <div
+              ref={ideate}
+              className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Three: Ideate</h2>
+            </div>
+            <section>
+              {nintendo.ideate.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="prototype">
+            <div
+              ref={prototyping}
+              className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Four: Prototype</h2>
+            </div>
+            <section>
+              {nintendo.prototyping.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="test">
+            <div
+              ref={test}
+              className={`headerDivider ${isVisibleTest ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Five: Test</h2>
+            </div>
+            <section>
+              {nintendo.testing.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="implement">
+            <div
+              ref={implement}
+              className={`headerDivider ${isVisibleImplement ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Six: Implement</h2>
+            </div>
+            <section>
+              {nintendo.implement.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
         </div>
-        <section id="empathize">
-          <div
-            ref={empathize}
-            className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step One: Empathize</h2>
-          </div>
-          <section>
-            {nintendo.empathize.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="define">
-          <div
-            ref={define}
-            className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Two: Define</h2>
-          </div>
-          <section>
-            {nintendo.define.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="ideate">
-          <div
-            ref={ideate}
-            className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Three: Ideate</h2>
-          </div>
-          <section>
-            {nintendo.ideate.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="prototype">
-          <div
-            ref={prototyping}
-            className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Four: Prototype</h2>
-          </div>
-          <section>
-            {nintendo.prototyping.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="test">
-          <div
-            ref={test}
-            className={`headerDivider ${isVisibleTest ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Five: Test</h2>
-          </div>
-          <section>
-            {nintendo.testing.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="implement">
-          <div
-            ref={implement}
-            className={`headerDivider ${isVisibleImplement ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Six: Implement</h2>
-          </div>
-          <section>
-            {nintendo.implement.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer

@@ -64,88 +64,90 @@ export default function Projects() {
       </Head>
 
       <PageLayout>
-        <div ref={header}>
-          <TitleCard
-            h1Text="Heart of the Valley"
-            overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
-          >
-            <div style={{ height: 200 }} />
-            {/* TODO: UPDATE THIS SPACING */}
-          </TitleCard>
-          <DesignProcessNav navItems={navItems} />
+        <div className={styles.mobileScrollFix}>
+          <div ref={header}>
+            <TitleCard
+              h1Text="Heart of the Valley"
+              overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
+            >
+              <div style={{ height: 200 }} />
+              {/* TODO: UPDATE THIS SPACING */}
+            </TitleCard>
+            <DesignProcessNav navItems={navItems} />
+          </div>
+          <section id="empathize">
+            <div
+              ref={empathize}
+              className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step One: Empathize</h2>
+            </div>
+            <section>
+              {hov.empathize.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="define">
+            <div
+              ref={define}
+              className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Two: Define</h2>
+            </div>
+            <section>
+              {hov.define.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="ideate">
+            <div
+              ref={ideate}
+              className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Three: Ideate</h2>
+            </div>
+            <section>
+              {hov.ideate.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
+          <section id="prototype">
+            <div
+              ref={prototyping}
+              className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
+            >
+              <h2>Step Four: Prototype</h2>
+            </div>
+            <section>
+              {hov.prototyping.map((item) => (
+                <ProjectCard
+                  key={item.title}
+                  title={item.title}
+                  body={item.body}
+                  images={item.images}
+                />
+              ))}
+            </section>
+          </section>
         </div>
-        <section id="empathize">
-          <div
-            ref={empathize}
-            className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step One: Empathize</h2>
-          </div>
-          <section>
-            {hov.empathize.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="define">
-          <div
-            ref={define}
-            className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Two: Define</h2>
-          </div>
-          <section>
-            {hov.define.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="ideate">
-          <div
-            ref={ideate}
-            className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Three: Ideate</h2>
-          </div>
-          <section>
-            {hov.ideate.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="prototype">
-          <div
-            ref={prototyping}
-            className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Four: Prototype</h2>
-          </div>
-          <section>
-            {hov.prototyping.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer
