@@ -68,7 +68,8 @@ export default function Projects() {
           <div ref={header}>
             <TitleCard
               h1Text="Heart of the Valley"
-              overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
+              overviewText=" A website for helping visitors and locals find artworks in their area. In this project, I work with a team of designers, developers, project managers, and more to build this website. It is set to launch by next year for desktop with mobile to come after."
+              strongOverviewText="Ongoing…"
             >
               <div style={{ height: 200 }} />
               {/* TODO: UPDATE THIS SPACING */}
