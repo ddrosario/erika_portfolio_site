@@ -10,48 +10,9 @@ import useIntersect from '@util/hooks/useIntersection';
 
 import styles from '@styles/Projects2.module.scss';
 import TitleCard from '@components/caseStudies/TitleCard';
-import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
+import DesignProcessNav from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
-
-const designProcessLocations: DesignProcessNavItem[] = [
-  {
-    icon: '/assets/design_process/empathize.svg',
-    iconAlt: '',
-    text: 'Empathize',
-    id: 'empathize',
-  },
-  {
-    icon: '/assets/design_process/define.svg',
-    iconAlt: '',
-    text: 'Define',
-    id: 'define',
-  },
-  {
-    icon: '/assets/design_process/ideate.svg',
-    iconAlt: '',
-    text: 'Ideate',
-    id: 'ideate',
-  },
-  {
-    icon: '/assets/design_process/prototype.svg',
-    iconAlt: '',
-    text: 'Prototype',
-    id: 'prototype',
-  },
-  {
-    icon: '/assets/design_process/test.svg',
-    iconAlt: '',
-    text: 'Test',
-    id: 'test',
-  },
-  {
-    icon: '/assets/design_process/implement.svg',
-    iconAlt: '',
-    text: 'Implement',
-    id: 'implement',
-  },
-];
 
 const projectOverviewImgs = [
   {
@@ -84,6 +45,53 @@ export default function Projects() {
   const [prototyping, isVisiblePrototyping] = useIntersect<HTMLDivElement>(textOptions);
   const [test, isVisibleTest] = useIntersect<HTMLDivElement>(textOptions);
   const [implement, isVisibleImplement] = useIntersect<HTMLDivElement>(textOptions);
+  const navItems = React.useMemo(() => {
+    const designProcessLocations = [
+      {
+        icon: '/assets/design_process/empathize.svg',
+        iconAlt: '',
+        text: 'Empathize',
+        id: 'empathize',
+        ref: empathize,
+      },
+      {
+        icon: '/assets/design_process/define.svg',
+        iconAlt: '',
+        text: 'Define',
+        id: 'define',
+        ref: define,
+      },
+      {
+        icon: '/assets/design_process/ideate.svg',
+        iconAlt: '',
+        text: 'Ideate',
+        id: 'ideate',
+        ref: ideate,
+      },
+      {
+        icon: '/assets/design_process/prototype.svg',
+        iconAlt: '',
+        text: 'Prototype',
+        id: 'prototype',
+        ref: prototyping,
+      },
+      {
+        icon: '/assets/design_process/test.svg',
+        iconAlt: '',
+        text: 'Test',
+        id: 'test',
+        ref: test,
+      },
+      {
+        icon: '/assets/design_process/implement.svg',
+        iconAlt: '',
+        text: 'Implement',
+        id: 'implement',
+        ref: implement,
+      },
+    ];
+    return designProcessLocations;
+  }, [define, empathize, ideate, implement, prototyping, test]);
 
   return (
     <>
@@ -112,7 +120,7 @@ export default function Projects() {
               ))}
             </div>
           </TitleCard>
-          <DesignProcessNav navItems={designProcessLocations} />
+          <DesignProcessNav navItems={navItems} />
         </div>
         <section id="empathize">
           <div

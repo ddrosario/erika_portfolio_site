@@ -9,36 +9,9 @@ import styles from '@styles/Projects2.module.scss';
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
 import TitleCard from '@components/caseStudies/TitleCard';
-import DesignProcessNav, { DesignProcessNavItem } from '@components/caseStudies/DesignProcessNav';
+import DesignProcessNav from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
-
-const designProcessLocations: DesignProcessNavItem[] = [
-  {
-    icon: '/assets/design_process/empathize.svg',
-    iconAlt: '',
-    text: 'Empathize',
-    id: 'empathize',
-  },
-  {
-    icon: '/assets/design_process/define.svg',
-    iconAlt: '',
-    text: 'Define',
-    id: 'define',
-  },
-  {
-    icon: '/assets/design_process/ideate.svg',
-    iconAlt: '',
-    text: 'Ideate',
-    id: 'ideate',
-  },
-  {
-    icon: '/assets/design_process/prototype.svg',
-    iconAlt: '',
-    text: 'Prototype',
-    id: 'prototype',
-  },
-];
 
 export default function Projects() {
   const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
@@ -48,8 +21,40 @@ export default function Projects() {
   const [define, isVisibleDefine] = useIntersect<HTMLDivElement>(textOptions);
   const [ideate, isVisibleIdeate] = useIntersect<HTMLDivElement>(textOptions);
   const [prototyping, isVisiblePrototyping] = useIntersect<HTMLDivElement>(textOptions);
-  const [test, isVisibleTest] = useIntersect<HTMLDivElement>(textOptions);
-  const [implement, isVisibleImplement] = useIntersect<HTMLDivElement>(textOptions);
+  const navItems = React.useMemo(() => {
+    const designProcessLocations = [
+      {
+        icon: '/assets/design_process/empathize.svg',
+        iconAlt: '',
+        text: 'Empathize',
+        id: 'empathize',
+        ref: empathize,
+      },
+      {
+        icon: '/assets/design_process/define.svg',
+        iconAlt: '',
+        text: 'Define',
+        id: 'define',
+        ref: define,
+      },
+      {
+        icon: '/assets/design_process/ideate.svg',
+        iconAlt: '',
+        text: 'Ideate',
+        id: 'ideate',
+        ref: ideate,
+      },
+      {
+        icon: '/assets/design_process/prototype.svg',
+        iconAlt: '',
+        text: 'Prototype',
+        id: 'prototype',
+        ref: prototyping,
+      },
+    ];
+    return designProcessLocations;
+  }, [define, empathize, ideate, prototyping]);
+
   return (
     <>
       <Head>
@@ -67,7 +72,7 @@ export default function Projects() {
             <div style={{ height: 200 }} />
             {/* TODO: UPDATE THIS SPACING */}
           </TitleCard>
-          <DesignProcessNav navItems={designProcessLocations} />
+          <DesignProcessNav navItems={navItems} />
         </div>
         <section id="empathize">
           <div
