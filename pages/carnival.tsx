@@ -203,9 +203,9 @@ export default function Projects() {
       </PageLayout>
       <Footer
         text="Have any questions about this project?"
-        hrefLeft="/projects/nintendo"
+        hrefLeft="/nintendo"
         leftLabel="Nintendo"
-        hrefRight="/projects/hov"
+        hrefRight="/hov"
         rightLabel="HoV"
       />
     </>

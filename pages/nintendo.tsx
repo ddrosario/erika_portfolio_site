@@ -2,38 +2,16 @@
 import React from 'react';
 import Head from 'next/head';
 
-import PageLayout from '@components/PageLayout';
-import Footer from '@components/Footer';
-
-import * as aura from 'data/aura';
+import * as nintendo from 'data/nintendo';
+import styles from '@styles/Projects2.module.scss';
 import useIntersect from '@util/hooks/useIntersection';
 
-import styles from '@styles/Projects2.module.scss';
+import PageLayout from '@components/PageLayout';
+import Footer from '@components/Footer';
 import TitleCard from '@components/caseStudies/TitleCard';
 import DesignProcessNav from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
-
-const projectOverviewImgs = [
-  {
-    webp: '/assets/projects/aura/iphone-1.webp',
-    jpg: '/assets/projects/aura/iphone-1-small.jpg',
-    jpgLg: '/assets/projects/aura/iphone-1-lg.jpg',
-    alt: '',
-  },
-  {
-    webp: '/assets/projects/aura/iphone-2.webp',
-    jpg: '/assets/projects/aura/iphone-2-small.jpg',
-    jpgLg: '/assets/projects/aura/iphone-2-lg.jpg',
-    alt: '',
-  },
-  {
-    webp: '/assets/projects/aura/iphone-3.webp',
-    jpg: '/assets/projects/aura/iphone-3-small.jpg',
-    jpgLg: '/assets/projects/aura/iphone-3-lg.jpg',
-    alt: '',
-  },
-];
 
 export default function Projects() {
   const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
@@ -45,6 +23,7 @@ export default function Projects() {
   const [prototyping, isVisiblePrototyping] = useIntersect<HTMLDivElement>(textOptions);
   const [test, isVisibleTest] = useIntersect<HTMLDivElement>(textOptions);
   const [implement, isVisibleImplement] = useIntersect<HTMLDivElement>(textOptions);
+
   const navItems = React.useMemo(() => {
     const designProcessLocations = [
       {
@@ -92,32 +71,22 @@ export default function Projects() {
     ];
     return designProcessLocations;
   }, [define, empathize, ideate, implement, prototyping, test]);
-
   return (
     <>
       <Head>
-        <title>Eri Lambe - Aura Case Study</title>
-        <meta property="og:title" content="Eri Lambe - Aura Case Study" />
-        <meta name="twitter:title" content="Eri Lambe - Aura Case Study" />
+        <title>Eri Lambe - Nintendo Case Study</title>
+        <meta property="og:title" content="Eri Lambe - Nintendo Case Study" />
+        <meta name="twitter:title" content="Eri Lambe - Nintendo Case Study" />
       </Head>
 
       <PageLayout>
         <div ref={header}>
           <TitleCard
-            h1Text="Aura"
-            overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
+            h1Text="Nintendo eShop"
+            overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
           >
-            <div
-              className={styles.projectsOverviewImages}
-            >
-              {projectOverviewImgs.map((img) => (
-                <img
-                  key={img.webp}
-                  className={styles.projectOverviewImg}
-                  src={img.webp}
-                  alt={img.alt}
-                />
-              ))}
+            <div className={styles.nintendoTitleCard}>
+              <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
             </div>
           </TitleCard>
           <DesignProcessNav navItems={navItems} />
@@ -130,7 +99,7 @@ export default function Projects() {
             <h2>Step One: Empathize</h2>
           </div>
           <section>
-            {aura.empathize.map((item) => (
+            {nintendo.empathize.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -148,7 +117,7 @@ export default function Projects() {
             <h2>Step Two: Define</h2>
           </div>
           <section>
-            {aura.define.map((item) => (
+            {nintendo.define.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -166,7 +135,7 @@ export default function Projects() {
             <h2>Step Three: Ideate</h2>
           </div>
           <section>
-            {aura.ideate.map((item) => (
+            {nintendo.ideate.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -184,7 +153,7 @@ export default function Projects() {
             <h2>Step Four: Prototype</h2>
           </div>
           <section>
-            {aura.prototyping.map((item) => (
+            {nintendo.prototyping.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -202,7 +171,7 @@ export default function Projects() {
             <h2>Step Five: Test</h2>
           </div>
           <section>
-            {aura.testing.map((item) => (
+            {nintendo.testing.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -220,7 +189,7 @@ export default function Projects() {
             <h2>Step Six: Implement</h2>
           </div>
           <section>
-            {aura.implement.map((item) => (
+            {nintendo.implement.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -234,10 +203,10 @@ export default function Projects() {
       </PageLayout>
       <Footer
         text="Have any questions about this project?"
-        hrefLeft="/projects/hov"
-        leftLabel="HoV"
-        hrefRight="/projects/nintendo"
-        rightLabel="Nintendo"
+        hrefLeft="/aura"
+        leftLabel="Aura"
+        hrefRight="/carnival"
+        rightLabel="Carnival"
       />
     </>
   );

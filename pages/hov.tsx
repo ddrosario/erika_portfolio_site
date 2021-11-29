@@ -2,9 +2,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-import * as nintendo from 'data/nintendo';
-import styles from '@styles/Projects2.module.scss';
 import useIntersect from '@util/hooks/useIntersection';
+import * as hov from 'data/hov';
+import styles from '@styles/Projects2.module.scss';
 
 import PageLayout from '@components/PageLayout';
 import Footer from '@components/Footer';
@@ -21,9 +21,6 @@ export default function Projects() {
   const [define, isVisibleDefine] = useIntersect<HTMLDivElement>(textOptions);
   const [ideate, isVisibleIdeate] = useIntersect<HTMLDivElement>(textOptions);
   const [prototyping, isVisiblePrototyping] = useIntersect<HTMLDivElement>(textOptions);
-  const [test, isVisibleTest] = useIntersect<HTMLDivElement>(textOptions);
-  const [implement, isVisibleImplement] = useIntersect<HTMLDivElement>(textOptions);
-
   const navItems = React.useMemo(() => {
     const designProcessLocations = [
       {
@@ -54,40 +51,26 @@ export default function Projects() {
         id: 'prototype',
         ref: prototyping,
       },
-      {
-        icon: '/assets/design_process/test.svg',
-        iconAlt: '',
-        text: 'Test',
-        id: 'test',
-        ref: test,
-      },
-      {
-        icon: '/assets/design_process/implement.svg',
-        iconAlt: '',
-        text: 'Implement',
-        id: 'implement',
-        ref: implement,
-      },
     ];
     return designProcessLocations;
-  }, [define, empathize, ideate, implement, prototyping, test]);
+  }, [define, empathize, ideate, prototyping]);
+
   return (
     <>
       <Head>
-        <title>Eri Lambe - Nintendo Case Study</title>
-        <meta property="og:title" content="Eri Lambe - Nintendo Case Study" />
-        <meta name="twitter:title" content="Eri Lambe - Nintendo Case Study" />
+        <title>Eri Lambe - Heart of The Valley Case Study</title>
+        <meta property="og:title" content="Eri Lambe - Heart of The Valley Case Study" />
+        <meta name="twitter:title" content="Eri Lambe - Heart of The Valley Case Study" />
       </Head>
 
       <PageLayout>
         <div ref={header}>
           <TitleCard
-            h1Text="Nintendo eShop"
-            overviewText="I added a much-needed social feature to the Nintendo eShop that allows users to purchase and send each other games off of personalized wishlists."
+            h1Text="Heart of the Valley"
+            overviewText="I designed an app from start to finish using the design process to iterate and create an efficient mood-tracking app"
           >
-            <div className={styles.nintendoTitleCard}>
-              <img src="/assets/projects/nintendo/switch.webp" alt="Nintendo switch with eShop open" />
-            </div>
+            <div style={{ height: 200 }} />
+            {/* TODO: UPDATE THIS SPACING */}
           </TitleCard>
           <DesignProcessNav navItems={navItems} />
         </div>
@@ -99,7 +82,7 @@ export default function Projects() {
             <h2>Step One: Empathize</h2>
           </div>
           <section>
-            {nintendo.empathize.map((item) => (
+            {hov.empathize.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -117,7 +100,7 @@ export default function Projects() {
             <h2>Step Two: Define</h2>
           </div>
           <section>
-            {nintendo.define.map((item) => (
+            {hov.define.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -135,7 +118,7 @@ export default function Projects() {
             <h2>Step Three: Ideate</h2>
           </div>
           <section>
-            {nintendo.ideate.map((item) => (
+            {hov.ideate.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -153,43 +136,7 @@ export default function Projects() {
             <h2>Step Four: Prototype</h2>
           </div>
           <section>
-            {nintendo.prototyping.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="test">
-          <div
-            ref={test}
-            className={`headerDivider ${isVisibleTest ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Five: Test</h2>
-          </div>
-          <section>
-            {nintendo.testing.map((item) => (
-              <ProjectCard
-                key={item.title}
-                title={item.title}
-                body={item.body}
-                images={item.images}
-              />
-            ))}
-          </section>
-        </section>
-        <section id="implement">
-          <div
-            ref={implement}
-            className={`headerDivider ${isVisibleImplement ? styles.inView : styles.notInView}`}
-          >
-            <h2>Step Six: Implement</h2>
-          </div>
-          <section>
-            {nintendo.implement.map((item) => (
+            {hov.prototyping.map((item) => (
               <ProjectCard
                 key={item.title}
                 title={item.title}
@@ -203,10 +150,10 @@ export default function Projects() {
       </PageLayout>
       <Footer
         text="Have any questions about this project?"
-        hrefLeft="/projects/aura"
-        leftLabel="Aura"
-        hrefRight="/projects/carnival"
-        rightLabel="Carnival"
+        hrefLeft="/carnival"
+        leftLabel="Carnival"
+        hrefRight="/aura"
+        rightLabel="Aura"
       />
     </>
   );

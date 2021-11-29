@@ -7,19 +7,19 @@ import styles from '@styles/CaseStudyNavLinks.module.scss';
 const CaseStudyNavLinks = () => (
   <div className={styles.grid}>
     <LinkTile
-      href="/projects/hov"
+      href="/hov"
       text="Heart of the Valley"
     />
     <LinkTile
-      href="/projects/aura"
+      href="/aura"
       text="Aura"
     />
     <LinkTile
-      href="/projects/nintendo"
+      href="/nintendo"
       text="Nintendo eShop"
     />
     <LinkTile
-      href="/projects/carnival"
+      href="/carnival"
       text="Carnival Cruise"
     />
   </div>
