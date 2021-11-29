@@ -16,14 +16,13 @@ const BackToTopButton = ({ isVisible }: BackToTopButtonProps) => {
       <button
         ref={buttonRef}
         className={`${styles.backToTop} ${isVisible ? styles.visible : styles.notVisible}`}
-        onClick={(event) => {
+        onClick={() => {
           window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth',
           });
           buttonRef.current?.blur();
-          console.log(buttonRef.current);
         }}
         tabIndex={-1}
         type="button"

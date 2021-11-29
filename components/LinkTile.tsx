@@ -9,7 +9,7 @@ interface LinkTileProps {
 }
 
 const LinkTile = ({ text, href }: LinkTileProps) => {
-  const [isActive, setIsActive] = React.useState(false);
+  const [, setIsActive] = React.useState(false);
 
   const turnActive = () => {
     setIsActive(true);

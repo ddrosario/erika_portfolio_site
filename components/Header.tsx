@@ -9,8 +9,6 @@ import LinkedInPink from '@assets/social_icons/linkedin-pink.png';
 import Email from '@assets/social_icons/email.svg';
 import EmailPink from '@assets/social_icons/email-pink.png';
 
-import SmoothLink from '@components/hoc/SmoothLink';
-
 const locations = {
   about: '/?section=about-me',
   contact: '#footer',
