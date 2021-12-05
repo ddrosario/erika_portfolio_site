@@ -28,19 +28,19 @@ export default function Projects() {
         <meta property="og:title" content="Eri Lambe - Aura Case Study" />
         <meta name="twitter:title" content="Eri Lambe - Aura Case Study" />
       </Head>
-      <HelloBanner
-        webp="/assets/banners/aura-banner.webp"
-        alt="iPhone with Aura"
-      />
+      <div ref={header}>
+        <HelloBanner
+          webp="/assets/banners/aura-banner.webp"
+          alt="iPhone with Aura"
+        />
+      </div>
       <PageLayout>
         <div className={styles.mobileScrollFix}>
           <section>
-            <div ref={header}>
-              <TitleCard
-                h1Text="Aura"
-                overviewText="Using competitor research and information gathered from interviews with potential users, I created a mood-tracking app from start to finish, allowing users to track their moods multiple times a day, record ideas in scrapbooks, and customize the app to their own tastes. By presenting the product to a group of other designers, I was able to pinpoint users' pain points and make the app more tailored to their needs."
-              />
-            </div>
+            <TitleCard
+              h1Text="Aura"
+              overviewText="Using competitor research and information gathered from interviews with potential users, I created a mood-tracking app from start to finish, allowing users to track their moods multiple times a day, record ideas in scrapbooks, and customize the app to their own tastes. By presenting the product to a group of other designers, I was able to pinpoint users' pain points and make the app more tailored to their needs."
+            />
           </section>
           <div>
             {data.map((item, idx) => (

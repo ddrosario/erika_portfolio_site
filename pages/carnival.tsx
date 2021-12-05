@@ -24,19 +24,19 @@ export default function Projects() {
         <meta property="og:title" content="Eri Lambe - Carnival Cruise Case Study" />
         <meta name="twitter:title" content="Eri Lambe - Carnival Cruise Case Study" />
       </Head>
-      <HelloBanner
-        webp="/assets/banners/carnival-banner.webp"
-        alt="laptop on desk on Carnival homepage"
-      />
+      <div ref={header}>
+        <HelloBanner
+          webp="/assets/banners/carnival-banner.webp"
+          alt="laptop on desk on Carnival homepage"
+        />
+      </div>
       <PageLayout>
         <div className={styles.mobileScrollFix}>
           <section>
-            <div ref={header}>
-              <TitleCard
-                h1Text="Carnival Cruiseline"
-                overviewText="I decided to update Carnival Cruise's old website to a more modern look by doing a complete redesign. Among those who enjoy taking cruises for vacations and holidays, it is a popular site, however, it has an outdated design and is difficult to navigate. My goal was to update the site and fix these problems. "
-              />
-            </div>
+            <TitleCard
+              h1Text="Carnival Cruiseline"
+              overviewText="I decided to update Carnival Cruise's old website to a more modern look by doing a complete redesign. Among those who enjoy taking cruises for vacations and holidays, it is a popular site, however, it has an outdated design and is difficult to navigate. My goal was to update the site and fix these problems. "
+            />
           </section>
           <div>
             {data.map((item, idx) => (

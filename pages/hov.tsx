@@ -62,19 +62,19 @@ export default function Projects() {
         <meta property="og:title" content="Eri Lambe - Heart of The Valley Case Study" />
         <meta name="twitter:title" content="Eri Lambe - Heart of The Valley Case Study" />
       </Head>
-      <HelloBanner
-        webp="/assets/banners/heart-of-the-valley-banner.webp"
-        alt="laptop with heart of the valley artwork"
-      />
+      <div ref={header}>
+        <HelloBanner
+          webp="/assets/banners/heart-of-the-valley-banner.webp"
+          alt="laptop with heart of the valley artwork"
+        />
+      </div>
       <PageLayout>
         <div className={styles.mobileScrollFix}>
           <section>
-            <div ref={header}>
-              <TitleCard
-                h1Text="Heart of the Valley"
-                overviewText="The Code for America network provides an opportunity for me to work with a team of designers, programmers, project managers, and others in the development of this website. By next year, the desktop version will become available, followed by the mobile version. It is intended to be an easily accessible website where locals and visitors can locate art installations in San Jose, California, as well as get information about some of the artists and works. "
-              />
-            </div>
+            <TitleCard
+              h1Text="Heart of the Valley"
+              overviewText="The Code for America network provides an opportunity for me to work with a team of designers, programmers, project managers, and others in the development of this website. By next year, the desktop version will become available, followed by the mobile version. It is intended to be an easily accessible website where locals and visitors can locate art installations in San Jose, California, as well as get information about some of the artists and works. "
+            />
           </section>
           <div>
             {data.map((item, idx) => (

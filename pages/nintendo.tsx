@@ -78,19 +78,19 @@ export default function Projects() {
         <meta property="og:title" content="Eri Lambe - Nintendo Case Study" />
         <meta name="twitter:title" content="Eri Lambe - Nintendo Case Study" />
       </Head>
-      <HelloBanner
-        webp="/assets/banners/nintendo-banner.webp"
-        alt="nintendo switch mockup"
-      />
+      <div ref={header}>
+        <HelloBanner
+          webp="/assets/banners/nintendo-banner.webp"
+          alt="nintendo switch mockup"
+        />
+      </div>
       <PageLayout>
         <div className={styles.mobileScrollFix}>
           <section>
-            <div ref={header}>
-              <TitleCard
-                h1Text="Nintendo eShop"
-                overviewText="With the addition of the social feature, gamers now have the ability to create wishlists of games they want their friends to see and purchase online for them as gifts in the Nintendo eShop on the Switch. This project was carried out during the peak of the pandemic when people mostly played online games with their friends. I began by reconstructing the user profile portion of the console, adding the newly added features, and adding some of the new elements to the store, such as the customization of gift messages."
-              />
-            </div>
+            <TitleCard
+              h1Text="Nintendo eShop"
+              overviewText="With the addition of the social feature, gamers now have the ability to create wishlists of games they want their friends to see and purchase online for them as gifts in the Nintendo eShop on the Switch. This project was carried out during the peak of the pandemic when people mostly played online games with their friends. I began by reconstructing the user profile portion of the console, adding the newly added features, and adding some of the new elements to the store, such as the customization of gift messages."
+            />
           </section>
           <div>
             {data.map((item, idx) => (
