@@ -1,7 +1,7 @@
 .caseStudyItem {
   display: block;
 
-  & h4 {
+  & h3 {
     text-align: left;
     width: fit-content;
     margin: 5px auto 5px 0px;
@@ -28,60 +28,18 @@
 }
 
 .nintendoTitleCard {
-  margin: 60px auto;
   width: 100%;
 }
 .mobileScrollFix {
   overflow-x: hidden;
 }
 
-@media (min-width: 768px) {
-  .projectsOverviewImages {
-    height: 262px;
-    & > img:not(:first-child) {
-      display: block;
-    }
-    & > img:nth-child(2) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  .projectOverviewImg {
-    margin: 0px;
-  }
-  .caseStudyItem {
-    margin-top: 100px;
-    margin-bottom: 120px;
-    & h4 {
-      margin: 15px auto 15px 0px;
-      padding-left: 28px;
-      padding-right: 28px;
-    }
-    & p {
-      padding-left: 28px;
-      padding-right: 28px;
-    }
-  }
-  .caseStudyImg {
-    margin: 50px auto;
-  }
-
-  .nintendoTitleCard {
-    margin: 60px auto;
-    width: 100%;
-  }
-}
-
 @media (min-width: 1200px) {
   .projectsOverviewImages {
     height: 390px;
-    margin-top: 200px;
-    margin-bottom: 200px;
   }
   .caseStudyItem {
-    margin-top: 150px;
-    margin-bottom: 300px;
-    & h4 {
+    & h3 {
       margin: 15px auto 15px 0px;
       padding-left: 0px;
       padding-right: 0px;
@@ -98,7 +56,6 @@
 
   // Case study exclusive classes
   .nintendoTitleCard {
-    margin: 200px auto;
     width: 100%;
   }
 }

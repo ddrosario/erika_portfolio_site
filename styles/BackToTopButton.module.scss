@@ -1,5 +1,12 @@
+.root {
+  max-width: 1366px;
+  margin: auto;
+  position: sticky;
+  bottom: 10px;
+}
+
 .backToTop {
-  background-color: var(--background-color);
+  background-color: transparent;
   cursor: pointer;
   font-family: var(--title-font-family);
   font-size: 20px;
@@ -8,12 +15,12 @@
   border: 0;
   padding: 2px;
   text-align: center;
-  position: sticky;
+  // position: sticky;
+  // bottom: 10px;
   display: block;
   opacity: 0;
   margin-left: auto;
   margin-right: 0px;
-  bottom: 10px;
   transition: opacity 0.5s ease-in-out;
   // right: 200px;
   &:hover {
@@ -69,10 +76,6 @@
 .noMobile {
   display: none;
 }
-@media (min-width: 768px) {
-
-}
-
 @media (min-width: 1200px) {
   .noMobile {
     display: block;

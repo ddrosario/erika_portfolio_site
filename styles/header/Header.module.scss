@@ -1,6 +1,7 @@
 .header {
-  background-color: var(--header-color);
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .logo {
@@ -14,7 +15,7 @@
   padding: 30px 32px;
   height: 100%;
   margin: 0px auto;
-  max-width: 1366px;
+  // max-width: 1366px;
 }
 
 .logo {
@@ -108,10 +109,6 @@
   transition: all 0.1s linear;
 }
 
-@media (min-width: 768px) {
-
-}
-
 @media (min-width: 1200px) {
   .header {
     padding: 0;
@@ -119,7 +116,7 @@
   }
 
   .headerBody {
-    padding: 0px 200px;
+    padding: 0px 120px;
   }
 
   .logo {

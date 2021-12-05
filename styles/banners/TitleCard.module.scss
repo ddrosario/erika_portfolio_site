@@ -1,7 +1,6 @@
 .banner {
   width: 100%;
   text-align: left;
-  margin-bottom: 80px;
 }
 
 .strong {
@@ -9,7 +8,7 @@
 }
 .bannerHeader {
   text-align: center;
-  margin: 60px auto;
+  margin: 0px auto 60px auto;
 }
 
 .overviewHeader {
@@ -24,25 +23,9 @@
   font-size: 16px;
 }
 
-@media (min-width: 768px) {
-  .banner {
-    margin-bottom: 100px;
-  }
-  
-  .overviewText {
-    font-size: 22px;
-    margin: 10px auto;
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-}
-
 @media (min-width: 1200px) {
-  .banner {
-    margin-bottom: 200px;
-  }
   .bannerHeader {
-    margin: 200px auto;
+    margin: 0px auto 200px auto;
   } 
   
   .overviewText {

@@ -100,25 +100,6 @@
   padding-left: 7px;
 }
 
-@media (min-width: 768px) {
-  .navGrid {
-    row-gap: 45px;
-    column-gap: 55px;
-  }
-  .anchorIcon {
-    height: 44px;
-  }
-  .linkTile {
-    height: 70px;
-    & a {
-      padding-left: 45px;
-    }
-  }
-  .spacer {
-    padding-left: 10px;
-  }
-}
-
 @media (min-width: 1200px) {
   .navGrid {
     gap: 60px;
