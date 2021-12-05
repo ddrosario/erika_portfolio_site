@@ -13,12 +13,14 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-responsive": "^8.2.0",
-    "sass": "^1.35.2"
+    "sass": "^1.35.2",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "@types/react": "17.0.14",
     "@types/react-dom": "^17.0.9",
     "@types/react-responsive": "^8.0.3",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "eslint": "7.30.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
