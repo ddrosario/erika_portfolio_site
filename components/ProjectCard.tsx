@@ -28,7 +28,7 @@ const ProjectCard = ({ title, body, images }: ProjectCardProps) => {
         ref={textRef}
         className={isVisibleText ? styles.inViewRight : styles.notInViewRight}
       >
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{body}</p>
       </div>
       <div

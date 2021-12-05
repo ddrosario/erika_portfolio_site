@@ -12,7 +12,7 @@ interface BackToTopButtonProps {
 const BackToTopButton = ({ isVisible }: BackToTopButtonProps) => {
   const buttonRef = React.useRef<HTMLButtonElement>(null);
   return (
-    <>
+    <div className={styles.root}>
       <button
         ref={buttonRef}
         className={`${styles.backToTop} ${isVisible ? styles.visible : styles.notVisible}`}
@@ -42,7 +42,7 @@ const BackToTopButton = ({ isVisible }: BackToTopButtonProps) => {
           Top
         </div>
       </button>
-    </>
+    </div>
   );
 };
 

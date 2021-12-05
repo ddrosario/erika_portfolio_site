@@ -19,7 +19,7 @@ export default function TitleCard({
   // strongSubtext,
 }: TitleCardProps) {
   return (
-    <section className={styles.banner}>
+    <div className={styles.banner}>
       <h1 className={styles.bannerHeader}>{h1Text}</h1>
       <h2 className={styles.overviewHeader}>Project Overview</h2>
       <p className={styles.overviewText}>
@@ -31,7 +31,7 @@ export default function TitleCard({
         </span>
       </p>
       {children}
-    </section>
+    </div>
   );
 }
 
