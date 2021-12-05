@@ -3,13 +3,13 @@ import React from 'react';
 import Head from 'next/head';
 
 import useIntersect from '@util/hooks/useIntersection';
-import * as hov from 'data/hov';
+import { data } from 'data/hov';
 import styles from '@styles/Projects2.module.scss';
 
 import PageLayout from '@components/PageLayout';
+import HelloBanner from '@components/banners/HelloBanner';
 import Footer from '@components/Footer';
 import TitleCard from '@components/caseStudies/TitleCard';
-import DesignProcessNav from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
 
@@ -62,92 +62,36 @@ export default function Projects() {
         <meta property="og:title" content="Eri Lambe - Heart of The Valley Case Study" />
         <meta name="twitter:title" content="Eri Lambe - Heart of The Valley Case Study" />
       </Head>
-
+      <HelloBanner
+        webp="/assets/banners/heart-of-the-valley-banner.webp"
+        alt="laptop with heart of the valley artwork"
+      />
       <PageLayout>
         <div className={styles.mobileScrollFix}>
-          <div ref={header}>
-            <TitleCard
-              h1Text="Heart of the Valley"
-              overviewText=" A website for helping visitors and locals find artworks in their area. In this project, I work with a team of designers, developers, project managers, and more to build this website. It is set to launch by next year for desktop with mobile to come after."
-              strongOverviewText="Ongoing…"
-            >
-              <div style={{ height: 200 }} />
-              {/* TODO: UPDATE THIS SPACING */}
-            </TitleCard>
-            <DesignProcessNav navItems={navItems} />
+          <section>
+            <div ref={header}>
+              <TitleCard
+                h1Text="Heart of the Valley"
+                overviewText="The Code for America network provides an opportunity for me to work with a team of designers, programmers, project managers, and others in the development of this website. By next year, the desktop version will become available, followed by the mobile version. It is intended to be an easily accessible website where locals and visitors can locate art installations in San Jose, California, as well as get information about some of the artists and works. "
+              />
+            </div>
+          </section>
+          <div>
+            {data.map((item, idx) => (
+              <div
+                key={item.title}
+                className={idx % 2 === 0 ? 'contrast' : 'standard'}
+              >
+                <section>
+                  <ProjectCard
+                    title={item.title}
+                    body={item.body}
+                    images={item.images}
+                  />
+                </section>
+              </div>
+            ))}
           </div>
-          <section id="empathize">
-            <div
-              ref={empathize}
-              className={`headerDivider ${isVisibleEmpathize ? styles.inView : styles.notInView}`}
-            >
-              <h2>Step One: Empathize</h2>
-            </div>
-            <section>
-              {hov.empathize.map((item) => (
-                <ProjectCard
-                  key={item.title}
-                  title={item.title}
-                  body={item.body}
-                  images={item.images}
-                />
-              ))}
-            </section>
-          </section>
-          <section id="define">
-            <div
-              ref={define}
-              className={`headerDivider ${isVisibleDefine ? styles.inView : styles.notInView}`}
-            >
-              <h2>Step Two: Define</h2>
-            </div>
-            <section>
-              {hov.define.map((item) => (
-                <ProjectCard
-                  key={item.title}
-                  title={item.title}
-                  body={item.body}
-                  images={item.images}
-                />
-              ))}
-            </section>
-          </section>
-          <section id="ideate">
-            <div
-              ref={ideate}
-              className={`headerDivider ${isVisibleIdeate ? styles.inView : styles.notInView}`}
-            >
-              <h2>Step Three: Ideate</h2>
-            </div>
-            <section>
-              {hov.ideate.map((item) => (
-                <ProjectCard
-                  key={item.title}
-                  title={item.title}
-                  body={item.body}
-                  images={item.images}
-                />
-              ))}
-            </section>
-          </section>
-          <section id="prototype">
-            <div
-              ref={prototyping}
-              className={`headerDivider ${isVisiblePrototyping ? styles.inView : styles.notInView}`}
-            >
-              <h2>Step Four: Prototype</h2>
-            </div>
-            <section>
-              {hov.prototyping.map((item) => (
-                <ProjectCard
-                  key={item.title}
-                  title={item.title}
-                  body={item.body}
-                  images={item.images}
-                />
-              ))}
-            </section>
-          </section>
         </div>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>

@@ -45,36 +45,43 @@ export default function Home({ section }: HomeProps) {
         <meta property="og:title" content="Eri Lambe Portfolio" />
         <meta name="twitter:title" content="Eri Lambe Portfolio" />
       </Head>
+      <div ref={header}>
+        <HelloBanner
+          webp="/assets/main-banner.webp"
+          alt="laptop and coffee"
+          showText
+        />
+      </div>
       <PageLayout>
-        <div ref={header}>
-          <div className={styles.helloBlock}>
-            <HelloBanner />
-          </div>
-          <div className={styles.blockMargin}>
+        <section>
+          <div className={styles.myWork}>
+            <h2 className={styles.myWorkH2}>My Work</h2>
             <CaseStudyNavLinks />
           </div>
-        </div>
-        <div className={`${isVisible4 ? styles.inView : styles.notInView}`}>
-          <div className={styles.ctaCard} ref={yourProject}>
-            <h4 className={styles.ctaHeader}>Your project could be here!</h4>
-            <p>
-              <Link href="mailto:Erikaalanalambe@gmail.com" passHref>
-                <>
-                  <a href="replace">Reach out</a>
-                  <span>{' to me on the form below and let’s chat!'}</span>
-                </>
-              </Link>
-            </p>
+          <div className={`${isVisible4 ? styles.inView : styles.notInView}`}>
+            <div className={styles.ctaCard} ref={yourProject}>
+              <h4 className={styles.ctaHeader}>Your project could be here!</h4>
+              <p>
+                <Link href="mailto:Erikaalanalambe@gmail.com" passHref>
+                  <>
+                    <a href="replace">Reach out</a>
+                    <span>{' to me on the form below and let’s chat!'}</span>
+                  </>
+                </Link>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={`${isVisible1 ? styles.inView : styles.notInView}`}>
-          <div ref={ref1}>
-            <AboutMe />
-          </div>
+        </section>
+        <div className="contrast">
+          <section className={`${isVisible1 ? styles.inView : styles.notInView}`}>
+            <div ref={ref1}>
+              <AboutMe />
+            </div>
+          </section>
         </div>
         <article className={styles.resume}>
           <section className={`${isVisible2 ? styles.inView : styles.notInView}`}>
-            <div className="headerDivider" ref={ref2}>
+            <div ref={ref2}>
               <h2>Volunteer Experience</h2>
             </div>
             <div className={styles.resumeTitle}>
@@ -94,43 +101,45 @@ export default function Home({ section }: HomeProps) {
               </li>
             </ul>
           </section>
-          <section className={`${isVisible3 ? styles.inView : styles.notInView}`}>
-            <div className="headerDivider" ref={ref3}>
-              <h2>Education</h2>
-            </div>
-            <section>
-              <div className={styles.resumeTitle}>
-                <h4>DesignLab</h4>
-                <p className={styles.resumeDate}>Year: 2021</p>
+          <div className="contrast">
+            <section className={`${isVisible3 ? styles.inView : styles.notInView}`}>
+              <div ref={ref3}>
+                <h2>Education</h2>
               </div>
-              <ul
-                ref={designLabRef}
-                className={isVisibleDesign ? styles.inViewUL : styles.notInViewUL}
-              >
-                <li>
-                  Over 800+ hours of learning the design process, UX Research, and designing for
-                  responsive web
-                </li>
-                <li>
-                  Weekly presenting/explaining my design process and reasoning behind design
-                  decisions
-                </li>
-              </ul>
-            </section>
-            <section className={styles.resumeLastSection}>
-              <div className={styles.resumeTitle}>
-                <h4>Arizona State University</h4>
-                <p className={styles.resumeDate}>Year: 2018-2021</p>
+              <div>
+                <div className={styles.resumeTitle}>
+                  <h4>DesignLab</h4>
+                  <p className={styles.resumeDate}>Year: 2021</p>
+                </div>
+                <ul
+                  ref={designLabRef}
+                  className={isVisibleDesign ? styles.inViewUL : styles.notInViewUL}
+                >
+                  <li>
+                    Over 800+ hours of learning the design process, UX Research, and designing for
+                    responsive web
+                  </li>
+                  <li>
+                    Weekly presenting/explaining my design process and reasoning behind design
+                    decisions
+                  </li>
+                </ul>
               </div>
-              <ul
-                ref={arizonaRef}
-                className={isVisibleArizona ? styles.inViewUL : styles.notInViewUL}
-              >
-                <li>Graduated with a Bachelor’s in English Literature, with a minor in Media</li>
-                <li>Experience tutoring my colleagues and helping them write great papers</li>
-              </ul>
+              <div className={styles.resumeLastSection}>
+                <div className={styles.resumeTitle}>
+                  <h4>Arizona State University</h4>
+                  <p className={styles.resumeDate}>Year: 2018-2021</p>
+                </div>
+                <ul
+                  ref={arizonaRef}
+                  className={isVisibleArizona ? styles.inViewUL : styles.notInViewUL}
+                >
+                  <li>Graduated with a Bachelor’s in English Literature, with a minor in Media</li>
+                  <li>Experience tutoring my colleagues and helping them write great papers</li>
+                </ul>
+              </div>
             </section>
-          </section>
+          </div>
         </article>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
