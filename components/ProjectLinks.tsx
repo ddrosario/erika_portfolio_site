@@ -1,5 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+import rightArrow from '@assets/right-arrow-black.png';
+import rightArrowGreen from '@assets/right-arrow-green.png';
+import leftArrow from '@assets/left-arrow-black.png';
+import leftArrowGreen from '@assets/left-arrow-green.png';
 
 import styles from '@styles/banners/ProjectLinks.module.scss';
 
@@ -26,13 +32,27 @@ const ProjectLinks = ({
       onClick={() => window.scrollTo(0, 0)}
     >
       {left && (
-        <span>{'<'}</span>
+        <div className={styles.icon}>
+          <div className={styles.iconImg}>
+            <Image src={leftArrow} alt="" width={24} height={24} />
+          </div>
+          <div className={styles.iconImgActive}>
+            <Image src={leftArrowGreen} alt="" width={24} height={24} />
+          </div>
+        </div>
       )}
-      <span className={styles.linkText}>
+      <div className={styles.linkText}>
         {linkText}
-      </span>
+      </div>
       {right && (
-        <span>{'>'}</span>
+        <div className={styles.icon}>
+          <div className={styles.iconImg}>
+            <Image src={rightArrow} alt="" width={24} height={24} />
+          </div>
+          <div className={styles.iconImgActive}>
+            <Image src={rightArrowGreen} alt="" width={24} height={24} />
+          </div>
+        </div>
       )}
     </a>
   </Link>
