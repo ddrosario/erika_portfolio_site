@@ -52,6 +52,7 @@ export default function Home({ section }: HomeProps) {
           jpg="/assets/banners/main-banner.jpg"
           alt="laptop and coffee"
           showText
+          bannerAlignBottom
         />
       </div>
       <PageLayout>

@@ -8,6 +8,7 @@ interface HelloBannerProps {
   jpg: string;
   alt: string;
   showText?: boolean;
+  bannerAlignBottom?: boolean;
 }
 
 const HelloBanner = ({
@@ -15,13 +16,14 @@ const HelloBanner = ({
   jpg,
   alt,
   showText,
+  bannerAlignBottom,
 }: HelloBannerProps) => (
   <div className={styles.rootBanner}>
     <div className={styles.background}>
       <picture>
         <source type="image/webp" srcSet={webp} />
         <img
-          className={styles.backgroundImg}
+          className={bannerAlignBottom ? styles.backgroundImgBottom : styles.backgroundImg}
           src={jpg}
           alt={alt}
         />
@@ -38,6 +40,7 @@ const HelloBanner = ({
 
 HelloBanner.defaultProps = {
   showText: false,
+  bannerAlignBottom: false,
 };
 
 export default HelloBanner;
