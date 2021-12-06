@@ -170,11 +170,6 @@ export const data = [
     body: 'By analyzing the data collected, I was able to create a persona that represent my target audience. Prior to sharing my work with my colleagues, I created a short story to illustrate the motivations and pain points of each persona.',
     images: [
       {
-        webp: '/assets/projects/nintendo/persona1.webp',
-        jpg: '/assets/projects/nintendo/persona1-small.jpg',
-        jpgLg: '/assets/projects/nintendo/persona1-lg.jpg',
-      },
-      {
         webp: '/assets/projects/nintendo/persona2.webp',
         jpg: '/assets/projects/nintendo/persona2.jpg',
         jpgLg: '/assets/projects/nintendo/persona2-lg.jpg',

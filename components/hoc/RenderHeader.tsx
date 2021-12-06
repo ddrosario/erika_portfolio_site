@@ -6,7 +6,7 @@ const Header = dynamic(() => import('@components/Header'), { ssr: false });
 const MobileHeader = dynamic(() => import('@components/MobileHeader'), { ssr: false });
 
 const RenderHeader = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
   return (
     <>
       {isMobile ? (

@@ -79,37 +79,32 @@ export default function Projects() {
           </section>
           <div>
             {data.map((item, idx) => (
-              <div
-                key={item.title}
-                className={idx % 2 === 0 ? 'contrast' : 'standard'}
-              >
+              <div key={item.title} className={idx % 2 === 0 ? 'contrast' : 'standard'}>
                 <section>
-                  <ProjectCard
-                    title={item.title}
-                    body={item.body}
-                    images={item.images}
-                  />
+                  <ProjectCard title={item.title} body={item.body} images={item.images} />
                 </section>
               </div>
             ))}
           </div>
+          <section>
+            <h2 className={styles.moreToComeH2}>There&apos;s More To Come!</h2>
+            <p>
+              A living case study, Heart of the Valley is being updated as the project moves
+              forward. The prototype will be available in January!
+            </p>
+          </section>
+          <section>
+            <ViewProject
+              href="https://www.figma.com/file/HMDVYiExG8mMbiEv4UuOgd/Heart-of-the-Valley?node-id=0%3A1"
+              ctaText="View File"
+              header="For Now..."
+              body="Here is the Figma file with all my current iterations of the page"
+            />
+          </section>
         </div>
         <BackToTopButton isVisible={!isVisibleHeader} />
-        <section>
-          <ViewProject
-            href="https://www.figma.com/file/HMDVYiExG8mMbiEv4UuOgd/Heart-of-the-Valley?node-id=0%3A1"
-            ctaText="View File"
-            header="For Now..."
-            body="Here is the Figma file with all my current iterations of the page"
-          />
-        </section>
       </PageLayout>
-      <Footer
-        hrefLeft="/carnival"
-        leftLabel="Carnival"
-        hrefRight="/aura"
-        rightLabel="Aura"
-      />
+      <Footer hrefLeft="/carnival" leftLabel="Carnival" hrefRight="/aura" rightLabel="Aura" />
     </>
   );
 }

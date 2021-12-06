@@ -181,11 +181,6 @@ export const data = [
     body: 'Following the data collection, I developed a possible target user for the updated Carnival Cruise website based on a personification of the data collected.',
     images: [
       {
-        webp: '/assets/projects/carnival/persona1.webp',
-        jpg: '/assets/projects/carnival/persona1.jpg',
-        jpgLg: '/assets/projects/carnival/persona1-lg.jpg',
-      },
-      {
         webp: '/assets/projects/carnival/persona2.webp',
         jpg: '/assets/projects/carnival/persona2.jpg',
         jpgLg: '/assets/projects/carnival/persona2-lg.jpg',

@@ -101,7 +101,7 @@ export const data = [
   },
   {
     title: 'Userflow',
-    body: 'For the pages for which the project manager requested me to create wireframes and branding, I created a mood board so that the team could vote on them and decide on the type of design we would use.',
+    body: 'In order to help visualize how the users would navigate through the website, I was tasked with creating a User flow. Whimsical was used to accomplish this.',
     images: [
       {
         webp: '/assets/projects/hov/userflow.webp',
