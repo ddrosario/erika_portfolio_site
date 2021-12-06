@@ -3,11 +3,13 @@
   margin: -30px auto 0px auto;
   position: sticky;
   bottom: 10px;
+  pointer-events: none;
 }
 
 .backToTop {
   background-color: transparent;
   cursor: pointer;
+  pointer-events: initial;
   font-family: var(--title-font-family);
   font-size: 20px;
   font-weight: bold;

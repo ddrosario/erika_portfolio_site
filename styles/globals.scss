@@ -65,7 +65,6 @@ button:focus {
   color: var(--black);
 }
 .hiddenTrack {
-  scrollbar-color: var(--accent-color) transparent;
   scrollbar-width: thin;
   z-index: 1;
   overflow-x: hidden;

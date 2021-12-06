@@ -24,7 +24,7 @@
     font-family: var(--link-font-family);
     font-size: var(--link-font-size);
     font-weight: bold;
-    transition: all 0.5s linear;
+    transition: all 0.1s linear;
     padding-left: 10px;
     padding-right: 10px;
     min-width: 80px;
@@ -54,17 +54,6 @@
     background-color: var(--background-color);
 
     & a {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: inherit;
-      text-decoration: none;
-      font-family: var(--link-font-family);
-      font-size: var(--link-font-size);
-      font-weight: bold;
-      transition: all 0.5s linear;
       padding-left: 20px;
       padding-right: 20px;
       min-width: 134px;
