@@ -29,13 +29,22 @@ const MobileNavDropdown = ({ closeDropdown }: MobileNavDropdownProps) => {
         </a>
       </Link>
       <Link
-        href="/#about-me"
+        href="/?section=about-me"
         passHref
       >
         <a
           className={styles.link}
           href="replace"
-          onClick={closeDropdown}
+          onClick={(e) => {
+            const about = document.getElementById('about-me');
+            if (about) {
+              e.preventDefault();
+              closeDropdown();
+              about.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }
+          }}
         >
           About
         </a>

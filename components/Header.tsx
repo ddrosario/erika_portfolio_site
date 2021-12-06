@@ -10,7 +10,7 @@ import Email from '@assets/social_icons/email.svg';
 import EmailPink from '@assets/social_icons/email-green.png';
 
 const locations = {
-  about: '/#about-me',
+  about: '/?section=about-me',
   contact: '#footer',
   // resume: '/resume',
 };
@@ -40,6 +40,13 @@ const Header = () => (
           <a
             className={styles.navText}
             href="replace"
+            onClick={(e) => {
+              const about = document.getElementById('about-me');
+              if (about) {
+                e.preventDefault();
+                about?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             About
           </a>

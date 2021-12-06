@@ -32,6 +32,13 @@ export default function Home({ section }: HomeProps) {
   const [volunteerRef, isVisibleVolunteer] = useIntersect<HTMLUListElement>(options2);
   const [designLabRef, isVisibleDesign] = useIntersect<HTMLUListElement>(options2);
 
+  React.useEffect(() => {
+    if (section === 'about-me') {
+      // const aboutMeSection = document.getElementById('about-me-section');
+      ref1.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [ref1, section]);
+
   return (
     <>
       <Head>
