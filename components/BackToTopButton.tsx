@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import UpArrow from '@assets/up-arrow.png';
-import UpArrowPink from '@assets/up-arrow-pink.png';
+import UpArrowPink from '@assets/up-arrow-green.png';
 import styles from '@styles/BackToTopButton.module.scss';
 
 interface BackToTopButtonProps {

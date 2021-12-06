@@ -34,9 +34,7 @@ const LinkTile = ({ text, href }: LinkTileProps) => {
           onMouseDown={turnActive}
           onTouchStart={turnActive}
         >
-          <span>
-            {text}
-          </span>
+          {text}
         </a>
       </Link>
     </div>

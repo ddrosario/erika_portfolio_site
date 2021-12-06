@@ -10,34 +10,10 @@
 }
 
 .contactBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 30px;
-  width: 80px;
-  font-family: var(--title-font-family);
-  font-size: 14px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  cursor: pointer;
-  color: var(--text-color);
-  border-radius: 8px;
-  background-color: var(--background-color);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  border: solid 1px var(--accent-color);
-  // margin: 40px auto;
+  width: fit-content;
   text-decoration: none;
-  color: var(--text-color);
   margin: auto;
-  &:hover, &:focus {
-    padding: 1px;
-    border: 0;
-    background-image: var(--pink-gradient);
-    color: var(--black);
-  }
 }
 
 .footerButtons {
@@ -53,7 +29,7 @@
 @media (min-width: 1200px) {
   .root {
     font-size: 36px;
-    margin: 120px auto;
+    margin: 25px auto 120px;
   }
   
   .contactBtn {

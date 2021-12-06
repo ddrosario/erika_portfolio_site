@@ -23,8 +23,11 @@
   height: 100%;
 }
 .caseStudyImg {
-  display: block;
-  margin: 40px auto;
+  position: relative;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%);
 }
 
 .nintendoTitleCard {
@@ -50,8 +53,7 @@
     }
   }
   .caseStudyImg {
-    margin: 60px auto;
-    padding: 0px 100px;
+    margin: 60px 0px;
   }
 
   // Case study exclusive classes

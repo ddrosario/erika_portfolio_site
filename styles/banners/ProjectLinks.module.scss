@@ -1,5 +1,5 @@
 .boxedLink {
-  display: inline-block;
+  display: inline-flex;
   font-family: var(--card-title-font-family);
   font-size: var(--link-font-size);
   font-weight: 500;
@@ -11,21 +11,59 @@
   color: var(--text-color);
   transition: all 0.33s ease-in-out;
   text-decoration: none;
-  &:hover,&:focus {
+  border-bottom: 1px solid transparent;
+  &:hover,
+  &:focus {
     color: var(--accent-color);
-  }
-  &:hover .linkText {
-    text-decoration: underline;
-  }
-  &:focus .linkText {
-    text-decoration: underline;
+    & .iconImg {
+      opacity: 0;
+    }
+    & .iconImgActive {
+      opacity: 1;
+    }
+    & .linkText {
+      padding-bottom: 0px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
   }
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.iconImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  transition: all 0.1s linear;
+}
+.iconImgActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
 .linkText {
-  padding: 0px 5px;
+  margin-right: 5px;
 }
 
 @media (min-width: 1200px) {
   .boxedLink {
+    font-size: 24px;
   }
 }

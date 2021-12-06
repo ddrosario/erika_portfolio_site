@@ -9,6 +9,7 @@
 .bannerHeader {
   text-align: center;
   margin: 0px auto 60px auto;
+  line-height: normal;
 }
 
 .overviewHeader {
@@ -25,12 +26,16 @@
 
 @media (min-width: 1200px) {
   .bannerHeader {
-    margin: 0px auto 200px auto;
+    margin: 0px auto 100px auto;
   } 
+
+  .overviewHeader {
+    margin: 15px auto;
+  }
   
   .overviewText {
     font-size: 32px;
-    margin: 15px auto;
+    margin: 15px auto 0px;
     padding: 0px;
   }
 }

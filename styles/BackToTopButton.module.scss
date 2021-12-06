@@ -77,11 +77,14 @@
   display: none;
 }
 @media (min-width: 1200px) {
+  .root {
+    padding-right: 30px;
+  }
+
   .noMobile {
     display: block;
   }
   .backToTop {
-    margin-right: -87px;
     bottom: 50px;
   }
 }

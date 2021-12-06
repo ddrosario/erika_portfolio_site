@@ -102,6 +102,7 @@ h5,
 p {
   margin: 0;
   color: var(--text-color), #000000;
+  line-height: normal;
 }
 
 h1 {
@@ -116,7 +117,7 @@ h2 {
   font-family: var(--title-font-family);
   font-weight: bold;
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   // margin: 30px auto;
   margin-bottom: 40px;
   // color: var(--accent-color);
@@ -125,9 +126,9 @@ h2 {
 
 h3 {
   font-family: var(--title-font-family);
-  font-weight: 500;
+  font-weight: bold;
   text-align: left;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h4 {
@@ -241,11 +242,11 @@ section {
   h2 {
     // margin: 50px auto;
     margin-bottom: 50px;
-    font-size: 36px;
+    font-size: 60px;
   }
 
   h3 {
-    font-size: 30px;
+    font-size: 60px;
   }
 
   h4 {
@@ -275,7 +276,7 @@ section {
   }
 
   section {
-    padding: 100px 150px;
+    padding: 100px 120px;
     max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
