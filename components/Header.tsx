@@ -5,9 +5,9 @@ import Image from 'next/image';
 import styles from '@styles/header/Header.module.scss';
 import Logo from '@assets/logo.svg';
 import LinkedIn from '@assets/social_icons/linkedin.png';
-import LinkedInPink from '@assets/social_icons/linkedin-pink.png';
+import LinkedInPink from '@assets/social_icons/linkedin-green.png';
 import Email from '@assets/social_icons/email.svg';
-import EmailPink from '@assets/social_icons/email-pink.png';
+import EmailPink from '@assets/social_icons/email-green.png';
 
 const locations = {
   about: '/?section=about-me',
