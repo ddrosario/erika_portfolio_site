@@ -8,7 +8,7 @@ const aboutMeParagraph2 = ' by Don Norman and ended up buying it for myself. I w
 
 export default function About() {
   return (
-    <article id="about-me-section">
+    <article>
       <h2>A Little About Me</h2>
       <div>
         <div className={styles.profileContainer}>

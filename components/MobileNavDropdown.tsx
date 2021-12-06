@@ -29,7 +29,7 @@ const MobileNavDropdown = ({ closeDropdown }: MobileNavDropdownProps) => {
         </a>
       </Link>
       <Link
-        href="/?section=about-me"
+        href="/#about-me"
         passHref
       >
         <a

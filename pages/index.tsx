@@ -31,12 +31,6 @@ export default function Home({ section }: HomeProps) {
   const [arizonaRef, isVisibleArizona] = useIntersect<HTMLUListElement>(options2);
   const [volunteerRef, isVisibleVolunteer] = useIntersect<HTMLUListElement>(options2);
   const [designLabRef, isVisibleDesign] = useIntersect<HTMLUListElement>(options2);
-  React.useEffect(() => {
-    if (section === 'about-me') {
-      // const aboutMeSection = document.getElementById('about-me-section');
-      ref1.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [ref1, section]);
 
   return (
     <>
@@ -78,7 +72,7 @@ export default function Home({ section }: HomeProps) {
             </div>
           </div>
         </section>
-        <div className="contrast">
+        <div className="contrast" id="about-me">
           <div ref={ref1}>
             <section className={`${isVisible1 ? styles.inView : styles.notInView}`}>
               <AboutMe />
