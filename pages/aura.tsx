@@ -61,7 +61,7 @@ export default function Projects() {
           </div>
           <section>
             <ViewProject
-              href="https://sketch.com/s/146a106b-61db-4efd-88cb-ccd7350f11a3/a/Vr3dbKr/play"
+              href="https://sketch.com/s/146a106b-61db-4efd-88cb-ccd7350f11a3/a/9P4YgL7/play"
               ctaText="View Prototype"
               header="Final Product"
               body="Lastly, I added the final versions of the app and the branding to create a minimalist, relaxing design that was easy for the user to navigate and interact with. With the addition of a store, washi tape, fonts, and images, the overall journaling aspect of the app was enhanced."
