@@ -214,18 +214,6 @@ export const data = [
       },
     ],
   },
-
-  {
-    title: 'Wireframes',
-    body: 'I digitized my sketches using Sketch and plotted out all of the pages I would be eventually adding branding to before presenting it, once again, to my colleagues to make sure all feedback was heard and accounted for.',
-    images: [
-      {
-        webp: '/assets/projects/nintendo/wireframes.webp',
-        jpg: '/assets/projects/nintendo/wireframes.jpg',
-        jpgLg: '/assets/projects/nintendo/wireframes-lg.jpg',
-      },
-    ],
-  },
   {
     title: 'Challenges',
     body: "To create the pages for the added feature, I had to plan this out, which was time I did not really have. Consequently, some things had to be removed from the roadmap and added to 'create later'. In contrast to a desktop or mobile site/app, designing a new page for a game system was very different, so there was a lot more time spent researching how to do things properly and what best practices were.",

@@ -248,17 +248,6 @@ export const data = [
     ],
   },
   {
-    title: 'Wireframes',
-    body: 'Following the input from the team, I developed digitized versions of my sketches and added features such as menus and basic navigation to them before, once again, presenting the work in progress for feedback.',
-    images: [
-      {
-        webp: '/assets/projects/aura/wireframes.webp',
-        jpg: '/assets/projects/aura/wireframes-small.jpg',
-        jpgLg: '/assets/projects/aura/wireframes-lg.jpg',
-      },
-    ],
-  },
-  {
     title: 'Challenge',
     body: 'Because I knew the time crunch would be an issue, I prioritized which features I would work on first and what could wait. Since I could not accomplish everything by the deadline, I had to rearrange some things. As a result, I concentrated on the journaling feature since it was the most requested feature during interviews and moved the other features to a later stage.',
     images: [],

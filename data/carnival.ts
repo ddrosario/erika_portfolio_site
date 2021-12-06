@@ -226,17 +226,6 @@ export const data = [
     ],
   },
   {
-    title: 'Wireframes',
-    body: 'My colleagues provided me with feedback after I sketched and digitized concepts for the redesign. ',
-    images: [
-      {
-        webp: '/assets/projects/carnival/wireframes.webp',
-        jpg: '/assets/projects/carnival/wireframes.jpg',
-        jpgLg: '/assets/projects/carnival/wireframes-lg.jpg',
-      },
-    ],
-  },
-  {
     title: 'Challenges',
     body: 'Among the challenges I faced when redesigning this project was finishing it in the time frame that was expected, resizing icons and images so that they would have more white space and take up less space, as well as making it more navigable.',
     images: [],

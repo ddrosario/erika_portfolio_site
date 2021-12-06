@@ -121,7 +121,6 @@ export const data = [
       },
     ],
   },
-
   {
     title: 'Wireframes',
     body: 'With the help of Sketch, I was able to digitize my ideas and plan out the pages that would be created.',
