@@ -1,5 +1,6 @@
 import React from 'react';
 import '@styles/globals.scss';
+import 'react-image-lightbox/style.css';
 import type { AppProps } from 'next/app';
 import smoothscroll from 'smoothscroll-polyfill';
 
