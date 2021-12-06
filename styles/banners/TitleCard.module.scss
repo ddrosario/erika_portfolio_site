@@ -8,23 +8,23 @@
 }
 .bannerHeader {
   text-align: center;
-  margin: 0px auto 60px auto;
+  margin: 0px auto 40px auto;
   line-height: normal;
 }
 
 .overviewHeader {
   color: var(--text-color);
-  margin: 10px auto;
+  margin: 5px auto;
   font-weight: bold;
   text-align: left;
 }
 
 .overviewText {
   font-family: var(--body-font-family);
-  font-size: 16px;
+  font-size: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .bannerHeader {
     margin: 0px auto 100px auto;
   } 

@@ -19,7 +19,6 @@
 
 .resumeLastSection {
   margin-top: 60px;
-  margin-bottom: 80px;
 }
 
 .resumeTitle {
@@ -38,7 +37,8 @@
 .resumeDate {
   text-align: center;
   margin: 5px auto;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .card {
@@ -78,7 +78,7 @@
   margin-bottom: 40px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .card {
     margin-bottom: 60px;
   }

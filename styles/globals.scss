@@ -133,7 +133,7 @@ h3 {
 
 h4 {
   font-family: var(--title-font-family);
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
 }
@@ -157,7 +157,7 @@ ul {
   font-family: var(--card-subtext-font-family);
   font-weight: 300;
   text-align: left;
-  font-size: 14px;
+  font-size: 18px;
 
   & li::before {
     content: "\2022";
@@ -226,7 +226,7 @@ section {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   :root {
     --card-title-font-size: 36px;
     --card-subtext-font-size: 24px;
@@ -250,7 +250,7 @@ section {
   }
 
   h4 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   p {
