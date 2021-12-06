@@ -25,29 +25,38 @@ const Footer = ({
   return (
     <footer id="footer">
       <section className={styles.root}>
-        <div>{text}</div>
-        <div className={styles.footerButtons}>
-          {showProjectLinks && (
-            <ProjectLinks
-              href={hrefLeft as string}
-              linkText={leftLabel as string}
-              left
-            />
-          )}
+        <div className={styles.text}>{text}</div>
+        {showProjectLinks ? (
+          <div className={styles.footerButtons}>
+            <div className={styles.left}>
+              <ProjectLinks
+                href={hrefLeft as string}
+                linkText={leftLabel as string}
+                left
+              />
+            </div>
+            <div className={styles.contactBtn}>
+              <LinkTile
+                href="mailto:Erikaalanalambe@gmail.com"
+                text="Contact"
+              />
+            </div>
+            <div className={styles.right}>
+              <ProjectLinks
+                href={hrefRight as string}
+                linkText={rightLabel as string}
+                right
+              />
+            </div>
+          </div>
+        ) : (
           <div className={styles.contactBtn}>
             <LinkTile
               href="mailto:Erikaalanalambe@gmail.com"
               text="Contact"
             />
           </div>
-          {showProjectLinks && (
-            <ProjectLinks
-              href={hrefRight as string}
-              linkText={rightLabel as string}
-              right
-            />
-          )}
-        </div>
+        )}
       </section>
       <div className="footer" />
     </footer>
