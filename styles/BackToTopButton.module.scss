@@ -1,6 +1,6 @@
 .root {
   max-width: 1366px;
-  margin: auto;
+  margin: -30px auto 0px auto;
   position: sticky;
   bottom: 10px;
 }
@@ -78,6 +78,7 @@
 }
 @media (min-width: 1000px) {
   .root {
+    margin-top: -88px;
     padding-right: 30px;
   }
 
