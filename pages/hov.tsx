@@ -105,7 +105,6 @@ export default function Projects() {
         </section>
       </PageLayout>
       <Footer
-        text="Have any questions about this project?"
         hrefLeft="/carnival"
         leftLabel="Carnival"
         hrefRight="/aura"
