@@ -12,12 +12,11 @@ import styles from '@styles/Projects2.module.scss';
 
 import HelloBanner from '@components/banners/HelloBanner';
 import TitleCard from '@components/caseStudies/TitleCard';
-import DesignProcessNav from '@components/caseStudies/DesignProcessNav';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
+import ViewProject from '@components/ViewProject';
 
 export default function Projects() {
-  const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
   const backToTopOptions = { root: null, threshold: 0.1 };
   const [header, isVisibleHeader] = useIntersect<HTMLDivElement>(backToTopOptions, true);
 
@@ -59,6 +58,14 @@ export default function Projects() {
             ))}
           </div>
         </div>
+        <section>
+          <ViewProject
+            href=""
+            ctaText="View Prototype"
+            header="Final Product"
+            body="Lastly, I added the final versions of the app and the branding to create a minimalist, relaxing design that was easy for the user to navigate and interact with. With the addition of a store, washi tape, fonts, and images, the overall journaling aspect of the app was enhanced."
+          />
+        </section>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer

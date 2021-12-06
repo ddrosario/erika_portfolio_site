@@ -12,6 +12,7 @@ import Footer from '@components/Footer';
 import TitleCard from '@components/caseStudies/TitleCard';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
+import ViewProject from '@components/ViewProject';
 
 export default function Projects() {
   const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
@@ -94,6 +95,14 @@ export default function Projects() {
           </div>
         </div>
         <BackToTopButton isVisible={!isVisibleHeader} />
+        <section>
+          <ViewProject
+            href=""
+            ctaText="View File"
+            header="For Now..."
+            body="Here is the Figma file with all my current iterations of the page"
+          />
+        </section>
       </PageLayout>
       <Footer
         text="Have any questions about this project?"

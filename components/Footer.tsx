@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
-import styles from '@styles/banners/Footer.module.scss';
 
 import ProjectLinks from '@components/ProjectLinks';
+import LinkTile from '@components/LinkTile';
+
+import styles from '@styles/banners/Footer.module.scss';
 
 interface FooterProps {
   text?: string;
@@ -33,11 +34,12 @@ const Footer = ({
               left
             />
           )}
-          <Link href="mailto:Erikaalanalambe@gmail.com" passHref>
-            <a className={styles.contactBtn} href="replace">
-              Contact
-            </a>
-          </Link>
+          <div className={styles.contactBtn}>
+            <LinkTile
+              href="mailto:Erikaalanalambe@gmail.com"
+              text="Contact"
+            />
+          </div>
           {showProjectLinks && (
             <ProjectLinks
               href={hrefRight as string}

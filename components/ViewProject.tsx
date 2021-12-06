@@ -1,5 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
+
+import LinkTile from '@components/LinkTile';
 
 import styles from '@styles/ViewProject.module.scss';
 
@@ -20,7 +22,11 @@ const ViewProject = ({
     <h3 className={styles.h3}>{header}</h3>
     <p className={styles.body}>{body}</p>
     <div className={styles.linkContainer}>
-      <Link
+      <LinkTile
+        href={href}
+        text={ctaText}
+      />
+      {/* <Link
         href={href}
         passHref
       >
@@ -30,7 +36,7 @@ const ViewProject = ({
         >
           {ctaText}
         </a>
-      </Link>
+      </Link> */}
     </div>
   </div>
 );

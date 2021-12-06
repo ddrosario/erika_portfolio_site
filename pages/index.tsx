@@ -64,7 +64,12 @@ export default function Home({ section }: HomeProps) {
               <p>
                 <Link href="mailto:Erikaalanalambe@gmail.com" passHref>
                   <>
-                    <a href="replace">Reach out</a>
+                    <a
+                      className={styles.reachOut}
+                      href="replace"
+                    >
+                      Reach out
+                    </a>
                     <span>{' to me on the form below and let’s chat!'}</span>
                   </>
                 </Link>
