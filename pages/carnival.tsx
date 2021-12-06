@@ -59,7 +59,7 @@ export default function Projects() {
           </div>
           <section>
             <ViewProject
-              href="https://sketch.com/s/fe428915-3761-4619-8535-d4b50902794c/a/Jn5MaZ5/play"
+              href="https://sketch.com/s/fe428915-3761-4619-8535-d4b50902794c/a/l18brAV/play"
               ctaText="View Prototype"
               header="Final Product"
               body="The final step was to brand all the pages, desktop, tablet, and mobile, and demonstrate my work to colleagues and some of the interviewees. The redesign of the website was very well received by some Carnival Cruise customers who've used the service for a while, and I learned a lot as a result. "
