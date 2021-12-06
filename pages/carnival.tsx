@@ -13,6 +13,7 @@ import TitleCard from '@components/caseStudies/TitleCard';
 import HelloBanner from '@components/banners/HelloBanner';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
+import ViewProject from '@components/ViewProject';
 
 export default function Projects() {
   const backToTopOptions = { root: null, threshold: 0.1 };
@@ -55,6 +56,14 @@ export default function Projects() {
             ))}
           </div>
         </div>
+        <section>
+          <ViewProject
+            href="https://sketch.com/s/fe428915-3761-4619-8535-d4b50902794c/a/Jn5MaZ5/play"
+            ctaText="View Prototype"
+            header="Final Product"
+            body="The final step was to brand all the pages, desktop, tablet, and mobile, and demonstrate my work to colleagues and some of the interviewees. The redesign of the website was very well received by some Carnival Cruise customers who've used the service for a while, and I learned a lot as a result. "
+          />
+        </section>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer

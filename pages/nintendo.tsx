@@ -12,6 +12,7 @@ import TitleCard from '@components/caseStudies/TitleCard';
 import HelloBanner from '@components/banners/HelloBanner';
 import ProjectCard from '@components/ProjectCard';
 import BackToTopButton from '@components/BackToTopButton';
+import ViewProject from '@components/ViewProject';
 
 export default function Projects() {
   const textOptions = { root: null, threshold: 0.3, triggerOnce: true };
@@ -109,6 +110,14 @@ export default function Projects() {
             ))}
           </div>
         </div>
+        <section>
+          <ViewProject
+            href="https://sketch.com/s/31163d84-60e2-43fb-b5a6-8d84c6236e53/a/l1jbkAz/play"
+            ctaText="View Prototype"
+            header="Final Product"
+            body="Using Sketch as a platform, I added the branding and the final iterations. Every little detail of each page took a lot of time, but the end result was a seamless addition to the eShop. As a way to add more personalization and revenue to the gifting of games, I added the option to add virtual wrapping paper and messages. "
+          />
+        </section>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
       <Footer

@@ -97,7 +97,7 @@ export default function Projects() {
         <BackToTopButton isVisible={!isVisibleHeader} />
         <section>
           <ViewProject
-            href=""
+            href="https://www.figma.com/file/HMDVYiExG8mMbiEv4UuOgd/Heart-of-the-Valley?node-id=0%3A1"
             ctaText="View File"
             header="For Now..."
             body="Here is the Figma file with all my current iterations of the page"
