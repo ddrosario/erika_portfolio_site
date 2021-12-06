@@ -32,7 +32,7 @@ const ProjectCard = ({ title, body, images }: ProjectCardProps) => {
         <p>{body}</p>
       </div>
       <div
-        className={`${styles.imageContainer} ${isVisibleImage ? styles.inViewLeft : styles.notInViewLeft}`}
+        className={isVisibleImage ? styles.inViewLeft : styles.notInViewLeft}
         ref={imageRef}
       >
         {images.map((img) => (
