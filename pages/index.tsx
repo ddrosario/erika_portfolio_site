@@ -79,11 +79,11 @@ export default function Home({ section }: HomeProps) {
           </div>
         </section>
         <div className="contrast">
-          <section className={`${isVisible1 ? styles.inView : styles.notInView}`}>
-            <div ref={ref1}>
+          <div ref={ref1}>
+            <section className={`${isVisible1 ? styles.inView : styles.notInView}`}>
               <AboutMe />
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
         <article className={styles.resume}>
           <section className={`${isVisible2 ? styles.inView : styles.notInView}`}>
@@ -149,7 +149,9 @@ export default function Home({ section }: HomeProps) {
         </article>
         <BackToTopButton isVisible={!isVisibleHeader} />
       </PageLayout>
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </>
   );
 }
