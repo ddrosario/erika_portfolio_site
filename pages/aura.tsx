@@ -30,6 +30,7 @@ export default function Projects() {
       <div ref={header}>
         <HelloBanner
           webp="/assets/banners/aura-banner.webp"
+          jpg="/assets/banners/aura-banner.jpg"
           alt="iPhone with Aura"
         />
       </div>
@@ -52,6 +53,7 @@ export default function Projects() {
                     title={item.title}
                     body={item.body}
                     images={item.images}
+                    link={item.link ?? null}
                   />
                 </section>
               </div>

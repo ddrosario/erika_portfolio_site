@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 import LinkTile from '@components/LinkTile';
@@ -5,7 +6,8 @@ import LinkTile from '@components/LinkTile';
 import styles from '@styles/CaseStudyNavLinks.module.scss';
 
 interface CaseStudyLinkCardProps {
-  imgSrc: string;
+  webp: string;
+  jpg: string;
   href: string;
   bodyText: string;
   title: string;
@@ -13,19 +15,22 @@ interface CaseStudyLinkCardProps {
 }
 
 const CaseStudyLinkCard = ({
-  imgSrc,
+  webp,
+  jpg,
   href,
   bodyText,
   children,
   title,
 }: CaseStudyLinkCardProps) => (
   <div className={styles.card}>
-    <div>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={imgSrc}
-        alt=""
-      />
+    <div className={styles.imgContainer}>
+      <picture>
+        <source type="image/webp" srcSet={webp} />
+        <img
+          src={jpg}
+          alt=""
+        />
+      </picture>
     </div>
     <div className={styles.title}>
       {title}

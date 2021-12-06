@@ -66,6 +66,7 @@ export default function Projects() {
       <div ref={header}>
         <HelloBanner
           webp="/assets/banners/heart-of-the-valley-banner.webp"
+          jpg="/assets/banners/heart-of-the-valley-banner.jpg"
           alt="laptop with heart of the valley artwork"
         />
       </div>
@@ -81,7 +82,12 @@ export default function Projects() {
             {data.map((item, idx) => (
               <div key={item.title} className={idx % 2 === 0 ? 'contrast' : 'standard'}>
                 <section>
-                  <ProjectCard title={item.title} body={item.body} images={item.images} />
+                  <ProjectCard
+                    title={item.title}
+                    body={item.body}
+                    images={item.images}
+                    link={item.link ?? null}
+                  />
                 </section>
               </div>
             ))}

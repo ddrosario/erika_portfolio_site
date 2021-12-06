@@ -5,14 +5,27 @@ import styles from '@styles/banners/HelloBanner.module.scss';
 
 interface HelloBannerProps {
   webp: string;
+  jpg: string;
   alt: string;
   showText?: boolean;
 }
 
-const HelloBanner = ({ webp, alt, showText }: HelloBannerProps) => (
+const HelloBanner = ({
+  webp,
+  jpg,
+  alt,
+  showText,
+}: HelloBannerProps) => (
   <div className={styles.rootBanner}>
     <div className={styles.background}>
-      <img className={styles.backgroundImg} src={webp} alt={alt} />
+      <picture>
+        <source type="image/webp" srcSet={webp} />
+        <img
+          className={styles.backgroundImg}
+          src={jpg}
+          alt={alt}
+        />
+      </picture>
     </div>
     {showText && (
       <div className={styles.banner}>

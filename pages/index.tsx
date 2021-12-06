@@ -32,7 +32,7 @@ export default function Home({ section }: HomeProps) {
   const [volunteerRef, isVisibleVolunteer] = useIntersect<HTMLUListElement>(options2);
   const [designLabRef, isVisibleDesign] = useIntersect<HTMLUListElement>(options2);
   React.useEffect(() => {
-    if (typeof section === 'string' && section === 'about-me') {
+    if (section === 'about-me') {
       // const aboutMeSection = document.getElementById('about-me-section');
       ref1.current?.scrollIntoView({ behavior: 'smooth' });
     }
@@ -47,7 +47,8 @@ export default function Home({ section }: HomeProps) {
       </Head>
       <div ref={header}>
         <HelloBanner
-          webp="/assets/main-banner.webp"
+          webp="/assets/banners/main-banner.webp"
+          jpg="/assets/banners/main-banner.jpg"
           alt="laptop and coffee"
           showText
         />

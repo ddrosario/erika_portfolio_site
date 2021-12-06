@@ -28,6 +28,7 @@ export default function Projects() {
       <div ref={header}>
         <HelloBanner
           webp="/assets/banners/carnival-banner.webp"
+          jpg="/assets/banners/carnival-banner.jpg"
           alt="laptop on desk on Carnival homepage"
         />
       </div>
@@ -50,6 +51,7 @@ export default function Projects() {
                     title={item.title}
                     body={item.body}
                     images={item.images}
+                    link={item.link ?? null}
                   />
                 </section>
               </div>

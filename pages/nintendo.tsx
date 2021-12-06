@@ -82,6 +82,7 @@ export default function Projects() {
       <div ref={header}>
         <HelloBanner
           webp="/assets/banners/nintendo-banner.webp"
+          jpg="/assets/banners/nintendo-banner.jpg"
           alt="nintendo switch mockup"
         />
       </div>
@@ -104,6 +105,7 @@ export default function Projects() {
                     title={item.title}
                     body={item.body}
                     images={item.images}
+                    link={item.link ?? null}
                   />
                 </section>
               </div>
