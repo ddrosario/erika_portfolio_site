@@ -21,7 +21,7 @@ const CaseStudyLinkCard = ({
   children,
   title,
 }: CaseStudyLinkCardProps) => {
-  const [showText, setShowText] = React.useState(true);
+  const [showText, setShowText] = React.useState(false);
 
   return (
     <div>
