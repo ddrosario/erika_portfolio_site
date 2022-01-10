@@ -2,8 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-import LinkTile from '@components/LinkTile';
-
 import styles from '@styles/CaseStudyNavLinks.module.scss';
 
 interface CaseStudyLinkCardProps {
@@ -23,7 +21,7 @@ const CaseStudyLinkCard = ({
   children,
   title,
 }: CaseStudyLinkCardProps) => {
-  const [showText, setShowText] = React.useState(false);
+  const [showText, setShowText] = React.useState(true);
 
   return (
     <div>
@@ -46,6 +44,7 @@ const CaseStudyLinkCard = ({
                   className={styles.backgroundImg}
                   src={jpg}
                   alt=""
+                  style={{ filter: showText ? 'blur(4px)' : 'blur(0)' }}
                 />
               </picture>
             </div>
