@@ -1,0 +1,34 @@
+.h2 {}
+
+.caseStudyGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.roleTitle {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  .h2 {
+    font-size: 100px;
+    margin-bottom: 100px;
+  }
+
+  .caseStudyGrid {
+    margin-top: 100px;
+  }
+
+  .companyThankYouContainer {
+    margin-top: 100px;
+  }
+
+  .roleTitle {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+}
